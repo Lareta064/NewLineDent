@@ -64,6 +64,7 @@
 :root{
 	--second-family: 'PhonkSans', sans-serif;
 	--font6:"Roboto Mono", sans-serif;
+	--font4: "Gogol";
 }
 // @function remy($px) {
 //     @return calc(($px/19.2))+vw;
@@ -170,6 +171,13 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 		padding-right: 20px;
 	}
 }
+.container.pl-40{
+	position: relative;
+	
+}
+.pl-40{
+	padding-left: 40px;
+}
 .flex{
 	display: flex;
 	align-items: center;
@@ -180,4 +188,20 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	@media (max-width: 767px) {
 		column-gap:20px;
 	}
+}
+.flex-col{
+	display: flex;
+	flex-direction: column;
+}
+.left-decore{
+	position: absolute;
+	top: 0;
+	left: 0;
+	writing-mode: vertical-rl;
+	transform: scale(-1);
+	font-weight: 500;
+	font-size: 18px;
+	text-transform: uppercase;
+	
+
 }

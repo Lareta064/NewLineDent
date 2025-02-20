@@ -1,6 +1,6 @@
 //- ===== colors ======
 
-
+$pr:#B9B1A6 ;
 @function remy($pxsize) {
   
 	@return calc(($pxsize/19.2))*1vw;

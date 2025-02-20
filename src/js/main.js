@@ -17,4 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         bodyEl.classList.add('lock');
       }
     });
+    // window.addEventListener('resize', ()=>{
+
+    // });
 });
