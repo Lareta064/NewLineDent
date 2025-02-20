@@ -1,0 +1,45 @@
+@use "../base/var" as *;
+.header{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #B9B1A6;
+	&-content{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	@media (max-width: 1919px) {
+		padding-top: remy(40);
+		padding-bottom: remy(40);
+	}
+}
+.header-menu{
+	a{
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 150%;
+		text-transform: uppercase;
+		color: #fff;
+		white-space: nowrap;
+		@media (max-width: 1919px) {
+			font-size: remy(15);
+		}
+	}
+}
+.header-nav-wrapper{
+	.social-block {
+		padding-left: 20px;
+		border-left: 1px solid white;
+	}
+	.btn{
+		height: 35px;
+		font-size: 15px;
+		letter-spacing: 0.07em;
+		padding-inline: 25px;
+		@media (max-width: 1919px) {
+			height: remy(35);
+			font-size: remy(15);
+			padding-inline:  remy(25);
+		}
+	}
+}
