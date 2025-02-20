@@ -21,6 +21,10 @@
 		padding-inline:remy(35);
 		font-size: remy(20);
 	}
+	@media (max-width: 767px) {
+		font-size: 15px;
+		height: 52px;
+	}
 }
 .btn-primary{
 	border:1px solid #c7491f;

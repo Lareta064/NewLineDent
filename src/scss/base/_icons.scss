@@ -6,16 +6,17 @@
 	color: white;
 	flex-shrink: 0;
 }
+
 .svg-rarr{
 	width: 48px;
 	height: 12px;
 }
-.svg-logo{
+.svg-logo, .svg-logoDark{
 	width: 267px;
 	height: 43px;
 	display: inline-block;
 	cursor:pointer;
-	@media (max-width: 1919px) {
+	@media(min-width:768px) and (max-width: 1919px) {
 		width: remy(267);
 		height: remy(43);
 	}

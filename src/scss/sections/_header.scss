@@ -18,6 +18,10 @@
 		padding-bottom: remy(40);
 		.logo{width: remy(267)}
 	}
+	@media (max-width: 767px) {
+		.logo{width: 164px; height: 26px;}
+		height: 52px;
+	}
 }
 .header-menu{
 	li{
@@ -34,6 +38,19 @@
 		@media (max-width: 1919px) {
 			font-size: remy(15);
 		}
+		@media (max-width: 767px) {
+			color: #2E3033;
+			font-size: 15px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+	}
+	@media (max-width: 767px) {
+	 flex-direction: column;
+	 width: 100%;
+	 
+	 margin-bottom: 20px;
+	 li{width: 100%; border-bottom: 1px solid #ABA096;}
 	}
 }
 .header-nav-wrapper{
@@ -46,10 +63,169 @@
 		font-size: 15px;
 		letter-spacing: 0.07em;
 		padding-inline: 25px;
-		@media (max-width: 1919px) {
+		@media (min-width: 768px) and (max-width: 1919px) {
 			height: remy(35);
 			font-size: remy(15);
 			padding-inline:  remy(25);
 		}
+	}
+	.logo{display: none; width: 164px; height: 26px;}
+	@media (max-width: 767px) {
+		align-items: flex-start;
+		position: fixed;
+		flex-direction: column;;
+		inset:0;
+		background-color: #fff;
+		padding-bottom: 50px;
+		transform: translateX(110%);
+		z-index: 10;
+		transition: .3s; 
+		&.active{transform: translateX(0);}
+		.social-link{
+			color: #ABA096;
+			border-color: #ABA096;
+		}
+		.svg-logoDark{
+			width: 164px;
+			height: 26px;
+		}
+		.logo{display: flex; }
+		.header-nav-logo{
+			padding: 10px 20px;
+			border-bottom:1px solid #ABA096;
+			width: 100%;
+			height: 52px;
+			
+		}
+		.social-block{border-left-color:#ABA096; }
+		
+	}
+}
+.header-nav-scroll{
+	@media (max-width: 767px) {
+		width: 100%;
+		flex-direction: column;
+		padding-left: 20px;
+		padding-right: 20px;
+		align-items: flex-start;
+	}
+}
+/*BURGER*/
+.menu-toggle {
+	width: 35px;
+	height: 35px;
+	-webkit-box-pack: center;
+			justify-content: center;
+	-webkit-box-align: center;
+			align-items: center;
+	cursor: pointer;
+	display: none;
+	border-radius: 10px;
+	
+	@media (max-width: 767px) {
+		display: -webkit-box;
+		display: flex;
+		z-index: 15;
+	}
+  }
+  
+  .menu-toggle  span {
+	position: relative;
+	width: 25px;
+	height: 2px;
+	background-color: white;
+  }
+  .menu-toggle  span::before, .menu-toggle  span::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 25px;
+	height: 2px;
+	transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+	transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+	transition: transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+	background-color: white;
+  }
+  .menu-toggle  span::before {
+	top: -5px;
+  }
+  .menu-toggle  span::after {
+	top: 5px;
+  }
+  
+  /* Active state */
+  .menu-toggle.active  span {
+	background-color: transparent;
+  }
+  .menu-toggle.active span::before,  .menu-toggle.active span::after {
+	top: 0;
+	transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+	transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+	transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
+	background-color: #2E3033;
+  }
+  .menu-toggle.active span::before {
+	-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+  }
+  .menu-toggle.active span::after {
+	-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+  }
+  .social-link{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: var(--font6);
+	font-weight: 400;
+	font-size: 13px;
+	border: 1px solid #fff;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	flex-shrink: 0;
+	@media (max-width: 1919px) {
+		width: remy(32);
+		height: remy(32);
+		font-size: remy(13);
+	}
+	@media (max-width: 767px) {
+		width: 32px;
+		height: 32px;
+		font-size: 13px;
+	}
+}
+.address-block{
+	padding: 15px 30px;
+	background: #aba096;
+	color: white;
+	border: 1px solid #aba096;
+	display: none;
+	p{
+		font-weight: 500;
+		font-size: 14px;
+		
+		color: #fff;
+	}
+	&__metro{
+		display: flex;
+		column-gap: 10px;
+		align-items: center;
+		font-size: 18px;
+	}
+	&__info{
+		&>*+*{margin-top: 5px;}
+	}
+	&>*+*{margin-top: 10px;}
+	
+	@media (max-width: 767px) {
+	  display: block;
+	  margin-bottom: 20px;
+	  
+	  width: 100%;
 	}
 }
