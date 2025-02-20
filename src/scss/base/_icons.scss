@@ -15,6 +15,10 @@
 	height: 43px;
 	display: inline-block;
 	cursor:pointer;
+	@media (max-width: 1919px) {
+		width: remy(267);
+		height: remy(43);
+	}
 }
 .svg-metro{
 	width: 28px;

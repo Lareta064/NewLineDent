@@ -8,12 +8,22 @@
 		justify-content: space-between;
 		align-items: center;
 	}
+	.logo{
+		width: 267px;
+		display: flex;
+		align-items: center;
+	}
 	@media (max-width: 1919px) {
 		padding-top: remy(40);
 		padding-bottom: remy(40);
+		.logo{width: remy(267)}
 	}
 }
 .header-menu{
+	li{
+		display: flex;
+		align-items: center;
+	}
 	a{
 		font-weight: 500;
 		font-size: 15px;
