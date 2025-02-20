@@ -1,0 +1,94 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard(style="background-color: #e0e0e0;")
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Footers
+				footer.footer
+					.container
+						.footer-content.flex-center
+							.h11 Нет аккаунта?
+							a.h11.txt-s3(href="#!") Зарегистрируйтесь сейчас
+						
+				pre.
+					footer.footer
+						.footer-content.flex-center
+							.h11 Есть аккаунт?
+							a.h11.txt-s3(href="#!") Войти сейчас
+				hr
+				footer.footer
+					.container
+						.footer-content.flex-center
+							.h11 Есть аккаунт?
+							a.h11.txt-s3(href="#!") Войти сейчас
+				pre.
+					footer.footer
+						.footer-content.flex-center
+							.h11 Есть аккаунт?
+							a.h11.txt-s3(href="#!") Войти сейчас
+				hr
+				footer.footer
+					.container
+						.footer-content.flex-center
+							a.h11.txt-s3.flex(href="#!") Войти как курьер
+								svg.svg-login
+									use(href='../img/sprite.svg#svg-login')
+					
+				pre.
+					footer.footer
+						.footer-content.flex-center
+							a.h11.txt-s3.flex(href="#!") Войти как курьер
+								svg.svg-login
+									use(href='../img/sprite.svg#svg-login')
+				
+				footer.footer
+					.container
+						.footer-content
+							p.h11 Корзина
+							.cart-preview
+								.cart-preview__img
+									img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" alt="img")
+									img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" alt="img")
+									img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" alt="img")
+									img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" alt="img")
+									img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" alt="img")
+									img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" alt="img")
+								.cart-preview__count.flex-center
+									span.h11 7
+							button.btn-open-cart
+				
+				hr
+				//POPUP FOOTER
+				footer.footer.footer--white.popUp-footer
+					.container
+						button.btn-accent.w-100 Оформить
+					
+				hr
+				//POPUP FOOTER
+				footer.footer.footer--white.popUp-footer
+					.container.flex-between
+						.price-block 355 #[span &#8381;]
+						button.btn-accent.w-100 Оформить
+				
+				
+				
+				.total-price
+					.h3 Заказ
+					p 4 шт. на сумму
+					.price-block 1625&nbsp;#[span &#8381;]
