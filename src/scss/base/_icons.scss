@@ -5,11 +5,12 @@
 	height: 190px;
 	color: white;
 	flex-shrink: 0;
+	
 }
 
 .svg-rarr{
 	width: 48px;
-	height: 12px;
+	height: 12px;color: $pr;
 }
 .arrow-prev .svg-rarr{
 	transform: rotate(180deg);
@@ -19,7 +20,7 @@
 	width: 48px;
 	display: flex;
 	align-items: center;
-	.svg-rarr{color: $pr;}
+	
 }
 .svg-logo, .svg-logoDark{
 	width: 267px;
@@ -34,4 +35,16 @@
 .svg-metro{
 	width: 28px;
 	height: 23px;
+}
+.quote-left{
+	width: 39px;
+	height: 33px;
+	display: inline-block;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='39' height='33' viewBox='0 0 39 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M23.6395 0.000387798L38.5195 0.000389099L35.7595 32.4004L26.3995 32.4004L23.6395 0.000387798ZM12.1195 32.4004L2.75953 32.4004L-0.000466375 0.000385732L14.8795 0.000387032L12.1195 32.4004Z' fill='%23B9B1A6' /%3e%3c/svg%3e");
+}
+.quote-right{
+	width: 39px;
+	height: 33px;
+	display: inline-block;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='39' height='33' viewBox='0 0 39 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.88 32.4H0L2.76 0H12.12L14.88 32.4ZM26.4 0H35.76L38.52 32.4H23.64L26.4 0Z' fill='%23B9B1A6' /%3e%3c/svg%3e");
 }

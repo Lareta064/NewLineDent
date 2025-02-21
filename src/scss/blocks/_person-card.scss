@@ -1,0 +1,49 @@
+@use "../base/var" as *;
+.persone-card{
+	border: 1px solid #2E3033;
+}
+.persone-card-block{
+	display: flex;
+	flex-direction: column;
+	row-gap:20px;
+	color: #2e3033;
+	padding: 20px;
+	max-width: 387px;
+	.persone-card__img{
+		height: 187px;
+		border-bottom:  1px solid #2E3033;
+	}
+	.persone-card__title{
+		font-family: var(--second-family);
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 111%;
+		width: 100%;
+		max-width: 290px;
+	}
+	.persone-card__info{
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 129%;
+		letter-spacing: -0.03em;
+		width: 100%;
+	}
+	.flex-link{
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 150%;
+	}
+	@media (min-width: 768px) and (max-width: 1919px) {
+		max-width: remy(347);
+		row-gap:remy(20);
+		padding: remy(20);
+		.persone-card__img{height: remy(187)}
+		.persone-card__title{font-size: remy(18);}
+		.persone-card__info{font-size: remy(14);}
+		.flex-link{font-size: remy(16);}
+	}
+	@media (max-width: 767px) {
+	 
+	}
+}
+//@media (min-width: 768px) and (max-width: 1919px) {padding-left: remy(110);}

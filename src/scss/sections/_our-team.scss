@@ -1,0 +1,100 @@
+@use "../base/var" as *;
+.blockquote-box{
+	font-weight: 300;
+	font-size: 26px;
+	line-height: 123%;
+	letter-spacing: 0.04em;
+	text-align: center;
+	color: #2e3033;
+	text-align: center;
+	max-width: 970px;
+	position: relative;
+	padding-top: 70px;
+	
+
+	font-family: var(--second-family);
+	p{
+		position: relative;
+		padding-inline: 60px;
+	}
+	.quote-left,.quote-right{
+		position: absolute;
+		width: 39px;
+		height: 33px;
+	}
+	.quote-left{
+		top: 0;
+		left: 0;
+	}
+	.quote-right{
+		bottom: 0;
+		right: 0;
+	}
+	.blockquote-faximily {
+		display: inline-block;
+		font-family: var(--font4);
+		font-weight: 400;
+		font-size: 120px;
+		line-height: 120%;
+		text-transform: uppercase;
+		color: #b9b1a6;
+		text-transform: capitalize;
+		display: flex;
+		justify-content: flex-end;
+		padding-right: 145px;
+		margin-top: 26px;
+		@media (min-width: 768px) and (max-width: 1919px) {
+			font-size: remy(120);
+			padding-right: remy(145);
+			margin-top: remy(26);
+		}
+	}
+	@media (min-width: 768px) and (max-width: 1919px) {
+		font-size: remy(26);
+		max-width:remy(970);
+		margin-top: remy(80);
+		p{padding-inline: remy(60);}
+		
+		.quote-left,.quote-right{
+			width: remy(39);
+			height: remy(33);
+		}
+	}
+	@media (max-width: 767px) {
+		
+		font-size: 12px;
+		line-height: 135%;
+		letter-spacing: 0.08em;
+		.quote-left,.quote-right{
+			width: 27px;
+			height: 23px;
+		}
+	}
+}
+
+.team-preview{
+	display: flex;
+	position: relative;
+	.persone-card-block{
+		margin-top: -123px;
+		@media (min-width: 768px) and (max-width: 1919px) {
+			margin-top: remy(-123);
+		}
+	}
+	.team-preview__video{
+		width: 38%;
+		height: calc((602/19.2)*1vw);
+		max-height: 602px;
+		position: relative;
+		left: -6%;
+		overflow: hidden;
+		img{
+			width: 100%;
+			height: auto;
+			object-position: top;
+		}
+		@media (min-width: 768px) and (max-width: 1919px) {
+			max-height: remy(602);
+		}
+	}
+}

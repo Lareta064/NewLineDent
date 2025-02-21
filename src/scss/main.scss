@@ -8,9 +8,11 @@
 @use "base/_form";
 
 
+@use "blocks/_person-card.scss";
 @use "sections/_header.scss";
 @use "sections/_promo-main.scss";
 @use "sections/_service-poppulare.scss";
+@use "sections/_our-team.scss";
 
 
 // @use "sections/_footer";
