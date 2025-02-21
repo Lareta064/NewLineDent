@@ -163,16 +163,16 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 section{
 	
 	padding-top: 60px;
-	.container{padding-bottom: 60px;}
-	padding-bottom: 80px;
+	.container-special{padding-bottom: 80px;}
+	// padding-bottom: 80px;
 	@media (min-width: 768px) and (max-width: 1919px) {
 		padding-top: remy(60);
-		.container{padding-bottom:remy(60)}
+		.container-special{padding-bottom:remy(60)}
 	   
 	}
 	@media (max-width: 767px) {
 	padding-top: 40px;
-	padding-bottom: 40px;
+	.container-special{padding-bottom:40px;}
 	}
 }
 

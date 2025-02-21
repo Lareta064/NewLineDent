@@ -43,7 +43,11 @@
 		.flex-link{font-size: remy(16);}
 	}
 	@media (max-width: 767px) {
-	 
+		 .persone-card__title{
+			font-size: 14px;
+			line-height: 143%;
+		 }
+		 .flex-link{font-size: 15px; column-gap:10px; svg{width:22px;}}
 	}
 }
 //@media (min-width: 768px) and (max-width: 1919px) {padding-left: remy(110);}

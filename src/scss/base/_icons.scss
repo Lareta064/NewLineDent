@@ -48,3 +48,16 @@
 	display: inline-block;
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='39' height='33' viewBox='0 0 39 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.88 32.4H0L2.76 0H12.12L14.88 32.4ZM26.4 0H35.76L38.52 32.4H23.64L26.4 0Z' fill='%23B9B1A6' /%3e%3c/svg%3e");
 }
+.btn-play{
+	width: 44px;
+	height: 44px;
+	background-image: url('../img/video/play.webp');
+	@media (min-width: 768px) and (max-width: 1919px) {
+		width: remy(44);
+	   height: remy(44);
+	}
+	@media (max-width: 767px) {
+	width: 36px;
+	height: 36px;
+	}
+}
