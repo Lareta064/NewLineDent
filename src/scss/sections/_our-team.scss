@@ -210,16 +210,10 @@
 	}
 }
 .teams-cards .swiper-wrapper{
-	display: grid;
-	column-gap: 20px;
-	grid-template-columns: repeat(5, 1fr);
 	
-	@media (min-width: 1024px) and (max-width: 1919px) {
-		column-gap: remy(20);
-	}
 	@media (max-width: 1023px) {
 		.swiper-slide{width: 210px!important;}
-		column-gap: 0;
+		
 	}
 	@media (max-width: 767px) {
 		.persone-card__title{
@@ -233,8 +227,19 @@
 		}
 	}
 }
-.teams-cards{
+.teams-cards-slider{
+	position: relative;
+	
+	.teams-cards-next{
+		position: absolute;
+		right: -10px;
+		top: 50%;
+		transform: translate(100%, -50%);
+		@media (max-width: 1279px) {
+		  display: none;
+		}
+	}
 	@media (max-width: 767px) {
-	width: calc(50% + 50vw);
+	 width: calc(50% + 50vw);
 	}
 }

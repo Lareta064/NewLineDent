@@ -44,29 +44,32 @@
 }
 
 .service-cards .swiper-wrapper{
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	.service-card:first-child{padding-left: 0;}
-	.service-card:last-child{padding-right: 0;}
-	.service-card{grid-column: span 1;}
-	.service-card +.service-card{
-		position: relative;
-		&:after{
-
-			content:'';
-			position: absolute;
-			top: 40px;
-			bottom: 40px;
-			left: 0;
-			width: 1px;
-			background-color: $pr;
-			@media (min-width: 768px) and (max-width: 1919px) {
-
-				top: remy(40);
-			   bottom: remy(40);
+	@media (min-width: 768px) {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		.service-card:first-child{padding-left: 0;}
+		.service-card:last-child{padding-right: 0;}
+		.service-card{grid-column: span 1;}
+		.service-card +.service-card{
+			position: relative;
+			&:after{
+	
+				content:'';
+				position: absolute;
+				top: 40px;
+				bottom: 40px;
+				left: 0;
+				width: 1px;
+				background-color: $pr;
+				@media (min-width: 768px) and (max-width: 1919px) {
+	
+					top: remy(40);
+				   bottom: remy(40);
+				}
 			}
+	
 		}
-
+		
 	}
 }
 

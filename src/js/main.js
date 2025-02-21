@@ -21,44 +21,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // });
 
-    // POPPULARE SLIDER
-    
+    // teamSlider
+    let teamSlider = new Swiper(".teams-cards", {
+      slidesPerView: 'auto',
+      speed: 800,
+      spaceBetween: 10,
+      navigation: {
+          nextEl: ".teams-cards-next",
+         
+      },
+      breakpoints: {
+       
+       1024: {
+          slidesPerView: 5,
+          spaceBetween: 10,
+        },
+        1280: {
+          slidesPerView: 5,
+          spaceBetween: 10,
+        },
+        
+      }
+  });
 
     // Fancybox
     Fancybox.bind("[data-fancybox]", {
       Thumbs: false,
     });
     
-});
-document.addEventListener("DOMContentLoaded", function () {
-  let teamSlider = null; // Переменная для хранения экземпляра Swiper
 
-  function initSwiper() {
-      if (window.innerWidth < 1200 && !teamSlider) {
-          // Инициализация Swiper
-          teamSlider = new Swiper(".teams-cards", {
-              slidesPerView: "auto",
-              speed: 800,
-              spaceBetween: 10,
-              
-          });
-      } else if (window.innerWidth >= 1200 && teamSlider) {
-          // Уничтожение Swiper при большом экране
-          teamSlider.destroy(true, true);
-          teamSlider = null;
-      }
-  }
-
-  // Вызываем при загрузке страницы
-  initSwiper();
-
-  // Отслеживаем изменение размера окна
-  window.addEventListener("resize", initSwiper);
-});
-  document.addEventListener("DOMContentLoaded", function () {
     let serviceCards= null; // Переменная для хранения экземпляра Swiper
 
-    function initSwiper2() {
+    function initSwiper() {
         if (window.innerWidth < 768 && !serviceCards) {
            serviceCards = new Swiper('.service-cards', {
             slidesPerView: 1,
@@ -77,8 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Вызываем при загрузке страницы
-    initSwiper2();
+    initSwiper();
 
     // Отслеживаем изменение размера окна
-    window.addEventListener("resize", initSwiper2);
+    window.addEventListener("resize", initSwiper);
 });
