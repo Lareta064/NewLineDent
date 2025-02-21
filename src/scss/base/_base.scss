@@ -177,11 +177,13 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 }
 .container.pl-40{
 	position: relative;
+	padding-left: 40px;
+	@media (max-width: 767px) {
+		padding-left: 20px;
+	}
 	
 }
-.pl-40{
-	padding-left: 40px;
-}
+
 .flex{
 	display: flex;
 	align-items: center;
@@ -223,4 +225,13 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 		display: none!important;
 	}
 
+}
+.mobile-swipe{
+	@media (max-width: 767px) {
+		width: calc(50% + 50vw);
+		overflow: hidden;
+		overflow-x: auto;
+		scrollbar-width: none;
+		&::-webkit-scrollbar{display: none;}
+	  }
 }

@@ -12,7 +12,13 @@
 				
 					h1.h1 Всё на 4-х (All-on-4)
 					p.promo-subtitle Вся хирургическая часть с установкой имплантатов и мультиюнитов
-			
+				//картинка на mob экранах
+				.promo-img.promo-img--mob
+					img.cover-img(src="./img/img.webp", width="823" height="663" alt="img")
+					
+					span.decore-text-top улыбки
+					span.decore-text-bottom жизни
+				
 				.promo-title__box.flex-col
 					.price-block
 						p.txt-24 Без скидки: #[span 150 000 ₽]
@@ -21,8 +27,8 @@
 						button.btn Записаться на консультацию
 						button.btn-outline Узнать все цены
 			
-			
-			.promo-img
+			//картинка на больших экранах
+			.promo-img.promo-img--desk
 				img.cover-img(src="./img/img.webp", width="823" height="663" alt="img")
 				
 				span.decore-text-top улыбки
@@ -31,7 +37,7 @@
 	
 	//bottom row
 	.promo-bottom.flex
-		.container
+		.container.mobile-swipe
 			.promo-bottom-content.flex
 				ul.flex
 					li цены под ключ
