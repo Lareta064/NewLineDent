@@ -58,6 +58,8 @@
 		.flex-link{font-size: remy(16);}
 	}
 	@media (max-width: 767px) {
+		 padding: 15px;
+		 row-gap: 15px;
 		 .persone-card__title{
 			font-size: 14px;
 			line-height: 143%;

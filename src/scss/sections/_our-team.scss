@@ -51,7 +51,10 @@
 		@media (max-width: 767px) {
 			font-size: 36px;
 			line-height: 1;
-			padding-right: 170px;
+			padding-right: 20px;
+			justify-content: flex-start;
+			padding-left: 40px;
+			margin-top: 15px;
 		}
 	}
 	@media (min-width: 768px) and (max-width: 1919px) {
@@ -78,6 +81,7 @@
 		p{
 			padding-left: 30px;
 			padding-right: 30px;
+			max-width: 540px;
 		}
 	}
 }
@@ -198,6 +202,12 @@
 	margin-top: -50px;
 	position: relative;
 	z-index: 5;background-color: #fff;
+	@media (max-width: 1199px) {
+	margin-top: -10px;
+	}
+	@media (max-width: 767px) {
+		margin-top: 55px;
+	}
 }
 .teams-cards .swiper-wrapper{
 	display: grid;
@@ -221,5 +231,10 @@
 			line-height: 129%;
 			letter-spacing: -0.03em;
 		}
+	}
+}
+.teams-cards{
+	@media (max-width: 767px) {
+	width: calc(50% + 50vw);
 	}
 }

@@ -22,15 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // });
 
     // POPPULARE SLIDER
-    let poppulareSlider = new Swiper('.poppular-slider', {
-       slidesPerView: 1,
-       speed: 800,
-       spaceBetween: 10,
-       navigation: {
-        nextEl: ".poppular-service-nav .arrow-next",
-        prevEl: ".poppular-service-nav .arrow-prev",
-      },
-    });
+    
 
     // Fancybox
     Fancybox.bind("[data-fancybox]", {
@@ -38,32 +30,55 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     
 });
- 
-   document.addEventListener("DOMContentLoaded", function () {
-    let teamSlider = null; // Переменная для хранения экземпляра Swiper
+document.addEventListener("DOMContentLoaded", function () {
+  let teamSlider = null; // Переменная для хранения экземпляра Swiper
 
-    function initSwiper() {
-        if (window.innerWidth < 1200 && !teamSlider) {
-            // Инициализация Swiper
-            teamSlider = new Swiper(".teams-cards", {
-                slidesPerView: "auto",
-                speed: 800,
-                spaceBetween: 10,
-                navigation: {
-                    nextEl: ".teams-cards-nav .arrow-next",
-                    prevEl: ".teams-cards-nav .arrow-prev",
-                },
-            });
-        } else if (window.innerWidth >= 1200 && teamSlider) {
+  function initSwiper() {
+      if (window.innerWidth < 1200 && !teamSlider) {
+          // Инициализация Swiper
+          teamSlider = new Swiper(".teams-cards", {
+              slidesPerView: "auto",
+              speed: 800,
+              spaceBetween: 10,
+              
+          });
+      } else if (window.innerWidth >= 1200 && teamSlider) {
+          // Уничтожение Swiper при большом экране
+          teamSlider.destroy(true, true);
+          teamSlider = null;
+      }
+  }
+
+  // Вызываем при загрузке страницы
+  initSwiper();
+
+  // Отслеживаем изменение размера окна
+  window.addEventListener("resize", initSwiper);
+});
+  document.addEventListener("DOMContentLoaded", function () {
+    let serviceCards= null; // Переменная для хранения экземпляра Swiper
+
+    function initSwiper2() {
+        if (window.innerWidth < 768 && !serviceCards) {
+           serviceCards = new Swiper('.service-cards', {
+            slidesPerView: 1,
+            speed: 800,
+            spaceBetween: 10,
+            navigation: {
+             nextEl: ".service-cards-nav .arrow-next",
+             prevEl: ".service-cards-nav .arrow-prev",
+           },
+         });
+        } else if (window.innerWidth >= 768 && serviceCards) {
             // Уничтожение Swiper при большом экране
-            teamSlider.destroy(true, true);
-            teamSlider = null;
+            serviceCards.destroy(true, true);
+            serviceCards = null;
         }
     }
 
     // Вызываем при загрузке страницы
-    initSwiper();
+    initSwiper2();
 
     // Отслеживаем изменение размера окна
-    window.addEventListener("resize", initSwiper);
+    window.addEventListener("resize", initSwiper2);
 });

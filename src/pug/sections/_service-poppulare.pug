@@ -3,69 +3,39 @@ section.poppular-service
 	.container-special
 		.header-block
 			h2.h2 Популярные услуги
-			a(href="#!").btn-primary 
-				span Все врачи
+			a(href="#!").btn-primary.abs-btn
+				span Посмотреть больше услуг
 				svg.svg-rarr
 					use(href='../img/sprite.svg#svg-rarr')
-		.service-cards
-			.service-card
-				.service-card__title Эстетическая<br>реставрация
-				.service-card__img.flex
-					img.cover-img(src="./img/service-cards/img1.webp",  srcset="./img/service-cards/img1@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
-					img.cover-img(src="./img/service-cards/img2.webp",  srcset="./img/service-cards/img2@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
-
-			.service-card
-				.service-card__title Виниры<br>E-max
-				.service-card__img.flex
-					img.cover-img(src="./img/service-cards/img1.webp",  srcset="./img/service-cards/img1@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
-					img.cover-img(src="./img/service-cards/img2.webp",  srcset="./img/service-cards/img2@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
-
-			.service-card
-				.service-card__title Имплантация<br>Аll on 4 
-				.service-card__img.flex
-					img.cover-img(src="./img/service-cards/img1.webp",  srcset="./img/service-cards/img1@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
-					img.cover-img(src="./img/service-cards/img2.webp",  srcset="./img/service-cards/img2@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
-
-			.service-card
-				.service-card__title Брекеты<br>Damon Q
-				.service-card__img.flex
-					img.cover-img(src="./img/service-cards/img1.webp",  srcset="./img/service-cards/img1@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
-					img.cover-img(src="./img/service-cards/img2.webp",  srcset="./img/service-cards/img2@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
-
-section.poppular-service.visible-sm
-	.container
-		h2.h2 Популярные услуги
-		.poppular-slider.swiper
+		.service-cards.swiper
 			.swiper-wrapper
-				.swiper-slide
-					.service-card
-						.service-card__title Эстетическая<br>реставрация
-						.service-card__img.flex
-							img.cover-img(src="./img/service-cards/img1.webp",  srcset="./img/service-cards/img1@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
-							img.cover-img(src="./img/service-cards/img2.webp",  srcset="./img/service-cards/img2@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
-				.swiper-slide
-					.service-card
-						.service-card__title Виниры<br>E-max
-						.service-card__img.flex
-							img.cover-img(src="./img/service-cards/img1.webp",  srcset="./img/service-cards/img1@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
-							img.cover-img(src="./img/service-cards/img2.webp",  srcset="./img/service-cards/img2@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
-				.swiper-slide
-					.service-card
-						.service-card__title Имплантация<br>Аll on 4 
-						.service-card__img.flex
-							img.cover-img(src="./img/service-cards/img1.webp",  srcset="./img/service-cards/img1@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
-							img.cover-img(src="./img/service-cards/img2.webp",  srcset="./img/service-cards/img2@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
-				.swiper-slide
-					.service-card
-						.service-card__title Брекеты<br>Damon Q
-						.service-card__img.flex
-							img.cover-img(src="./img/service-cards/img1.webp",  srcset="./img/service-cards/img1@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
-							img.cover-img(src="./img/service-cards/img2.webp",  srcset="./img/service-cards/img2@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
+				.swiper-slide.service-card
+					.service-card__title Эстетическая<br>реставрация
+					.service-card__img.flex
+						img.cover-img(src="./img/service-cards/img1.webp",  srcset="./img/service-cards/img1@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
+						img.cover-img(src="./img/service-cards/img2.webp",  srcset="./img/service-cards/img2@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
+				.swiper-slide.service-card
+					.service-card__title Виниры<br>E-max
+					.service-card__img.flex
+						img.cover-img(src="./img/service-cards/img1.webp",  srcset="./img/service-cards/img1@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
+						img.cover-img(src="./img/service-cards/img2.webp",  srcset="./img/service-cards/img2@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
+				.swiper-slide.service-card
+					.service-card__title Имплантация<br>Аll on 4 
+					.service-card__img.flex
+						img.cover-img(src="./img/service-cards/img1.webp",  srcset="./img/service-cards/img1@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
+						img.cover-img(src="./img/service-cards/img2.webp",  srcset="./img/service-cards/img2@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
+				.swiper-slide.service-card
+					.service-card__title Брекеты<br>Damon Q
+					.service-card__img.flex
+						img.cover-img(src="./img/service-cards/img1.webp",  srcset="./img/service-cards/img1@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
+						img.cover-img(src="./img/service-cards/img2.webp",  srcset="./img/service-cards/img2@2x.webp 2x"  width="160"  height="105" loading="lazy" alt="img")
 
-			.poppular-service-nav.flex
+			.service-cards-nav.flex
 				button.arrow-prev
 					svg.svg-rarr
 						use(href='./img/sprite.svg#svg-rarr')
 				button.arrow-next
 					svg.svg-rarr
 						use(href='./img/sprite.svg#svg-rarr')
+
+				

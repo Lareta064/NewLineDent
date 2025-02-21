@@ -43,7 +43,7 @@
 	
 }
 
-.service-cards{
+.service-cards .swiper-wrapper{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	.service-card:first-child{padding-left: 0;}
@@ -69,17 +69,28 @@
 
 	}
 }
-.poppular-service{
+
+.service-cards{
+	.service-cards-nav{display: none;}
 	@media (max-width: 767px) {
-	  display: none;
+		
+		.service-cards-nav{
+			display: flex;
+			justify-content: center;
+		}
 	}
 }
-.poppular-service.visible-sm{
-	display: none;
+.poppular-service{
 	@media (max-width: 767px) {
-	display: block;
-	.poppular-service-nav{
-		justify-content: center;
-	}
+		.container-special{
+			padding-bottom: 134px;
+		}
+		
+		.abs-btn{
+			position: absolute;
+			bottom: 60px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 }

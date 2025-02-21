@@ -171,7 +171,7 @@ section{
 	   
 	}
 	@media (max-width: 767px) {
-	padding-top: 40px;
+	padding-top: 18px;
 	.container-special{padding-bottom:40px;}
 	}
 }
@@ -222,6 +222,11 @@ section{
 .flex-col{
 	display: flex;
 	flex-direction: column;
+}
+.hide-sm {
+	@media (max-width: 767px) {
+	display: none!important;
+	}
 }
 .left-decore-line{
 	position: absolute;
