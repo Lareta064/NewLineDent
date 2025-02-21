@@ -1,7 +1,7 @@
 @use "base/var" as *;
 
 .promo{
-	// height: 560px;
+	
 	background-color: $pr;
 	
 	.promo-top .container{
@@ -14,30 +14,6 @@
 		}
 	}
 		
-	.left-decore{
-		color: #fff;
-		top:40px;
-		bottom:60px;
-		text-align: center;
-		p{
-			padding: 5px 20px;
-			background-color: $pr;
-			position: relative;
-			z-index: 2;
-		}
-		&:after{
-			content: '';
-			width: 1.5px;
-			height: 100%;
-			background-color: #fff;
-			display: block;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			
-		}
-	}
 	
 	
 	.promo-img{
@@ -153,4 +129,39 @@
 			}
 		}
 	}
+}
+.promo{
+	.left-decore-line{
+			position: absolute;
+			color: #fff;
+			top:6%;
+			bottom:16%;
+			left:0;
+			transform: translateX(-50%);
+			text-align: center;
+
+			p{
+				padding-block:20px;
+				background-color: $pr;
+				position: relative;
+				z-index: 2;
+				width: fit-content;
+			}
+			.decore-line__top{
+				flex-shrink: 0;
+				width: 2px;
+				height: 31%;
+				background-color: #fff;
+				
+				
+			}
+			.decore-line__bottom{
+				flex-grow: 1;
+				
+			}
+			
+		}
+		
+		
+	
 }
