@@ -1,0 +1,86 @@
+@use "../base/var" as *;
+.service-card{
+	padding: 40px;
+	&__title{
+		font-family: var(--second-family);
+		font-weight: 300;
+		font-size: 26px;
+		line-height: 123%;
+		color: #2e3033;
+		margin-bottom: 22px;
+	}
+	&__img{
+		column-gap:10px;
+		img{
+			height: 105px;
+			flex: 1;
+			max-width: calc(50% - 5px);
+		}
+	}
+	@media (min-width: 768px) and (max-width: 1919px) {
+		padding: remy(40);
+		&__title{
+			font-size: remy(26);
+			margin-bottom: remy(22);
+		}
+		&__img{column-gap:remy(10);}
+		&__img img{
+			height: remy(105);
+			max-width: calc(50% - (remy(5)));
+		}
+	}
+	@media (max-width: 767px) {
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 24px;
+		&__img{column-gap:10px;}
+		&__title{
+			font-size: 20px;
+			line-height: 1.06;
+		}
+		img{height: 120px;}
+	}
+	
+}
+
+.service-cards{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	.service-card:first-child{padding-left: 0;}
+	.service-card:last-child{padding-right: 0;}
+	.service-card{grid-column: span 1;}
+	.service-card +.service-card{
+		position: relative;
+		&:after{
+
+			content:'';
+			position: absolute;
+			top: 40px;
+			bottom: 40px;
+			left: 0;
+			width: 1px;
+			background-color: $pr;
+			@media (min-width: 768px) and (max-width: 1919px) {
+
+				top: remy(40);
+			   bottom: remy(40);
+			}
+		}
+
+	}
+}
+.poppular-service{
+	@media (max-width: 767px) {
+	  display: none;
+	}
+}
+.poppular-service.visible-sm{
+	display: none;
+	@media (max-width: 767px) {
+	display: block;
+	.poppular-service-nav{
+		justify-content: center;
+	}
+	}
+}
+// @media (min-width: 768px) and (max-width: 1919px) {}

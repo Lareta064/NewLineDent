@@ -43,9 +43,14 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-bottom: remy(20);
+	padding-block: 20px;
 	border-bottom: 0.67px solid #b9b1a6;
-	
+	@media(min-width: 768px)and (max-width: 1919px) {
+		column-gap: remy(20);
+	}
+	@media (max-width: 767px) {
+		padding-block: 20px;
+	}
 }
 .social-block{
 	display: flex;

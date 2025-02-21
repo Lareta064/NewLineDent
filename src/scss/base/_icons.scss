@@ -11,6 +11,16 @@
 	width: 48px;
 	height: 12px;
 }
+.arrow-prev .svg-rarr{
+	transform: rotate(180deg);
+}
+.arrow-prev, .arrow-next{
+	height: 20px;
+	width: 48px;
+	display: flex;
+	align-items: center;
+	.svg-rarr{color: $pr;}
+}
 .svg-logo, .svg-logoDark{
 	width: 267px;
 	height: 43px;

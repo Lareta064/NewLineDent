@@ -20,4 +20,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // window.addEventListener('resize', ()=>{
 
     // });
+
+    // POPPULARE SLIDER
+    let poppulareSlider = new Swiper('.poppular-slider', {
+       slidesPerView: 1,
+       speed: 800,
+       spaceBetween: 10,
+       navigation: {
+        nextEl: ".poppular-service-nav .arrow-next",
+        prevEl: ".poppular-service-nav .arrow-prev",
+      },
+    });
 });

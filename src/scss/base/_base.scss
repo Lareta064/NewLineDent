@@ -160,7 +160,21 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	font-family: inherit;
 	font-size: inherit;
 }
-
+section{
+	
+	padding-top: 60px;
+	.container{padding-bottom: 60px;}
+	padding-bottom: 80px;
+	@media (min-width: 768px) and (max-width: 1919px) {
+		padding-top: remy(60);
+		.container{padding-bottom:remy(60)}
+	   
+	}
+	@media (max-width: 767px) {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	}
+}
 
 .container{
 	width: 1645px;
@@ -174,6 +188,9 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+}
+.container.border-bot{
+	border-bottom: 1px solid $pr;
 }
 .container.pl-40{
 	position: relative;
