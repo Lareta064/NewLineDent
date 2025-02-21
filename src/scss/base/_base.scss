@@ -125,9 +125,13 @@ img {
 	max-width: 100%;
 	height: auto;
 	display: block;
-	
 }
-
+img.cover-img, img.contain-img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+img.contain-img{object-fit: contain;}
 input,
 button, textarea{border: none;}
 button:focus,
@@ -159,7 +163,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 
 
 .container{
-	width: 1640px;
+	width: 1645px;
 	margin: 0 auto;
 	@media (max-width: 1919px) {
 		width: remy(1640);

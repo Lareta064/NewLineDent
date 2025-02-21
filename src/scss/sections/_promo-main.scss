@@ -4,61 +4,56 @@
 	// height: 560px;
 	background-color: $pr;
 	
-	.promo-top{
-		overflow: hidden;
-		
-		.left-decore{
-			color: #fff;
-			top:40px;
-			bottom:60px;
-			text-align: center;
-			p{
-				padding: 5px 20px;
-				background-color: $pr;
-				position: relative;
-				z-index: 2;
-			}
-			&:after{
-				content: '';
-				width: 1.5px;
-				height: 100%;
-				background-color: #fff;
-				display: block;
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				
-			}
-		}
-	}
 	.promo-top .container{
-		height: 560px;
+		
 		position: relative;
 		display: flex;
+		justify-content: flex-end;
 		@media(min-width:768px) and (max-width: 1919px){
 			
 		}
 	}
+		
+	.left-decore{
+		color: #fff;
+		top:40px;
+		bottom:60px;
+		text-align: center;
+		p{
+			padding: 5px 20px;
+			background-color: $pr;
+			position: relative;
+			z-index: 2;
+		}
+		&:after{
+			content: '';
+			width: 1.5px;
+			height: 100%;
+			background-color: #fff;
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			
+		}
+	}
+	
+	
 	.promo-img{
-		position: absolute;
-		right: 0;
-		top: 0;
-		bottom: 0;
+		position: relative;
+		
 		width: 883px;
 		height: 663px;
 		display: flex;
         justify-content: flex-end;
-		img{
-			width: 883px;
-		    height: 663px;
-		}
+		
 		@media(min-width:768px) and (max-width: 1919px){
 			width: remy(883);
 			height: remy(663);
 		}
 	}	
-	.decore-text-top, .decore-text-bottom{
+	.promo-img .decore-text-top, .promo-img .decore-text-bottom{
 		font-family: var(--font4);
 		font-weight: 400;
 		font-size: 100px;
@@ -72,35 +67,43 @@
 		}
 	}
 		
-	.decore-text-top{
-		left: 0;
-		top: 200px;
+	.promo-img .decore-text-top{
+		left: 11%;
+		top: 27%;
 	}
-	.decore-text-bottom{
+	.promo-img .decore-text-bottom{
 		right:0;
-		bottom: 100px;
+		bottom: 28%;
 	}
 	
 	.promo-title__content{
-		width: 100%;
-		max-width: 432px;
-		padding-top: 57px;
-		padding-bottom: 57px;
+		
+		
+		padding-top: 80px;
+		padding-bottom: 80px;
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 70px;
+		z-index: 5;
 		.h1, h1, p{
 			color: white;
+		}
+		@media(min-width:768px) and (max-width: 1919px){
+			
+			padding-top: remy(80);
+			padding-bottom: remy(80);
+			left: remy(70);
 		}
 	}
 		
 	.promo-title__head{
-		.h1, h1{
-			
-			max-width: 440px;
-			margin-bottom: 0.5em;
-		}
+		max-width: 440px;
+		.h1, h1{margin-bottom: 0.5em;}
 		.promo-subtitle{
 			font-weight: 400;
 			font-size: 24px;
@@ -111,6 +114,10 @@
 				font-size: remy(24);
 			}
 		}
+		@media(min-width:768px) and (max-width: 1919px){
+			max-width: remy(440);
+			
+		}
 	}
 	.price-block{
 		color: white!important;
@@ -120,18 +127,14 @@
 	.promo-title__box{
 		row-gap: 30px;
 	}
-	@media(min-width:768px) and (max-width: 1919px){
-		padding-top: remy(57);
-		padding-bottom: remy(57);
-	}
-
+	
 	.promo-bottom{
-		height: 50px;
+		height: 75px;
 		position: relative;
 		border-top:1px solid white;
 		z-index: 3;
 		@media(min-width:768px) and (max-width: 1919px){
-			height: remy(50);
+			height: remy(75);
 		}
 	}
 	.promo-bottom-content{
