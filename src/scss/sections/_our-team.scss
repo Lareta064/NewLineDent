@@ -95,6 +95,14 @@
 		   width: 50%;
 		}
 	}
+	.persone-card__title{
+		font-family: var(--second-family);
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 111%;
+		width: 100%;
+		max-width: 290px;
+	}
 	.team-preview__video{
 		width: 38%;
 		height: 602px;;
@@ -184,5 +192,34 @@
 	}
 	@media (max-width: 767px) {
 		flex-direction: column;
+	}
+}
+.teams-cards{
+	margin-top: -50px;
+	position: relative;
+	z-index: 5;background-color: #fff;
+}
+.teams-cards .swiper-wrapper{
+	display: grid;
+	column-gap: 20px;
+	grid-template-columns: repeat(5, 1fr);
+	
+	@media (min-width: 1024px) and (max-width: 1919px) {
+		column-gap: remy(20);
+	}
+	@media (max-width: 1023px) {
+		.swiper-slide{width: 210px!important;}
+		column-gap: 0;
+	}
+	@media (max-width: 767px) {
+		.persone-card__title{
+			font-size: 12px;
+			line-height: 125%
+		}
+		.persone-card__info{
+			font-size: 10px;
+			line-height: 129%;
+			letter-spacing: -0.03em;
+		}
 	}
 }

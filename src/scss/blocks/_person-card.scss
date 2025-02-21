@@ -1,6 +1,24 @@
 @use "../base/var" as *;
 .persone-card{
 	border: 1px solid #2E3033;
+	background-color: #fff;
+	@media (max-width: 767px) {
+	  width: 210px;
+	}
+}
+.persone-card__img{
+	height: 187px;
+	border-bottom: 1px solid #2E3033;
+	overflow: hidden;
+	background-color: #B9B1A6;
+	@media (min-width: 768px) and (max-width: 1919px) {
+		height: calc((187/19.2)*1vw);
+		height: 140px;
+	}
+	@media (max-width: 767px) {
+		height: 140px;
+	}
+
 }
 .persone-card-block{
 	display: flex;
@@ -9,14 +27,11 @@
 	color: #2e3033;
 	padding: 20px;
 	max-width: 387px;
-	.persone-card__img{
-		height: 187px;
-		border-bottom:  1px solid #2E3033;
-	}
+	
 	.persone-card__title{
 		font-family: var(--second-family);
 		font-weight: 300;
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 111%;
 		width: 100%;
 		max-width: 290px;
