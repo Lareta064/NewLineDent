@@ -23,13 +23,16 @@ html(lang="ru")
 				h2 Форма
 				.container-dashboard__content
 					.form-item
-						input(type="text" placeholder="Placeholder Text" name="name")
+						span.fake-placeholder Имя
+						input.form-input(type="text"  name="name")
 					pre.
-						.form-item
-							input(type="text" placeholder="Placeholder Text" name="name")
+						.form-item.input-focus
+							span.fake-placeholder Имя
+							input.form-input(type="text"  name="name" disabled)
 					br
-					.form-item
-						textarea( placeholder="Placeholder Text" name="message")
+					.form-item.input-success
+						span.fake-place Телефон
+						input.form-input(type="text"  name="name")
 					pre.
 						.form-item
 							textarea(type="text" placeholder="Placeholder Text" name="message")
@@ -94,4 +97,26 @@ html(lang="ru")
 					dropDownList.classList.remove('dropdown__list--visible');
 					}
 				});
-			});
+
+				//FORMS FAKE PLACEHOLDER
+				const formItems = document.querySelectorAll('.form-item');
+				
+				if(formItems.length > 0){
+				formItems.forEach((item)=>{
+					let itemFakePlhl = item.querySelector('.fake-placeholder');
+					let itemInput = item.querySelector('.form-input');
+					if(itemFakePlhl){
+					itemInput.addEventListener('focus', ()=>{
+						console.log(formItems)
+						item.classList.add('input-focus');
+					});
+					itemInput.addEventListener('blur', ()=>{
+					if(itemInput.value == ''){
+						item.classList.remove('input-focus');
+					}
+					});
+					}
+
+				})
+				}
+						});

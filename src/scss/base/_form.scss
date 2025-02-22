@@ -1,1 +1,47 @@
 @use "base/var" as *;
+.form-item{
+	position: relative;
+	input, textarea{
+		display: block;
+		height: 50px;
+		width: 100%;
+		border: 1px solid #c2c2c2;
+		border-radius: 24px;
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 16px;
+		color: #2f2f2f;
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-top: 11px;
+		line-height: 1;
+	}
+	input:focus{
+		border: 1px solid #C71647;
+		caret-color : #C71647;
+	}
+	input[disabled]{background-color: #f6f6f6;}
+	.fake-placeholder{
+		font-size: 14px;
+		color: #616161;
+		position: absolute;
+		z-index: 2;
+		position: absolute;
+		left: 16px;
+		top: 15px;
+		transition: .3s;
+		pointer-events: none;
+	}
+	.fake-place{
+
+	}
+	textarea{
+		padding: 16px;
+	}
+}
+.form-item.input-focus{
+	.fake-placeholder{
+		top:4px;
+		font-size: 12px;
+	}
+}
