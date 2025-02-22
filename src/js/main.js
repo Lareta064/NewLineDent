@@ -75,4 +75,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Отслеживаем изменение размера окна
     window.addEventListener("resize", initSwiper);
+
+    let stepsSlider= null; // Переменная для хранения экземпляра Swiper
+
+    function initSwiperSlider() {
+        if (window.innerWidth < 1280 && !stepsSlider) {
+          stepsSlider = new Swiper('.steps-slider', {
+            slidesPerView: 'auto',
+            speed: 800,
+            spaceBetween: 10,
+            pagination: {
+              el: ".steps-slider-pagination",
+              type: "fraction",
+            },
+            navigation: {
+             nextEl: ".steps-slider-next",
+            
+           }
+         });
+        } else if (window.innerWidth >= 1280 && stepsSlider) {
+            // Уничтожение Swiper при большом экране
+            stepsSlider.destroy(true, true);
+            stepsSlider = null;
+        }
+    }
+
+    // Вызываем при загрузке страницы
+    initSwiperSlider();
+
+    // Отслеживаем изменение размера окна
+    window.addEventListener("resize", initSwiperSlider);
 });
