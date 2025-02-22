@@ -171,7 +171,7 @@ section{
 	   
 	}
 	@media (max-width: 767px) {
-	padding-top: 18px;
+	padding-top: 40px;
 	.container-special{padding-bottom:40px;}
 	}
 }
@@ -227,6 +227,12 @@ section{
 	@media (max-width: 767px) {
 	display: none!important;
 	}
+}
+.visible-sm{
+	display: none!important;
+	@media (max-width: 767px) {
+		display: flex!important;
+		}
 }
 .left-decore-line{
 	position: absolute;
