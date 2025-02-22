@@ -11,6 +11,7 @@
 .svg-rarr{
 	width: 48px;
 	height: 12px;color: $pr;
+	@media(min-width:768px) and (max-width: 1919px) {width: remy(48);}
 }
 .arrow-prev .svg-rarr{
 	transform: rotate(180deg);

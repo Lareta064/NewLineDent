@@ -106,23 +106,25 @@ document.addEventListener("DOMContentLoaded", function () {
     // Отслеживаем изменение размера окна
     window.addEventListener("resize", initSwiperSlider);
 
-    //FORMS FAKE PLACEHOLDER
-    const formItems = document.querySelectorAll('.form-item');
-    if(formItems.length > 0){
-      formItems.forEach((item)=>{
-        let itemFakePlhl = item.querySelector('.fake-placeholder');
-        let itemInput = item.querySelector('.form-input');
-        if(itemFakePlhl){
-          itemInput.addEventListener('input', ()=>{
-            item.classList.add('form-item--focus');
-          });
-          itemInput.addEventListener('blur', ()=>{
-           if(itemInput.value == ''){
-            item.classList.remove('form-item--focus');
-           }
-          });
-        }
+   //FORMS FAKE PLACEHOLDER
+   const formItems = document.querySelectorAll('.form-item');
+				
+   if(formItems.length > 0){
+     formItems.forEach((item)=>{
+       let itemFakePlhl = item.querySelector('.fake-placeholder');
+       let itemInput = item.querySelector('.form-input');
+       if(itemFakePlhl && itemInput){
+       itemInput.addEventListener('focus', ()=>{
+         console.log(formItems)
+         item.classList.add('input-focus');
+       });
+       itemInput.addEventListener('blur', ()=>{
+       if(itemInput.value == ''){
+         item.classList.remove('input-focus');
+       }
+       });
+       }
 
-      })
-    }
+     });
+   }
 });

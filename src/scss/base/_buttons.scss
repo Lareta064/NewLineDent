@@ -21,6 +21,9 @@
 		padding-inline:remy(35);
 		font-size: remy(20);
 	}
+	@media (max-width: 1023px) {
+		height: 32px;
+	}
 	@media (max-width: 767px) {
 		font-size: 15px;
 		height: 52px;
@@ -37,6 +40,9 @@
 	background-color: #fff;
 	border:1px solid #fff;
 	&:hover{color:#c7491f;}
+}
+.btn.btn--accent{
+	border:1px solid #c7491f;
 }
 .btn-outline{
 	border:1px solid currentColor;

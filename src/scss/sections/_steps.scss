@@ -101,6 +101,10 @@
 		.steps-slider-pagination span{font-variant-numeric: tabular-nums;}
 		@media (max-width: 1279px) {
 			display: flex;
+			align-items: center;
+			column-gap:remy(20);
+		}
+		@media (max-width: 767px) {
 			column-gap:20px;
 		}
 	}

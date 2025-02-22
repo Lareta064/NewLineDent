@@ -1,0 +1,32 @@
+//FEDDBACK
+section.feedback
+	.container
+		.feedback__content.flex
+			.feedback__txt
+				p.txt-16 Оставьте заявку
+				.title-22 Получите скидку на первое посещение и бесплатную консультацию.
+				.social-block
+					a(href="#!").social-link
+						img(src="./img/social/inst2.svg", width="32" height="32" alt="img")
+					a(href="#!").social-link
+						img(src="./img/social/wa.svg", width="32" height="32" alt="img")
+					a(href="#!").social-link
+						img(src="./img/social/youtube.svg", width="40" height="32" alt="img")
+
+			.feedback__center
+				.gogol-text всегда  #[span.smile-icon] на связи
+			.feedback__form
+				form.contact-form.flex-col
+					
+					.form-item
+						span.fake-placeholder Имя
+						input.form-input(type="text" name="name")
+					.form-item
+						span.fake-placeholder Телефон
+						input.form-input(type="tel" name="phone")
+					.form-btn.flex
+						button.btn-primary(type="submit")
+							span Оставить заявку 
+							svg.svg-rarr
+								use(href='../img/sprite.svg#svg-rarr')
+						p.agree-txt Нажимая на кнопку «Отправить», я даю согласие на обработку персональных данных

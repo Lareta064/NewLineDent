@@ -9,6 +9,9 @@
 		justify-content: space-between;
 		align-items: center;
 	}
+	&-contacts{
+		.social-link{border-color: white;}
+	}
 	.logo{
 		width: 267px;
 		display: flex;
@@ -58,6 +61,13 @@
 	.social-block {
 		padding-left: 20px;
 		border-left: 1px solid white;
+		column-gap: 20px;
+		@media (max-width: 1919px) {
+			column-gap: remy(20);
+		}
+		@media (max-width: 767px) {
+			column-gap: 20px;
+		}
 	}
 	.btn{
 		height: 35px;
@@ -68,6 +78,9 @@
 			height: remy(35);
 			font-size: remy(15);
 			padding-inline:  remy(25);
+		}
+		@media (max-width: 767px) {
+		border: 1px solid currentColor;
 		}
 	}
 	.logo{display: none; width: 164px; height: 26px;}
@@ -114,7 +127,7 @@
 /*BURGER*/
 .menu-toggle {
 	width: 35px;
-	height: 35px;
+	height: 25px;
 	-webkit-box-pack: center;
 			justify-content: center;
 	-webkit-box-align: center;
@@ -173,33 +186,7 @@
 	-webkit-transform: rotate(-45deg);
 			transform: rotate(-45deg);
   }
-  .social-link{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: var(--font6);
-	font-weight: 400;
-	font-size: 13px;
-	border: 1px solid #fff;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-	text-align: center;
-	color: #fff;
-	width: 32px;
-	height: 32px;
-	border-radius: 50%;
-	flex-shrink: 0;
-	@media (max-width: 1919px) {
-		width: remy(32);
-		height: remy(32);
-		font-size: remy(13);
-	}
-	@media (max-width: 767px) {
-		width: 32px;
-		height: 32px;
-		font-size: 13px;
-	}
-}
+  
 .address-block{
 	padding: 15px 30px;
 	background: #aba096;
