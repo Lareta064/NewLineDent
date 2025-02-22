@@ -22,20 +22,38 @@ html(lang="ru")
 			.container-dashboard
 				h2 Форма
 				.container-dashboard__content
+					h4 disabled
+					.form-item
+						span.fake-placeholder Имя
+						input.form-input(type="text"  name="name" disabled)
+					pre.
+						.form-item
+							span.fake-placeholder Имя
+							input.form-input(type="text"  name="name" disabled)
 					.form-item
 						span.fake-placeholder Имя
 						input.form-input(type="text"  name="name")
 					pre.
-						.form-item.input-focus
-							span.fake-placeholder Имя
-							input.form-input(type="text"  name="name" disabled)
-					br
-					.form-item.input-success
-						span.fake-place Телефон
-						input.form-input(type="text"  name="name")
-					pre.
 						.form-item
-							textarea(type="text" placeholder="Placeholder Text" name="message")
+							span.fake-placeholder Имя
+							input.form-input(type="text"  name="name")
+					.form-item.input-success
+						span.fake-placeholder Имя
+						input.form-input(type="text"  name="name")
+						p text content
+					pre.
+						.form-item.input-success
+							span.fake-placeholder Имя
+							input.form-input(type="text"  name="name")
+					br
+					.form-item.input-error
+						span.fake-placeholder Имя
+						input.form-input(type="text"  name="name")
+						p text content
+					pre.
+						.form-item.input-error
+							span.fake-placeholder Имя
+							input.form-input(type="text"  name="name")
 					
 					br
 					.form-item.error
@@ -102,21 +120,21 @@ html(lang="ru")
 				const formItems = document.querySelectorAll('.form-item');
 				
 				if(formItems.length > 0){
-				formItems.forEach((item)=>{
-					let itemFakePlhl = item.querySelector('.fake-placeholder');
-					let itemInput = item.querySelector('.form-input');
-					if(itemFakePlhl){
-					itemInput.addEventListener('focus', ()=>{
-						console.log(formItems)
-						item.classList.add('input-focus');
-					});
-					itemInput.addEventListener('blur', ()=>{
-					if(itemInput.value == ''){
-						item.classList.remove('input-focus');
-					}
-					});
-					}
-
-				})
-				}
+					formItems.forEach((item)=>{
+						let itemFakePlhl = item.querySelector('.fake-placeholder');
+						let itemInput = item.querySelector('.form-input');
+						if(itemFakePlhl){
+						itemInput.addEventListener('focus', ()=>{
+							console.log(formItems)
+							item.classList.add('input-focus');
 						});
+						itemInput.addEventListener('blur', ()=>{
+						if(itemInput.value == ''){
+							item.classList.remove('input-focus');
+						}
+						});
+						}
+
+					});
+				}
+			});
