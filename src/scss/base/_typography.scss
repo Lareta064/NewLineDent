@@ -3,6 +3,7 @@
 .h1, h1, .h2, h2{
 	font-family: var(--second-family);
 	font-weight: 300;
+	font-weight: 700;
 }
 .h1, h1{
 	font-size: 50px;
@@ -23,11 +24,27 @@
 	font-size: 30px;
 	line-height: 150%;
 	color: #2e3033;
+	font-weight: 700;
 	@media (max-width: 1919px) {
 		font-size: remy(30);
 	}
 	@media (max-width: 767px) {
 	font-size: 20px;
+	}
+}
+.title-36{
+	font-family: var(--second-family);
+	font-weight: 300;
+	font-size: 36px;
+	line-height: 125%;
+	font-weight: 700;
+	color: #2e3033;
+	@media (max-width: 1919px) {
+		font-size: remy(36);
+	}
+	@media (max-width: 767px) {
+	  font-size: 20px;
+	  line-height: 1.4;
 	}
 }
 .txt-24{
@@ -37,6 +54,20 @@
 	letter-spacing: -0.08em;
 	@media (min-width: 768px) and (max-width: 1919px) {
 		font-size: remy(24);
+	}
+}
+.title-26{
+	font-family: var(--second-family);
+	font-weight: 300;
+	font-size: 26px;
+	line-height: 123%;
+	
+	color: #2e3033;
+	@media (max-width: 1919px) {
+		font-size: remy(26);
+	}
+	@media (max-width: 767px) {
+		font-size: 17px;
 	}
 }
 .title-22{

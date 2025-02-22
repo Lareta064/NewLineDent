@@ -127,9 +127,15 @@ img {
 	display: block;
 }
 img.cover-img, img.contain-img{
-width: 100%;
-height: 100%;
-object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.rotate-image{
+	padding: 12px;
+	padding-bottom: 46px;
+	background-color: #ABA096;
+	width: fit-content;
 }
 img.contain-img{object-fit: contain;}
 input,
