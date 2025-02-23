@@ -134,8 +134,27 @@ img.cover-img, img.contain-img{
 .rotate-image{
 	padding: 12px;
 	padding-bottom: 46px;
-	background-color: #ABA096;
+	background-color: #b9b1a6;
 	width: fit-content;
+	position: relative;
+	border-radius: 2px;
+	box-shadow: 1px 1px 4px 0 rgba(185, 177, 166, 0.2);
+	img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.img-caption{
+		font-weight: 500;
+		font-size: 5px;
+		line-height: 167%;
+		
+		text-align: right;
+		color: #fff;
+		position: absolute;
+		bottom: 12px;
+		right: 12px;
+	}
 }
 img.contain-img{object-fit: contain;}
 input,
