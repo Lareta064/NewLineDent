@@ -120,6 +120,30 @@
 		padding-block: 20px;
 	}
 }
+.header-col{
+	padding-block: 40px;
+	&>*+*{margin-top: 40px;}
+	p{
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		color: #2e3033;
+		max-width: 980px;
+	}
+	@media (max-width: 1919px) {
+		padding-block: remy(40);
+		&>*+*{margin-top: remy(40);}
+		p{
+			font-size: remy(16);
+		}
+	}
+	@media (max-width: 767px) {
+		padding-block: 40px;
+		padding-top: 20px;
+	  &>*+*{margin-top: 40px;}
+	  p{font-size: 16px;}
+	}
+}
 .social-block{
 	display: flex;
 	align-items: center;

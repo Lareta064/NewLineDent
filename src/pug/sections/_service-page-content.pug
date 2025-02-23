@@ -1,4 +1,27 @@
-section.service
+mixin servCard(imgSrc, title, par='Хирургическое лечение и удаление зубов')
+	.serv-card
+		.serv-card__top.flex
+			.serv-card__title
+				.title-26 !{title}
+				p !{par}
+			.serv-card__img
+				img(src="./img/service/serv"+ imgSrc +".svg" width='101' height='105' loading='lazy' alt='img')
+		
+		.accordion-group
+			.accordion-header.flex
+				p #{title}
+				span
+				.acc-icon
+			.accordion-body
+				a(href="").service-link
+					span Что такое отбеливание зубов и какие бывают виды?
+				a(href="").service-link
+					span Что такое отбеливание зубов и какие бывают виды?
+				a(href="").service-link
+					span Что такое отбеливание зубов и какие бывают виды?
+				a(href="").service-link
+					span Что такое отбеливание зубов и какие бывают виды?
+section.service.pt-20 
 	.container
 		.breadcrumbs-wrapper
 			ul.breadcrumbs
@@ -6,3 +29,24 @@ section.service
 					a(href="#!") Newlinedent
 				li
 					a(href="#!") Блог
+		
+		.service-content
+			.header-col
+				h1.title-36 услуги
+				p Широкий спектр услуг. Стоматология Newlinedent предлагает полный цикл услуг, начиная от профессионального отбеливания зубов и заканчивая имплантацией всего зубного ряда под ключ.
+			.service-content-grid.flex
+				.service-content__column
+					+servCard(1, 'Консультация и диагностика')
+					+servCard(2, 'Онлайн консультация')
+					+servCard(3, 'Имплантация зубов', 'Все виды имплантации и сопутствующие операции по костной пластике')
+					+servCard(4, 'Имплантация All-on-4,<br>All-on-6', 'Все виды имплантации и сопутствующие операции по костной пластике')
+					+servCard(5, 'Удаление зубов')
+					+servCard(6, 'Пародонтология', 'Решение проблем с дёснами')
+				
+				.service-content__column
+					+servCard(7, 'Терапия','Все виды лечения при зубных болях и незначительных повреждениях зубов.')
+					+servCard(8, 'Ортопедия', 'Все виды протезирования зубов - коронками, винирами, съемное и т.д.')
+					+servCard(9, 'Ортодонтия', 'Исправление прикуса брекетами, каппами и пластинками.')
+					+servCard(10, 'Гигиена', 'Профилактическая стоматология и отбеливание зубов')
+					+servCard(11, 'Отбеливание ', 'Профилактическая стоматология и отбеливание зубов')
+					+servCard(12, 'Седация', 'Профилактическая стоматология и отбеливание зубов')
