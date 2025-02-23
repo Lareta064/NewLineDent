@@ -41,6 +41,10 @@
 	.cta-top{
 		position: relative;
 		margin-bottom: 200px;
+		.gogol-text{
+			position: relative;
+			left:115px;
+		}
 		.quote-dark{position: absolute;
 			left: -55px;
 			top:-17px;
@@ -51,6 +55,7 @@
 				left: remy(-55);
 				top:remy(-17);
 			}
+			.gogol-text{left:remy(115);}
 		}
 		@media (max-width: 767px) {
 	    	z-index: 4;

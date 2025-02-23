@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
           slidesPerView: 5,
           spaceBetween: 10,
         },
-        
       }
   });
 
@@ -105,7 +104,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Отслеживаем изменение размера окна
     window.addEventListener("resize", initSwiperSlider);
-
+   
+    let testimonialSlider = new Swiper('.testimonial-slider', {
+      slidesPerView: 'auto',
+      breakpoints: {
+       
+       768: {
+          slidesPerView: 3,
+          
+        }
+      }
+    })
    //FORMS FAKE PLACEHOLDER
    const formItems = document.querySelectorAll('.form-item');
 				
