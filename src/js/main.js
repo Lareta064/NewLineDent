@@ -107,14 +107,19 @@ document.addEventListener("DOMContentLoaded", function () {
    
     let testimonialSlider = new Swiper('.testimonial-slider', {
       slidesPerView: 'auto',
+      speed:800,
+      navigation: {
+          nextEl: ".testimonial-slider-nav .arrow-next",
+          prevEl: ".testimonial-slider-nav .arrow-prev",
+          
+        },
       breakpoints: {
-       
        768: {
           slidesPerView: 3,
-          
+         
         }
       }
-    })
+    });
    //FORMS FAKE PLACEHOLDER
    const formItems = document.querySelectorAll('.form-item');
 				

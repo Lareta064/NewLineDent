@@ -1,5 +1,9 @@
 @use "../base/var" as *;
 //TESTIMONIAL
+.testimonial{
+	.container-special{}
+}
+
 .testimonial-card{
 	background-color: #fff;
 	display: flex;
@@ -115,6 +119,7 @@
 	.swiper-slide{
 		display: flex;
 		padding-right: 40px;
+		height: unset;
 	}
 	.swiper-slide +.swiper-slide{
 		padding-left: 40px;
@@ -136,6 +141,7 @@
 		padding-top: 0;
 		.swiper-slide{
 			padding-right: 5px;
+			height: unset;
 			width: 362px!important;
 		}
 		.swiper-slide + .swiper-slide{
@@ -143,5 +149,17 @@
 			border-left: 0;
 			
 		}
+	}
+}
+.testimonial-slider-nav{
+	position: absolute;
+	width: fit-content;
+	z-index: 5;
+	right: 0;
+	bottom: 7px;
+	background-color: #fff;
+	display: none;
+	@media (max-width: 767px) {
+	display: flex;
 	}
 }
