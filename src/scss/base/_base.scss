@@ -155,6 +155,21 @@ img.cover-img, img.contain-img{
 		bottom: 12px;
 		right: 12px;
 	}
+	@media (max-width: 1919px) {
+		padding: remy(12);
+		padding-bottom: remy(46);
+		.img-caption{
+			font-size: 3px;
+			bottom: remy(12);
+			right: remy(12);
+		}
+	}
+	@media (max-width: 767px) {
+	 padding: 5px;
+	 padding-bottom: 15px;
+	 width: 117px;
+	 height: 140px;
+	}
 }
 img.contain-img{object-fit: contain;}
 input,

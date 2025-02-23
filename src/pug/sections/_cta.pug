@@ -1,14 +1,15 @@
 //CTA
 section.cta
 	.cta-bg-img
-		img(src='./img/rotate/line2.svg'  loading='lazy' alt='img')
+		img.hide-sm(src='./img/rotate/line2.svg'  width="1920" height="543"  loading='lazy' alt='img')
+		img.visible-sm(src='./img/rotate/line-mobile.svg'  width="914" height="366" loading='lazy' alt='img')
 	.container
 		.cta-content
 			.siple-txt-top
 				p Заботясь о здоровье зубов наших пациентов, мы не просто лечим — мы возвращаем уверенность и улыбки в их жизни.
 			
 			.cta-top.cta-big-txt
-				p #[span.quote-dark] Мы#[br] создаем #[span.gogol-text улыбки]
+				p #[span.quote-dark] Мы#[br.hide-sm] создаем #[br.visible-sm] #[span.gogol-text улыбки]
 				.rotate-image.rotate-image1
 					img(src='./img/rotate/2.webp' width='234' height='261' loading='lazy' alt='img')
 					span.img-caption виниры<br>что то там
