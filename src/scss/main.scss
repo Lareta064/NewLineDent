@@ -4,6 +4,7 @@
 @use "base/_icons";
 
 @use "base/_buttons";
+@use "base/_breadcrumbs.scss";
 
 @use "base/_form";
 
@@ -24,10 +25,9 @@
 @use "sections/_accordion.scss";
 @use "sections/_faq.scss";
 
- @use "sections/_footer";
 
-
-
+@use "sections/_footer";
+@use "sections/_service-page";
 
 
 

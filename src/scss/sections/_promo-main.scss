@@ -200,7 +200,10 @@
 			left:0;
 			transform: translateX(-50%);
 			text-align: center;
-
+			height: auto;
+			@media (max-width: 1919px) {
+				height: auto;
+			}
 			p{
 				padding-block:20px;
 				background-color: $pr;

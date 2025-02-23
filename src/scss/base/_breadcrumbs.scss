@@ -1,0 +1,39 @@
+@use "base/var" as *;
+.breadcrumbs-wrapper{}
+.breadcrumbs{
+	li{
+		display: inline-block;
+		padding-right: 30px;
+		position: relative;
+		&:after{
+			content:'';
+			width: 6px;
+			height: 12px;
+			display: block;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='12' viewBox='0 0 6 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.57169 6.07947L0.00111541 1.22368L0.665475 0.5L6 6.07947L0.66551 11.5L-3.16332e-08 10.7763L4.57169 6.07947Z' fill='%232E3033' /%3e%3c/svg%3e");
+			background-size: 6px 12px;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	a{
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 171%;
+		letter-spacing: -0.03em;
+		text-transform: uppercase;
+		color: #2e3033;
+		
+	}
+	li+li{
+		margin-left: 30px;
+	}
+	li:last-child{
+		padding-right: 0;
+		&:after{
+			display: none;
+		}
+	}
+}
