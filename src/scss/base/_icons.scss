@@ -104,18 +104,21 @@
 	width: 80px;
 	height: 80px;
 	display: block;
-	background-image: url('../img/video/play-dark.png');
+	background-image: url('../img/video/play-dark.webp');
+	background-size: contain;
+	background-position: center;
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+	z-index: 3;
 	@media (min-width: 768px) and (max-width: 1919px) {
 		width: remy(80);
 	   height: remy(80);
 	}
 	@media (max-width: 767px) {
-	width: 36px;
-	height: 36px;
+	width: 44px;
+	height: 44px;
 	}
 }
 .smile-icon{
