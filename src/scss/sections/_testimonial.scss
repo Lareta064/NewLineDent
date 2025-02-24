@@ -304,8 +304,9 @@
 	}
 }
 // REVIEW PAGE
-.testimonial.pb-110{
+*.pb-110{
 	padding-bottom: 110px;
+	.container-special{border-bottom:0;}
 	@media (max-width: 1919px) {
 	padding-bottom: remy(110);
 	}

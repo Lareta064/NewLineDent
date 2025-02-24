@@ -248,7 +248,7 @@
 	background: #aba096;
 	color: white;
 	border: 1px solid #aba096;
-	display: none;
+	width: max-content;
 	p{
 		font-weight: 500;
 		font-size: 14px;
@@ -265,11 +265,19 @@
 		&>*+*{margin-top: 5px;}
 	}
 	&>*+*{margin-top: 10px;}
-	
 	@media (max-width: 767px) {
-	  display: block;
-	  margin-bottom: 20px;
-	  
-	  width: 100%;
+	width: 100%;
+	}
+	
+}
+.header-nav-wrapper {
+	.address-block{
+		display: none;
+	
+		@media (max-width: 767px) {
+			display: block;
+			margin-bottom: 20px;
+			width: 100%;
+		}
 	}
 }

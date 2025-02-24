@@ -1,0 +1,41 @@
+section.our-clinic
+	
+	.container-special
+		.left-decore-line
+			p.txt-primary 05/07
+			span.fake-line
+			p как выклядит наша клиника
+		
+		.header-block
+			h2.title-36 О клинике
+		
+		.our-clinic_content
+			
+			.p-block-20
+				.address-block
+					.address-block__metro
+						svg.svg-metro
+							use(href='./img/sprite.svg#svg-metro')
+						p Новочеркасская
+					.address-block__info
+						p ул. Стахановцев, д. 6
+						p пн-вс: 9:00 — 21:00
+
+			//SLIDER
+			.clinic-slider.swiper
+				.swiper-wrapper
+					.swiper-slide
+						.clinic-photo
+							img(src='./img/about/panorama1.webp', srcset='./img/about/panorama1@2x.webp 2x' width='839' height='499' loading='lazy' alt='img')
+					.swiper-slide
+						.clinic-photo
+							img(src='./img/about/panorama2.webp', srcset='./img/about/panorama2@2x.webp 2x' width='839' height='499' loading='lazy' alt='img')
+				
+				//slider-nav
+				.clinic-slider-nav
+					button.arrow-prev
+						svg.svg-rarr
+							use(href='./img/sprite.svg#svg-rarr')
+					button.arrow-next
+						svg.svg-rarr
+							use(href='./img/sprite.svg#svg-rarr')

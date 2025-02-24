@@ -23,26 +23,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // teamSlider
     let teamSlider = new Swiper(".teams-cards", {
-      slidesPerView: 'auto',
-      speed: 800,
-      spaceBetween: 10,
-      navigation: {
-          nextEl: ".teams-cards-next",
-         
-      },
-      breakpoints: {
-       
-       1024: {
-          slidesPerView: 5,
-          spaceBetween: 10,
+        slidesPerView: 'auto',
+        speed: 800,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".teams-cards-next",
+          
         },
-        1280: {
-          slidesPerView: 5,
-          spaceBetween: 10,
+        breakpoints: {
+        
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+          },
+          1280: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+          },
+        }
+    });
+      // clinicSlider
+      let clinicSlider = new Swiper(".clinic-slider", {
+        slidesPerView: 'auto',
+        speed: 800,
+        spaceBetween: 18,
+        navigation: {
+            nextEl: ".clinic-slider-nav .arrow-next",
+            prevEl: ".clinic-slider-nav .arrow-prev",
+          
         },
-      }
-  });
-
+        // breakpoints: {
+        
+        // 1024: {
+        //     slidesPerView: 5,
+        //     spaceBetween: 10,
+        //   },
+        //   1280: {
+        //     slidesPerView: 5,
+        //     spaceBetween: 10,
+        //   },
+        // }
+    });
     // Fancybox
     Fancybox.bind("[data-fancybox]", {
       Thumbs: false,
