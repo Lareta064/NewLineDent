@@ -148,12 +148,40 @@
 		}
 	}
 }
-.promo.promo-inner--slim{
-	min-height: 500px;
-	background-color: #fff;
-}
 
+.promo.promo-inner{
+	height: 500px;
+}
+.promo-inner__title.flex-col{
+	row-gap: 38px;
+	padding-top: 27px;
+}
 .promo-inner__grid.grid-two-column{
 	display: grid;
-	grid-template-columns:  470px 1fr;
+	grid-template-columns: 460px 1fr;
+	column-gap: 30px;
+	padding-top: 30px;
+	.rotate-img-group{
+		padding-left: 140px;
+		display:flex;
+		align-items: flex-start;
+		column-gap:50px;
+		.rotate-image1{
+			transform: rotate(-12.53deg);
+			margin-left: 50px;
+		}
+		.rotate-image2{
+			transform: rotate(15.42deg);
+			margin-left: 80px;
+			margin-top: 50px;
+			position: relative;
+			z-index: 2;
+		}
+		.rotate-image3{
+			transform: rotate(-20.39deg);
+			right:50px;
+			position: relative;
+			z-index: 1;
+		}
+	}
 }

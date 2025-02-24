@@ -1,9 +1,7 @@
 @use "base/var" as *;
 
 .promo{
-	
-	background-color: $pr;
-	
+	background-color: #fff;
 	.promo-top .container{
 		
 		position: relative;
@@ -229,3 +227,4 @@
 		
 	
 }
+.promo.promo-main{background-color: $pr;}
