@@ -48,8 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
       Thumbs: false,
     });
     
-
-    let serviceCards= null; // Переменная для хранения экземпляра Swiper
+    //service-cards slider
+    let serviceCards= null; 
 
     function initSwiper() {
         if (window.innerWidth < 768 && !serviceCards) {
@@ -69,14 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Вызываем при загрузке страницы
     initSwiper();
 
     // Отслеживаем изменение размера окна
     window.addEventListener("resize", initSwiper);
-
-    let stepsSlider= null; // Переменная для хранения экземпляра Swiper
-
+    
+    
+    //STERS SLIDER
+    let stepsSlider= null;
     function initSwiperSlider() {
         if (window.innerWidth < 1280 && !stepsSlider) {
           stepsSlider = new Swiper('.steps-slider', {
@@ -98,28 +98,33 @@ document.addEventListener("DOMContentLoaded", function () {
             stepsSlider = null;
         }
     }
-
-    // Вызываем при загрузке страницы
     initSwiperSlider();
-
-    // Отслеживаем изменение размера окна
     window.addEventListener("resize", initSwiperSlider);
    
-    let testimonialSlider = new Swiper('.testimonial-slider', {
-      slidesPerView: 'auto',
-      speed:800,
-      navigation: {
-          nextEl: ".testimonial-slider-nav .arrow-next",
-          prevEl: ".testimonial-slider-nav .arrow-prev",
-          
-        },
-      breakpoints: {
-       768: {
-          slidesPerView: 3,
-         
+    //Review slider
+    let testimonialSlider= null; // Переменная для хранения экземпляра Swiper
+
+    function initSwiperSliderReview() {
+        if (window.innerWidth < 768 && !testimonialSlider) {
+          testimonialSlider = new Swiper('.testimonial-slider', {
+            slidesPerView: 'auto',
+            speed:800,
+            navigation: {
+                nextEl: ".testimonial-slider-nav .arrow-next",
+                prevEl: ".testimonial-slider-nav .arrow-prev",
+                
+              }
+         });
+        } else if (window.innerWidth >= 768 && testimonialSlider) {
+            // Уничтожение Swiper при большом экране
+            testimonialSlider.destroy(true, true);
+            testimonialSlider = null;
         }
-      }
-    });
+    }
+
+    initSwiperSliderReview();
+    window.addEventListener("resize", initSwiperSliderReview);
+
    //FORMS FAKE PLACEHOLDER
    const formItems = document.querySelectorAll('.form-item');
 				

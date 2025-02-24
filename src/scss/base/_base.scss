@@ -278,6 +278,11 @@ section{
 .pt-20 {
 	padding-top: 20px;
 }
+.pt-sm-10{
+	@media (max-width: 767px) {
+	padding-top: 10px!important;
+	}
+}
 .left-decore-line{
 	position: absolute;
 	top: 0;
