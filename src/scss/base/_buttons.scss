@@ -51,3 +51,8 @@
 	background-color: transparent;
 	&:hover{color: #fff;}
 }
+.sm-100{
+	@media (max-width: 767px) {
+	 width: 100%;
+	}
+}
