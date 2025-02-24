@@ -7,7 +7,11 @@
 	flex-shrink: 0;
 	
 }
-
+.svg-arDown{
+	@media (max-width: 1919px) {
+	height: remy(150);
+	}
+}
 .svg-rarr{
 	width: 48px;
 	height: 12px;color: $pr;
