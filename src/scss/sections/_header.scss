@@ -1,9 +1,60 @@
 @use "../base/var" as *;
+.header.header--primary{
+	background-color: #B9B1A6;
+	border-bottom:1px solid white;
+	.logo .svg-logo{color: white;}
+	.header-nav-logo .logo{display: none;}
+	.header-menu{
+		
+		a{
+			color: #fff;
+			@media (max-width: 767px) {
+				color: #2E3033;
+			}
+		}
+		@media (max-width: 767px) {
+			// .header-nav-logo .logo{display: flex;}
+			// .header-nav-logo .svg-logo{color: #2E3033;}
+		 li{width: 100%; border-bottom: 1px solid #ABA096;}
+		}
+	}
+	.header-nav-wrapper{
+		.social-block {
+			border-left: 1px solid white;
+		}
+		.btn{
+			border-color: white;
+			@media (max-width: 767px) {
+			border: 1px solid currentColor;
+			}
+		}
+		.logo{display: none; width: 164px; height: 26px;}
+		
+		@media (max-width: 767px) {
+			
+			background-color: #fff;
+			
+			.social-link{
+				color: #ABA096;
+				border-color: #ABA096;
+			}
+			
+			.header-nav-logo{
+				border-bottom:1px solid #ABA096;
+			}
+			
+			.header-nav-logo .logo{display: flex; .svg-logo{color: #2E3033;}} 
+			.social-block{border-left-color:#ABA096; }
+		}
+	}
+
+
+}
 .header{
 	padding-top: 40px;
 	padding-bottom: 40px;
-	background-color: #B9B1A6;
-	border-bottom:1px solid white;
+	background-color: #fff;
+	border-bottom: 1px solid #b9b1a6;
 	&-content{
 		display: flex;
 		justify-content: space-between;
@@ -16,6 +67,7 @@
 		width: 267px;
 		display: flex;
 		align-items: center;
+		.svg-logo{color: #2E3033;}
 	}
 	@media (max-width: 1919px) {
 		padding-top: remy(40);
@@ -37,7 +89,7 @@
 		font-size: 15px;
 		line-height: 150%;
 		text-transform: uppercase;
-		color: #fff;
+		color: #2e3033;
 		white-space: nowrap;
 		@media (max-width: 1919px) {
 			font-size: remy(15);
@@ -60,7 +112,7 @@
 .header-nav-wrapper{
 	.social-block {
 		padding-left: 20px;
-		border-left: 1px solid white;
+		border-left: 1px solid #ABA096;;
 		column-gap: 20px;
 		@media (max-width: 1919px) {
 			column-gap: remy(20);
@@ -69,11 +121,15 @@
 			column-gap: 20px;
 		}
 	}
+	.social-link{
+		border-color: #ABA096;
+	}
 	.btn{
 		height: 35px;
 		font-size: 15px;
 		letter-spacing: 0.07em;
 		padding-inline: 25px;
+		border-color: currentColor;
 		@media (min-width: 768px) and (max-width: 1919px) {
 			height: remy(35);
 			font-size: remy(15);
@@ -109,7 +165,7 @@
 			border-bottom:1px solid #ABA096;
 			width: 100%;
 			height: 52px;
-			
+			.logo{display: flex; }
 		}
 		.social-block{border-left-color:#ABA096; }
 		
