@@ -3,16 +3,15 @@ extends ../layouts/layout.pug
 block content
 	include ../sections/_header
 	main.main
-		.breadcrumbs-wrapper
-			.container
+		.container 
+			.breadcrumbs-wrapper
 				ul.breadcrumbs
 					li
 						a(href="#!") Newlinedent
 					li
 						a(href="#!") Блог
-		
-		include ../sections/_service-page-content
-		include ../sections/_feedback
+		include ../sections/_review-section
+		include ../sections/_review-page-content
 		
 	//FOOTER
 	include ../sections/_footer
