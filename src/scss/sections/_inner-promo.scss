@@ -1,0 +1,43 @@
+@use "base/var" as *;
+.promo.promo-inner{
+	min-height: 780px;
+	@media (max-width: 1919px) {
+		min-height: remy(780);
+	}
+	@media (max-width: 767px) {
+		min-height: 635px;
+	}
+}
+.promo-inner {
+	position: relative;
+	&:before{
+		content:'';
+		position: absolute;
+		inset: 0;
+		background-image: url('../img/about/promo-bg-group.svg');
+		background-image: url('../img/about/line-group.webp');
+		background-size: contain;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: 3;
+
+	}
+	&:after{
+		content:'';
+        position: absolute;
+		inset: 0;
+		background: linear-gradient(37deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+                linear-gradient(327deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+		z-index: 2;	
+	}
+}
+.promo-inner .promo-bg-image{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	
+}
