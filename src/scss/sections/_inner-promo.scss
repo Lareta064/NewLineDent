@@ -1,5 +1,5 @@
 @use "base/var" as *;
-.promo.promo-inner{
+.promo.promo-about{
 	min-height: 780px;
 	.container.pl-110{
 		min-height: 700px;
@@ -15,7 +15,7 @@
 		.container.pl-110{min-height: unset;}
 	}
 }
-.promo-inner {
+.promo-about {
 	position: relative;
 	&:before{
 		content:'';
@@ -42,7 +42,7 @@
 		}
 	}
 }
-.promo-inner .promo-bg-image{
+.promo-about .promo-bg-image{
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -66,8 +66,8 @@
 	}
 	
 }
-.promo-inner {
-	.promo-inner__content{
+.promo-about {
+	.promo-about__content{
 		padding-top: 50px;
 		@media (max-width: 1919px) {
 			padding-top: remy(50);
@@ -81,7 +81,7 @@
 			flex-direction: column;
 		}
 	}
-	.promo-inner__title{
+	.promo-about__title{
 		max-width: 992px;
 		flex-grow: 1;
 		.h1{line-height: 0.7;}
@@ -110,7 +110,7 @@
 			}
 		}
 	}
-	.promo-inner__description{
+	.promo-about__description{
 		max-width: 460px;
 		margin-left: auto;
 		transform: translateX(10%);
@@ -147,4 +147,13 @@
 			p + p{display: none;}
 		}
 	}
+}
+.promo.promo-inner--slim{
+	min-height: 500px;
+	background-color: #fff;
+}
+
+.promo-inner__grid.grid-two-column{
+	display: grid;
+	grid-template-columns:  470px 1fr;
 }

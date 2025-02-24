@@ -203,8 +203,10 @@
 	position: relative;
 	width: 25px;
 	height: 2px;
-	background-color: white;
+	
+	background-color: #2E3033;
   }
+
   .menu-toggle  span::before, .menu-toggle  span::after {
 	content: "";
 	position: absolute;
@@ -214,7 +216,12 @@
 	transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
 	transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
 	transition: transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
-	background-color: white;
+	
+	background-color: #2E3033;
+  }
+  .header.header--primary{
+	.menu-toggle  span::before, .menu-toggle  span::after,
+	.menu-toggle  span {background-color: white;}
   }
   .menu-toggle  span::before {
 	top: -5px;
