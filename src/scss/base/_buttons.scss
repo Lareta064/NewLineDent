@@ -1,7 +1,7 @@
 @use "var" as *;
 
 
-.btn,.btn-primary, .btn-outline{
+.btn,.btn-primary, .btn-outline,.btn-accent{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -54,5 +54,13 @@
 .sm-100{
 	@media (max-width: 767px) {
 	 width: 100%;
+	}
+}
+.btn-accent{
+	background-color: #B9B1A6;
+	color: #fff;
+	&:hover{
+		color: #fff;
+		background-color: #aca396;
 	}
 }

@@ -1,0 +1,58 @@
+@use "../base/var" as *;
+.before-after{
+	padding-top: 10px;
+	border-top:1px solid #b9b1a6;
+	padding-bottom: 80px;
+	position: relative;
+	overflow: hidden;
+	&:after{
+		content:'';
+		position: absolute;
+		display: block;
+		top: 40%;
+		right: 0;
+		border: 2px solid #b9b1a6;
+		border-right: 0;
+		border-radius: 232px 0 0 232px;
+		width: 1200px;
+		height: 464px;
+		z-index: 1;
+		@media (max-width: 1919px) {
+			width: remy(1200);
+			height: remy(464);
+		}
+	}
+	
+}
+.user-card{
+	padding: 25px;
+	padding-top: 0;
+	background-color: #fff;
+	row-gap:32px;
+	width: 380px;
+	&__img{flex-shrink: 0;}
+	&__img img{
+		height: 280px;
+		width: 100%;
+		object-fit: cover;
+	}
+	&__body{
+		flex-grow: 1;
+		row-gap: 22px;
+	}
+	.card__body-group{
+		row-gap: 10px;
+		.flex{column-gap:4px;}
+		.txt-bold{
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 111%;
+			color: #2e3033;
+		}
+	}
+}
+.user-card, .user-card__body, .user-card .card__body-group{
+	display: flex;
+	flex-direction: column;
+	&>*{width: 100%;}
+}

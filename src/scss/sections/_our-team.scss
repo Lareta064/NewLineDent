@@ -211,7 +211,7 @@
 	}
 }
 .teams-cards .swiper-wrapper{
-	
+	.swiper-slide{height: unset;}
 	@media (max-width: 1023px) {
 		.swiper-slide{width: 210px!important;}
 		

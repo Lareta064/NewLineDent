@@ -7,17 +7,18 @@
 	}
 }
 .persone-card__img{
-	height: 187px;
+	height: 200px;
 	border-bottom: 1px solid #2E3033;
 	overflow: hidden;
 	background-color: #B9B1A6;
+	img{
+		object-position: center top;
+	}
 	@media (min-width: 768px) and (max-width: 1919px) {
-		height: calc((187/19.2)*1vw);
-		height: 140px;
+		
+		height: 145px;
 	}
-	@media (max-width: 767px) {
-		height: 140px;
-	}
+	
 
 }
 .persone-card-block{

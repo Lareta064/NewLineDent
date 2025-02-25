@@ -2,16 +2,44 @@ section.before-after
 	.container
 		.before-after__tabs
 			.tabs-group
-				.tabs-group__nav
-					div(data-tbat="1") Text1
+				ul.tabs__nav.flex
+					li.tabs__nav-btn.flex(data-tbat="all") Все
 					
-					div(data-tbat="2") Text 2
+					li.tabs__nav-btn.flex(data-tbat="2") Терапия
+					li.tabs__nav-btn.flex(data-tbat="2") Хирургия
+					li.tabs__nav-btn.flex(data-tbat="2") Ортодонтия
+					li.tabs__nav-btn.flex(data-tbat="2") Ортопедия
+					li.tabs__nav-btn.flex(data-tbat="2") Гигиена
+					
 						
 				
-				.tabs-group__content
-					
+				.tabs__content-wrapper
 					//отображается при переключение свитча на положение Галоч
-					.tabs-content.active(data-tcontent="1")
-						p ghghghgh
+					.tabs-content.active(data-tcontent="all")
+						.tabs-content__left
+							.user-card
+								.user-card__img
+									img(src='./img/user1.webp' width='329' height='280' loading='lazy' alt='img')
+
+								.user-card__body
+									.card__body-group
+										.title-24 Вера Павловна Твердохлебова
+										span.txt-bold Эстетическая тератия
+									.card__body-group
+										span.txt-bold Лечащий врач 
+										p.txt-16  Вера Павловна Твердохлебова
+									.card__body-group
+										.flex
+											span.clock-icon
+											span.clock-icon
+											span.clock-icon
+										.flex
+											span.coins-icon
+											span.coins-icon
+											span.coins-icon.disable
+							
+							
+							a(href="#!").btn-accent Получить такую улыбку 
+					
 					.tabs-content(data-tcontent="2")
 						p sfsfsfsf
