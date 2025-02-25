@@ -131,6 +131,7 @@ img.cover-img, img.contain-img{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	object-position: center top;
 }
 .rotate-image{
 	padding: 12px;
@@ -155,8 +156,9 @@ img.cover-img, img.contain-img{
 		color: #fff;
 		
 	}
-	.img-caption--name{
+	.img-caption.img-caption--name{
 		font-size: 16px;
+		margin-left: 0;
 	}
 	.flex{
 		justify-content: space-between;

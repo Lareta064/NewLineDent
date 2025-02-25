@@ -9,20 +9,76 @@
 		content:'';
 		position: absolute;
 		display: block;
-		top: 40%;
+		bottom: 50%;
+		transform: translateY(50%);
 		right: 0;
 		border: 2px solid #b9b1a6;
 		border-right: 0;
 		border-radius: 232px 0 0 232px;
-		width: 1200px;
+		width: 1240px;
 		height: 464px;
 		z-index: 1;
 		@media (max-width: 1919px) {
-			width: remy(1200);
+			width: remy(1240);
 			height: remy(464);
 		}
 	}
 	
+}
+.tabs-content-wrapper.flex{
+	column-gap:100px;
+	.tabs-content__left{
+		flex-shrink: 0;
+		position: relative;
+	   z-index: 2;
+	}
+	@media (max-width: 1919px) {
+		column-gap:remy(100);
+	}
+}
+.tabs-content__right{
+	position: relative;
+	z-index: 2;
+	.rotate-image__group{
+		display: flex;
+		.rotate-image{
+			flex-shrink: 0;
+			.flex{bottom: 7px;}
+			img{
+				width: 498px;
+				height: 358px;
+				object-fit: cover;
+				@media (max-width: 1919px) {
+					width: remy(498);
+					height: remy(358);
+				}
+			}
+			.img-caption--name{
+				font-family: var(--second-family);
+				font-weight: 300;
+				font-size: 28px;
+				line-height: 66%;
+				@media (max-width: 1919px) {
+					font-size: remy(28);
+				}
+			}
+			.img-logo{
+				width: 186px;
+				height: 30px;
+				@media (max-width: 1919px) {
+					width: remy(186);
+				     height: remy(30);
+				}
+			}
+		}
+		.rotate-image1{
+			transform: translateY(13%) rotate(-11.49deg);
+			
+		}
+		.rotate-image2{
+			transform: translate(-6%, -10%) rotate(10.39deg)
+		}
+	}	
 }
 .user-card{
 	padding: 25px;
@@ -30,11 +86,12 @@
 	background-color: #fff;
 	row-gap:32px;
 	width: 380px;
-	&__img{flex-shrink: 0;}
+	&__img{flex-shrink: 0;background-color: #B9B1A6;}
 	&__img img{
 		height: 280px;
 		width: 100%;
 		object-fit: cover;
+		object-position: center top;;
 	}
 	&__body{
 		flex-grow: 1;
@@ -48,6 +105,22 @@
 			font-size: 18px;
 			line-height: 111%;
 			color: #2e3033;
+		}
+	}
+	@media (max-width: 1919px) {
+		padding: remy(25);
+		row-gap:remy(32);
+		width: remy(380);
+		&__body{row-gap: remy(22);}
+		&__img img{height: remy(280)}
+		.card__body-group{
+			row-gap: remy(10);
+			
+			.txt-bold{
+				
+				font-size: remy(18);
+				
+			}
 		}
 	}
 }

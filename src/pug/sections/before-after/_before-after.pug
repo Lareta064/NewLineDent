@@ -6,40 +6,136 @@ section.before-after
 					li.tabs__nav-btn.flex(data-tbat="all") Все
 					
 					li.tabs__nav-btn.flex(data-tbat="2") Терапия
-					li.tabs__nav-btn.flex(data-tbat="2") Хирургия
-					li.tabs__nav-btn.flex(data-tbat="2") Ортодонтия
-					li.tabs__nav-btn.flex(data-tbat="2") Ортопедия
-					li.tabs__nav-btn.flex(data-tbat="2") Гигиена
+					li.tabs__nav-btn.flex(data-tbat="3") Хирургия
+					li.tabs__nav-btn.flex(data-tbat="4") Ортодонтия
+					li.tabs__nav-btn.flex(data-tbat="5") Ортопедия
+					li.tabs__nav-btn.flex(data-tbat="6") Гигиена
 					
 						
 				
 				.tabs__content-wrapper
-					//отображается при переключение свитча на положение Галоч
+					//TAB #1
 					.tabs-content.active(data-tcontent="all")
-						.tabs-content__left
-							.user-card
-								.user-card__img
-									img(src='./img/user1.webp' width='329' height='280' loading='lazy' alt='img')
+						.tabs-content-wrapper.flex
+							//LEFT CONTENT
+							.tabs-content__left
+								.user-card
+									.user-card__img
+										img(src='./img/user1.webp' width='329' height='280' loading='lazy' alt='img')
 
-								.user-card__body
-									.card__body-group
-										.title-24 Вера Павловна Твердохлебова
-										span.txt-bold Эстетическая тератия
-									.card__body-group
-										span.txt-bold Лечащий врач 
-										p.txt-16  Вера Павловна Твердохлебова
-									.card__body-group
-										.flex
-											span.clock-icon
-											span.clock-icon
-											span.clock-icon
-										.flex
-											span.coins-icon
-											span.coins-icon
-											span.coins-icon.disable
+									.user-card__body
+										.card__body-group
+											.title-24 Вера Павловна Твердохлебова
+											span.txt-bold Эстетическая тератия
+										.card__body-group
+											span.txt-bold Лечащий врач 
+											p.txt-16  Вера Павловна Твердохлебова
+										.card__body-group
+											.flex
+												span.clock-icon
+												span.clock-icon
+												span.clock-icon
+											.flex
+												span.coins-icon
+												span.coins-icon
+												span.coins-icon.disable
 							
+							//RIGHT CONTENT
+							.tabs-content__right
+								.rotate-image__group
+									.rotate-image.rotate-image1
+										img(src='./img/service-cards/img1.webp', srcset='./img/service-cards/img1@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
+										.flex
+											span.img-caption.img-caption--name До
+											span.img-logo
+											
+									.rotate-image.rotate-image2
+										img(src='./img/service-cards/img2.webp', srcset='./img/service-cards/img2@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
+										.flex
+											span.img-caption.img-caption--name После
+											span.img-logo
 							
-							a(href="#!").btn-accent Получить такую улыбку 
-					
+					//TAB #2
 					.tabs-content(data-tcontent="2")
-						p sfsfsfsf
+						.tabs-content-wrapper.flex
+							//LEFT CONTENT
+							.tabs-content__left
+								.user-card
+									.user-card__img
+										img(src='./img/team/1.webp' width='329' height='280' loading='lazy' alt='img')
+
+									.user-card__body
+										.card__body-group
+											.title-24 Вера Павловна Твердохлебова
+											span.txt-bold Эстетическая тератия
+										.card__body-group
+											span.txt-bold Лечащий врач 
+											p.txt-16  Вера Павловна Твердохлебова
+										.card__body-group
+											.flex
+												span.clock-icon
+												span.clock-icon
+												span.clock-icon
+											.flex
+												span.coins-icon
+												span.coins-icon
+												span.coins-icon.disable
+							
+							//RIGHT CONTENT
+							.tabs-content__right
+								.rotate-image__group
+									.rotate-image.rotate-image1
+										img(src='./img/service-cards/img1.webp', srcset='./img/service-cards/img1@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
+										.flex
+											span.img-caption.img-caption--name До
+											span.img-logo
+											
+									.rotate-image.rotate-image2
+										img(src='./img/service-cards/img2.webp', srcset='./img/service-cards/img2@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
+										.flex
+											span.img-caption.img-caption--name После
+											span.img-logo
+					//TAB #3
+					.tabs-content(data-tcontent="3")
+						.tabs-content-wrapper.flex
+							//LEFT CONTENT
+							.tabs-content__left
+								.user-card
+									.user-card__img
+										img(src='./img/team/3.webp' width='329' height='280' loading='lazy' alt='img')
+
+									.user-card__body
+										.card__body-group
+											.title-24 Вера Павловна Твердохлебова
+											span.txt-bold Эстетическая тератия
+										.card__body-group
+											span.txt-bold Лечащий врач 
+											p.txt-16  Вера Павловна Твердохлебова
+										.card__body-group
+											.flex
+												span.clock-icon
+												span.clock-icon
+												span.clock-icon
+											.flex
+												span.coins-icon
+												span.coins-icon
+												span.coins-icon.disable
+							
+							//RIGHT CONTENT
+							.tabs-content__right
+								.rotate-image__group
+									.rotate-image.rotate-image1
+										img(src='./img/service-cards/img1.webp', srcset='./img/service-cards/img1@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
+										.flex
+											span.img-caption.img-caption--name До
+											span.img-logo
+											
+									.rotate-image.rotate-image2
+										img(src='./img/service-cards/img2.webp', srcset='./img/service-cards/img2@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
+										.flex
+											span.img-caption.img-caption--name После
+											span.img-logo
+
+			
+			.before-after__buttons
+				a(href="#!").btn-accent Получить такую улыбку 

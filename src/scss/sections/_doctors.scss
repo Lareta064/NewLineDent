@@ -1,0 +1,136 @@
+@use "../base/var" as *;
+.doctor-card{
+	display: grid;
+	grid-template-columns: 266px 1fr;
+	column-gap:26px;
+	padding: 16px;
+	font-family: var(--font-family);
+	font-weight: 400;
+	color: #2e3033;
+	@media (max-width: 1919px) {
+		grid-template-columns: remy(266) 1fr;
+		column-gap:remy(25);
+	}
+
+}
+.doctor-card__profile{
+	display: grid;
+	grid-template-columns: 354px 384px;
+	column-gap:28px;
+	@media (max-width: 1919px) {
+		grid-template-columns: remy(354) remy(384);
+		column-gap:remy(28);
+	}
+}
+.doctor-card__img{
+	width: 100%;
+	height: 366px;
+	background-color: #B9B1A6;
+	@media (max-width: 1919px) {
+		height: remy(366);
+	}
+}
+.doctor-card__title{
+	padding-top: 8px;
+	.accordion-group{border-bottom-width: 0;}
+	.title-17{
+		font-family: var(--second-family);
+		font-size: 17px;
+		line-height: 138%;
+		
+		@media (max-width: 1919px) {
+			font-size: remy(17);
+		}
+		@media (max-width: 767px) {
+			font-size: 18px;
+			line-height: 111%;
+			
+		}
+		
+	}
+	@media (max-width: 1919px) {
+	padding-top: rem(8);
+	}
+	@media (max-width: 767px) {
+		.accordion-group{border-bottom-width: 0;}
+	}
+}
+.doctor-card__list span, .doctor-card .accordion-header p{
+		font-weight: 500;
+		font-size: 9px;
+		line-height: 129%;
+		letter-spacing: -0.03em;
+		margin-bottom: 5px;
+		@media (max-width: 1919px) {
+			font-size: remy(9);
+		}
+		@media (max-width: 767px) {
+			font-size: 14px;
+			line-height: 129%;
+			letter-spacing: -0.03em;
+		}
+}
+.doctor-card .accordion-header {
+   padding: 0;
+    margin-top: 0;
+	&:after{width: 15px; height:9px; display: none;}
+	@media (max-width: 767px) {
+		&:after{display: flex;}
+		p{
+			font-size: 17px;
+			line-height: 106%;
+		}
+	}
+}
+
+ 
+.doctor-card__list p, .doctor-card .accordion-body{
+		
+	font-size: 12px;
+	line-height: 133%;
+	letter-spacing: -0.03em;
+	@media (max-width: 1919px) {
+		font-size: remy(12);
+	}
+	@media (max-width: 767px) {
+		font-size: 14px;
+		line-height: 129%;
+	}
+	
+}
+.doctor-card__info{
+	padding-bottom: 8px;
+	.title-13{
+		font-size: 13px;
+		line-height: 150%;
+		text-transform: uppercase;
+		margin-bottom: 16px;
+	}
+	p{
+		font-size: 9px;
+		line-height: 129%;
+		letter-spacing: -0.03em;
+		margin-top: 10px;
+	}
+	@media (max-width: 1919px) {
+		padding-bottom: remy(8);
+		.title-13{
+
+			font-size: remy(13);
+			margin-bottom: remy(16);
+		}
+		p{
+			font-size: remy(9);
+			margin-top: remy(10);
+		}
+	}
+	@media (max-width: 767px) {
+	display: none;
+	}
+}
+.doctor-card__profile-group{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	&>*{width: 100%;}
+}

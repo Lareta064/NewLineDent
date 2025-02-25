@@ -1,3 +1,33 @@
 section.doctors
 	.container
-		
+		.doctor-card
+			//CARD LEFT
+			.doctor-card__img
+				img.cover-img(src='./img/team/big-img.webp', srcset='./img/team/big-img@2x.webp' width='266' height='366' loading='lazy' alt='img')
+			//CARD CENTER
+			.doctor-card__profile
+				.doctor-card__profile-group
+					.doctor-card__title
+						.title-17 Роман Вруйрович Варданян 
+						ul.doctor-card__list
+							li
+								span Должность:
+								p Стоматолог - хирург, имплантолог, пародонтолог
+							li
+								span Стаж
+								p 7 лет
+						.accordion-group
+							.accordion-header.open
+								p Свидетельство об аккредитации:
+							.accordion-body(style="display: block;")
+								p №103724 142571
+								p Стоматология хирургическая. Действителен до 04.07.27
+					
+					.doctor-card__info
+						.title-13 О враче
+						p Постоянно обучается и идёт в ногу со временем. В своё время прошёл стажировки у ведущих специалистов в области дентальной имплантации, костной пластики, синус-лифтинга, пластике мягких тканей
+						p Со своими пациентами всегда очень аккуратен и внимателен, даёт только проверенные и рабочие рекомендации. Сопровождает до конца периода реабилитации, а не только в момент операции. Всегда на связи
+				
+				
+				//CARD RIGHT
+				.doctor-card__profile-group
