@@ -52,17 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             prevEl: ".clinic-slider-nav .arrow-prev",
           
         },
-        // breakpoints: {
         
-        // 1024: {
-        //     slidesPerView: 5,
-        //     spaceBetween: 10,
-        //   },
-        //   1280: {
-        //     slidesPerView: 5,
-        //     spaceBetween: 10,
-        //   },
-        // }
     });
     // Fancybox
     Fancybox.bind("[data-fancybox]", {
@@ -168,6 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
      });
    }
 });
+// ACCORDION
 document.addEventListener("DOMContentLoaded", function () {
     ;(function ($, window, document, undefined) {
       "use strict";
@@ -273,4 +264,28 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
  	
-  })
+})
+// TABS
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".tabs-group").forEach((tabsGroup) => {
+      const tabButtons = tabsGroup.querySelectorAll("[data-tbat]");
+      const tabContents = tabsGroup.querySelectorAll("[data-tcontent]");
+
+      tabButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+              const target = button.getAttribute("data-tbat");
+
+              // Удаляем активный класс у всех вкладок
+              tabContents.forEach((content) => {
+                  content.classList.remove("active");
+              });
+
+              // Находим и добавляем активный класс к нужному контенту
+              const activeContent = tabsGroup.querySelector(`[data-tcontent="${target}"]`);
+              if (activeContent) {
+                  activeContent.classList.add("active");
+              }
+          });
+      });
+  });
+});

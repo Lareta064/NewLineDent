@@ -1,0 +1,8 @@
+@use "../base/var" as *;
+.tabs-content {
+    display: none!important;
+}
+
+.tabs-content.active {
+    display: block !important;
+}
