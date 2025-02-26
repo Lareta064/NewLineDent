@@ -9,6 +9,9 @@
 			padding-block: 30px;
 		}
 	}
+	@media (max-width: 767px) {
+	  padding-top: 20px;
+	}
 }
 .doctors-wrapper{
 	display: flex;
@@ -55,7 +58,7 @@
 	}
 	@media (max-width: 767px) {
 		grid-template-columns: 1fr;
-		row-gap:0;
+		row-gap:8px;
 		position: relative;
 		padding-top: 130px;
 	}
@@ -355,5 +358,33 @@
 		top: 0;
 		left: 0;
 		right: 0;
+	}
+}
+.filters-group.flex{
+	padding-block: 40px;
+	.dropdown{
+		width: 400px;
+		@media (max-width: 1919px) {
+		width: 100%;
+		max-width: 400px;
+		}
+		
+	}
+	@media (max-width: 1919px) {
+		padding-block: remy(40);
+	}
+	@media (max-width: 767px) {
+		padding-block: 20px;
+	}
+}
+.doctors .filters-group{
+	border-top: 1px solid #b9b1a6;
+	justify-content: flex-end;
+	column-gap:24px;
+	@media (max-width: 1919px) {
+		column-gap:remy(24);
+	}
+	@media (max-width: 767px) {
+		gap:16px;
 	}
 }

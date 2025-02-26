@@ -263,3 +263,26 @@
 		}
 	}
 }
+
+.promo.promo-slim{
+	
+	.promo-title{
+		padding-top: 40px;
+		.title-36{text-transform: uppercase;}
+		&>*+*{margin-top: 40px;}
+		.txt-16{
+			max-width: 980px;
+		}
+		@media (max-width: 1919px) {
+			padding-top: remy(40);
+			&>*+*{margin-top: remy(40);}
+			.txt-16{
+				max-width: remy(980);
+			}
+		}
+		@media (max-width: 767px) {
+			padding-top: 20px;
+			
+		}
+	}
+}

@@ -74,8 +74,37 @@ mixin doctorCrad(img, name,txt, num)
 
 section.doctors.pb-110
 	.container
-		//card
+		.filters-group.flex
+			//filter item
+			.dropdown.filter-dropdown.hide-sm
+				button.dropdown__button(type="button") График работы
+				
+				.dropdown__list
+					ul
+						li.dropdown__list-item(data-value="Текст1") Текст 1
+						li.dropdown__list-item(data-value="Текст2") Текст 2
+						li.dropdown__list-item(data-value="Текст3") Текст 3
+						li.dropdown__list-item(data-value="Текст4") Текст 4
+
+				//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+				input.dropdown__input-hidden(type="hidden", name="")
+			
+			//filter item
+			.dropdown.filter-dropdown
+				button.dropdown__button(type="button") Поиск по направлениям
+				
+				.dropdown__list
+					ul
+						li.dropdown__list-item(data-value="Текст1") Текст 1
+						li.dropdown__list-item(data-value="Текст2") Текст 2
+						li.dropdown__list-item(data-value="Текст3") Текст 3
+						li.dropdown__list-item(data-value="Текст4") Текст 4
+
+				//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+				input.dropdown__input-hidden(type="hidden", name="")
+		
 		.doctors-wrapper
+			//card
 			.doctor-card
 				//CARD LEFT
 				.doctor-card__img
