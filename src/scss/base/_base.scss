@@ -159,6 +159,13 @@ img.cover-img, img.contain-img{
 	.img-caption.img-caption--name{
 		font-size: 16px;
 		margin-left: 0;
+		@media (max-width: 1919px) {
+			font-size: remy(16);
+		}
+		@media (max-width: 767px) {
+			font-size: 10px;
+			line-height: 53%;
+		}
 	}
 	.flex{
 		justify-content: space-between;
@@ -181,12 +188,20 @@ img.cover-img, img.contain-img{
 			bottom: remy(12);
 			right: remy(12);
 		}
+		span.img-logo{
+			width: remy(85);
+		    height: remy(14);
+		}
 	}
 	@media (max-width: 767px) {
 	 padding: 5px;
 	 padding-bottom: 15px;
 	 width: 117px;
 	 height: 140px;
+	 span.img-logo{
+		width: remy(57);
+		height: remy(24);
+	 }
 	}
 }
 img.contain-img{object-fit: contain;}

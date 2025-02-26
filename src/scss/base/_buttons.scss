@@ -64,3 +64,33 @@
 		background-color: #aca396;
 	}
 }
+.btn.btn--accent-slim, .text-btn{
+	border: 1px solid #c7491f;
+	color: #c7491f;
+	border-radius: 24px;
+	height:48px;
+	font-weight: 500;
+	font-size: 18px;
+	letter-spacing: 0.06em;
+	text-align: center;
+	color: #c7491f;
+	align-items: center;
+	display: inline-flex;
+	justify-content: center;
+	column-gap:16px;
+	@media (max-width: 1919px) {
+		height:remy(48);
+		font-size: remy(16);
+		column-gap:remy(16);
+	}
+	@media (max-width: 767px) {
+		height:48px;
+		font-size: 18px;
+		width: remy2(333);
+		column-gap:16px;
+	}
+
+}
+.text-btn.btn--accent{
+   border-color: white;
+}

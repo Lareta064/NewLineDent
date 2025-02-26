@@ -1,33 +1,207 @@
-section.doctors
-	.container
-		.doctor-card
-			//CARD LEFT
-			.doctor-card__img
-				img.cover-img(src='./img/team/big-img.webp', srcset='./img/team/big-img@2x.webp' width='266' height='366' loading='lazy' alt='img')
-			//CARD CENTER
-			.doctor-card__profile
-				.doctor-card__profile-group
-					.doctor-card__title
-						.title-17 Роман Вруйрович Варданян 
-						ul.doctor-card__list
-							li
-								span Должность:
-								p Стоматолог - хирург, имплантолог, пародонтолог
-							li
-								span Стаж
-								p 7 лет
-						.accordion-group
-							.accordion-header.open
-								p Свидетельство об аккредитации:
-							.accordion-body(style="display: block;")
-								p №103724 142571
-								p Стоматология хирургическая. Действителен до 04.07.27
+mixin doctorCrad(img, name,txt, num)
+	//card
+	.doctor-card
+		//CARD LEFT
+		.doctor-card__img
+			img.cover-img(src='./img/team/'+img+'.webp', srcset='./img/team/'+img+'@2x.webp' width='400' height='550' loading='lazy' alt='img')
+		//CARD CENTER
+		.doctor-card__profile
+			.doctor-card__profile-group
+				.doctor-card__title
+					.title-26 !{name}
+					ul.doctor-card__list
+						li
+							span Должность:
+							p #{txt}
+						li
+							span Стаж
+							p #{num} лет
+					.accordion-group
+						.accordion-header
+							p Свидетельство об аккредитации:
+						.accordion-body
+							p №103724 142571
+							p Стоматология хирургическая. Действителен до 04.07.27
+				
+				.doctor-card__info
+					.title-20 О враче
+					block
+			
+			
+			//CARD RIGHT
+			.doctor-card__profile-group
+				.doctor-card__schedule.flex-col
+					.schedule-block.accordion-group
+						.accordion-header
+							.title-20 График работы
+						.accordion-body
+							ul.schedule-time.flex
+								li.schedule-time-item
+									span.schedule-day Пн
+									span.schedule-interval 10-22
+								li.schedule-time-item
+									span.schedule-day Вт
+									span.schedule-interval 10-22
+								li.schedule-time-item.off-working
+									span.schedule-day Ср
+									span.schedule-interval
+								li.schedule-time-item
+									span.schedule-day Чт
+									span.schedule-interval 10-22
+								li.schedule-time-item.off-working
+									span.schedule-day Пт
+									span.schedule-interval
+								li.schedule-time-item.short-day
+									span.schedule-day Сб
+									span.schedule-interval 10-14
+								li.schedule-time-item.short-day
+									span.schedule-day Вс
+									span.schedule-interval 14-16
+
+					button(type="button").btn.btn--accent-slim Записаться на прием
+
+				//BUTTONS
+				.doctor-card__buttons.flex
+					a(href="https://www.youtube.com/embed/__-vp0g_BhA?si=ATYLxRiZZo-EeydT"  data-fancybox="video-doctor")
+						.text-btn.btn--accent
+							span Знакомство с врачом
+							svg.svg-play
+								use(href='./img/sprite.svg#svg-play')
 					
-					.doctor-card__info
-						.title-13 О враче
-						p Постоянно обучается и идёт в ногу со временем. В своё время прошёл стажировки у ведущих специалистов в области дентальной имплантации, костной пластики, синус-лифтинга, пластике мягких тканей
-						p Со своими пациентами всегда очень аккуратен и внимателен, даёт только проверенные и рабочие рекомендации. Сопровождает до конца периода реабилитации, а не только в момент операции. Всегда на связи
-				
-				
-				//CARD RIGHT
-				.doctor-card__profile-group
+					button.btn-primary.pro-doct-btn
+						span ПроДокторов
+						img(src='./img/icons/pro-doct.webp'  width='24' height='24' loading='lazy' alt='img')
+
+section.doctors.pb-110
+	.container
+		//card
+		.doctors-wrapper
+			.doctor-card
+				//CARD LEFT
+				.doctor-card__img
+					img.cover-img(src='./img/team/big-img.webp', srcset='./img/team/big-img@2x.webp' width='400' height='550' loading='lazy' alt='img')
+				//CARD CENTER
+				.doctor-card__profile
+					.doctor-card__profile-group
+						.doctor-card__title
+							.title-26 Роман Вруйрович Варданян 
+							ul.doctor-card__list
+								li
+									span Должность:
+									p Стоматолог - хирург, имплантолог, пародонтолог
+								li
+									span Стаж
+									p 7 лет
+							.accordion-group
+								.accordion-header
+									p Свидетельство об аккредитации:
+								.accordion-body
+									p №103724 142571
+									p Стоматология хирургическая. Действителен до 04.07.27
+						
+						.doctor-card__info
+							.title-20 О враче
+							p Постоянно обучается и идёт в ногу со временем. В своё время прошёл стажировки у ведущих специалистов в области дентальной имплантации, костной пластики, синус-лифтинга, пластике мягких тканей
+							p Со своими пациентами всегда очень аккуратен и внимателен, даёт только проверенные и рабочие рекомендации. Сопровождает до конца периода реабилитации, а не только в момент операции. Всегда на связи
+					
+					
+					//CARD RIGHT
+					.doctor-card__profile-group
+						.doctor-card__schedule.flex-col
+							.schedule-block.accordion-group
+								.accordion-header
+									.title-20 График работы
+								.accordion-body
+									ul.schedule-time.flex
+										li.schedule-time-item
+											span.schedule-day Пн
+											span.schedule-interval 10-22
+										li.schedule-time-item
+											span.schedule-day Вт
+											span.schedule-interval 10-22
+										li.schedule-time-item.off-working
+											span.schedule-day Ср
+											span.schedule-interval
+										li.schedule-time-item
+											span.schedule-day Чт
+											span.schedule-interval 10-22
+										li.schedule-time-item.off-working
+											span.schedule-day Пт
+											span.schedule-interval
+										li.schedule-time-item.short-day
+											span.schedule-day Сб
+											span.schedule-interval 10-14
+										li.schedule-time-item.short-day
+											span.schedule-day Вс
+											span.schedule-interval 14-16
+
+							button(type="button").btn.btn--accent-slim Записаться на прием
+
+						//BUTTONS
+						.doctor-card__buttons.flex
+							a(href="https://www.youtube.com/embed/__-vp0g_BhA?si=ATYLxRiZZo-EeydT"  data-fancybox="video-doctor")
+								.text-btn.btn--accent
+									span Знакомство с врачом
+									svg.svg-play
+										use(href='./img/sprite.svg#svg-play')
+							
+							button.btn-primary.pro-doct-btn
+								span ПроДокторов
+								img(src='./img/icons/pro-doct.webp'  width='24' height='24' loading='lazy' alt='img')
+			//Card
+			+doctorCrad(5,'Лейла Ахмедовна Бейноева','Стоматолог – терапевт, эндодонтист', 3)
+				ul
+					li 
+						p Образование:
+						p Выпускница ПСПбгму им. акад. И. А. Павлова 2020 год Стоматологический факультет
+					li 
+						p Ординатура:
+						p СЗГМУ им . И. И. Мечникова Кафедра стоматологии общей практики
+			//Card
+			+doctorCrad(2,'Чермен Олегович Дегоев','Стоматолог – терапевт, эндодонтист', 9)
+				p Окончил «Северо-Осетинский государственный медицинский университет им. Коста Левановича Хетагурова» . Прошел профессиональную подготовку в Северо-Западном государственном медицинском университете имени И. И. Мечникова
+
+		.feedback__content.flex
+			.feedback__txt
+				p.txt-16 Оставьте заявку
+				.title-22 Получите скидку на первое посещение и бесплатную консультацию.
+				.social-block
+					a(href="#!").social-link
+						img(src="./img/social/inst2.svg", width="32" height="32" alt="img")
+					a(href="#!").social-link
+						img(src="./img/social/wa.svg", width="32" height="32" alt="img")
+					a(href="#!").social-link
+						img(src="./img/social/youtube.svg", width="40" height="32" alt="img")
+
+			.feedback__center
+				.gogol-text всегда  #[span.smile-icon] на связи
+			.feedback__form
+				form.contact-form.flex-col
+					
+					.form-item
+						span.fake-placeholder Имя
+						input.form-input(type="text" name="name")
+					.form-item
+						span.fake-placeholder Телефон
+						input.form-input(type="tel" name="phone")
+					.form-btn.flex
+						button.btn-primary(type="submit")
+							span Оставить заявку 
+							svg.svg-rarr
+								use(href='../img/sprite.svg#svg-rarr')
+						p.agree-txt Нажимая на кнопку «Отправить», я даю согласие на обработку персональных данных
+
+		.doctors-wrapper
+			//Card
+			+doctorCrad(5,'Лейла Ахмедовна Бейноева','Стоматолог – терапевт, эндодонтист', 3)
+				ul
+					li 
+						p Образование:
+						p Выпускница ПСПбгму им. акад. И. А. Павлова 2020 год Стоматологический факультет
+					li 
+						p Ординатура:
+						p СЗГМУ им . И. И. Мечникова Кафедра стоматологии общей практики
+			
+			//Card
+			+doctorCrad(2,'Чермен Олегович Дегоев','Стоматолог – терапевт, эндодонтист', 9)
+				p Окончил «Северо-Осетинский государственный медицинский университет им. Коста Левановича Хетагурова» . Прошел профессиональную подготовку в Северо-Западном государственном медицинском университете имени И. И. Мечникова
