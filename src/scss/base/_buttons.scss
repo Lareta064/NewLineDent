@@ -63,6 +63,9 @@
 		color: #fff;
 		background-color: #aca396;
 	}
+	@media (max-width: 767px) {
+	font-size: 19px;
+	}
 }
 .btn.btn--accent-slim, .text-btn{
 	border: 1px solid #c7491f;

@@ -323,28 +323,53 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 // TABS
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".tabs-group").forEach((tabsGroup) => {
-      const tabButtons = tabsGroup.querySelectorAll("[data-tbat]");
-      const tabContents = tabsGroup.querySelectorAll("[data-tcontent]");
+  let activeSwiper = null; // Храним активный Swiper
 
-      tabButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-             tabButtons.forEach((el)=>{el.classList.remove("active");})
-              const target = button.getAttribute("data-tbat");
-
-              // Удаляем активный класс у всех вкладок
-              tabContents.forEach((content) => {
-                  content.classList.remove("active");
-                
-              });
-
-              // Находим и добавляем активный класс к нужному контенту
-              const activeContent = tabsGroup.querySelector(`[data-tcontent="${target}"]`);
-              if (activeContent) {
-                  activeContent.classList.add("active");
-                  button.classList.add("active");
-              }
-          });
+  function initSwiper(container) {
+      return new Swiper(container, {
+          slidesPerView: 'auto',
+          speed: 800,
+          navigation: {
+              nextEl: ".mySwiper .arrow-next",
+              prevEl: ".mySwiper .arrow-prev",
+          },
       });
+  }
+
+  function activateTab(tabButton) {
+      const tabValue = tabButton.getAttribute("data-tbat");
+
+      document.querySelectorAll(".tabs__nav-btn").forEach(btn => btn.classList.remove("active"));
+      document.querySelectorAll(".tabs-content").forEach(tab => tab.classList.remove("active"));
+
+      
+      tabButton.classList.add("active");
+      const activeTab = document.querySelector(`.tabs-content[data-tcontent="${tabValue}"]`);
+      if (activeTab) {
+          activeTab.classList.add("active");
+
+         
+          setTimeout(() => {
+              const swiperContainer = activeTab.querySelector(".mySwiper");
+              if (swiperContainer) {
+                  if (activeSwiper) activeSwiper.destroy(true, true); // Удаляем старый Swiper
+                  activeSwiper = initSwiper(swiperContainer); // Запускаем новый Swiper
+              }
+          }, 50);
+      }
+  }
+
+ 
+  document.querySelectorAll(".tabs__nav-btn").forEach(btn => {
+      btn.addEventListener("click", () => activateTab(btn));
   });
+
+  
+  const firstActiveTab = document.querySelector(".tabs__nav-btn.active") || document.querySelector(".tabs__nav-btn");
+  if (firstActiveTab) activateTab(firstActiveTab);
+
+  
 });
+// let sw = new Swiper('.mySwiper', {
+//   slidesPerView: 1
+// })

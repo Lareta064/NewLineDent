@@ -1,5 +1,49 @@
+mixin tabsRightContent
+	//блок для десктоп версии
+	.rotate-image__group.hide-sm
+		.rotate-image.rotate-image1
+			img(src='./img/service-cards/img1.webp', srcset='./img/service-cards/img1@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
+			.flex
+				span.img-caption.img-caption--name До
+				span.img-logo
+				
+		.rotate-image.rotate-image2
+			img(src='./img/service-cards/img2.webp', srcset='./img/service-cards/img2@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
+			.flex
+				span.img-caption.img-caption--name После
+				span.img-logo
+	
+	//слайдер для моб версии с теми же картинками, что и в блоке выше
+	.mySwiper.swiper.block-sm
+		.swiper-wrapper
+			.swiper-slide
+				.rotate-image
+					img(src='./img/service-cards/img1.webp', srcset='./img/service-cards/img1@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
+					.flex
+						span.img-caption.img-caption--name До
+						span.img-logo
+			.swiper-slide
+				.rotate-image
+					img(src='./img/service-cards/img1.webp', srcset='./img/service-cards/img1@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
+					.flex
+						span.img-caption.img-caption--name До
+						span.img-logo
+		.mySwiper-nav.flex
+			button.arrow-prev
+				svg.svg-rarr
+					use(href='./img/sprite.svg#svg-rarr')
+			button.arrow-next
+				svg.svg-rarr
+					use(href='./img/sprite.svg#svg-rarr')
+	
+	//buttons-group
+	.align-right-buttons
+		a(href="#!").btn.btn--accent Назад
+		a(href="#!").btn-primary Перейти к следующему
+
 section.before-after
 	.container
+		
 		.before-after__tabs
 			.tabs-group
 				ul.tabs__nav.flex
@@ -10,13 +54,12 @@ section.before-after
 					li.tabs__nav-btn.flex(data-tbat="4") Ортодонтия
 					li.tabs__nav-btn.flex(data-tbat="5") Ортопедия
 					li.tabs__nav-btn.flex(data-tbat="6") Гигиена
-					
 						
 				
-				.tabs__content-wrapper
+				.tabs__content-container
 					//TAB #1
 					.tabs-content.active(data-tcontent="all")
-						.tabs-content-wrapper.flex
+						.tabs-content-wrapper
 							//LEFT CONTENT
 							.tabs-content__left
 								.user-card
@@ -39,25 +82,14 @@ section.before-after
 												span.coins-icon
 												span.coins-icon
 												span.coins-icon.disable
-							
+									.before-after__buttons
+										a(href="#!").btn-accent.sm-100 Получить такую улыбку 
 							//RIGHT CONTENT
 							.tabs-content__right
-								.rotate-image__group
-									.rotate-image.rotate-image1
-										img(src='./img/service-cards/img1.webp', srcset='./img/service-cards/img1@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
-										.flex
-											span.img-caption.img-caption--name До
-											span.img-logo
-											
-									.rotate-image.rotate-image2
-										img(src='./img/service-cards/img2.webp', srcset='./img/service-cards/img2@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
-										.flex
-											span.img-caption.img-caption--name После
-											span.img-logo
-							
+								+tabsRightContent
 					//TAB #2
 					.tabs-content(data-tcontent="2")
-						.tabs-content-wrapper.flex
+						.tabs-content-wrapper
 							//LEFT CONTENT
 							.tabs-content__left
 								.user-card
@@ -80,24 +112,16 @@ section.before-after
 												span.coins-icon
 												span.coins-icon
 												span.coins-icon.disable
+									.before-after__buttons
+										a(href="#!").btn-accent.sm-100 Получить такую улыбку 
+							
 							
 							//RIGHT CONTENT
 							.tabs-content__right
-								.rotate-image__group
-									.rotate-image.rotate-image1
-										img(src='./img/service-cards/img1.webp', srcset='./img/service-cards/img1@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
-										.flex
-											span.img-caption.img-caption--name До
-											span.img-logo
-											
-									.rotate-image.rotate-image2
-										img(src='./img/service-cards/img2.webp', srcset='./img/service-cards/img2@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
-										.flex
-											span.img-caption.img-caption--name После
-											span.img-logo
+								+tabsRightContent
 					//TAB #3
 					.tabs-content(data-tcontent="3")
-						.tabs-content-wrapper.flex
+						.tabs-content-wrapper
 							//LEFT CONTENT
 							.tabs-content__left
 								.user-card
@@ -120,22 +144,9 @@ section.before-after
 												span.coins-icon
 												span.coins-icon
 												span.coins-icon.disable
+									.before-after__buttons
+										a(href="#!").btn-accent.sm-100 Получить такую улыбку 
 							
 							//RIGHT CONTENT
 							.tabs-content__right
-								.rotate-image__group
-									.rotate-image.rotate-image1
-										img(src='./img/service-cards/img1.webp', srcset='./img/service-cards/img1@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
-										.flex
-											span.img-caption.img-caption--name До
-											span.img-logo
-											
-									.rotate-image.rotate-image2
-										img(src='./img/service-cards/img2.webp', srcset='./img/service-cards/img2@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
-										.flex
-											span.img-caption.img-caption--name После
-											span.img-logo
-
-			
-			.before-after__buttons
-				a(href="#!").btn-accent Получить такую улыбку 
+								+tabsRightContent

@@ -159,10 +159,11 @@
 		height: 330px;
 	}
 	@media (max-width: 767px) {
-		min-height: 525px;
+		min-height: 545px;
 		display: flex;
 		.container{
 			display: flex;
+			justify-content: center;
 		}
 		.h1{
 			font-size: 18px;
@@ -178,7 +179,7 @@
 	}
 	@media (max-width: 767px) {
 	 padding-top: 0;
-	 padding-bottom: 15px;
+	 padding-bottom: 40px;
 	 row-gap: 10px;
 	 max-width:380px;
 	
@@ -231,6 +232,7 @@
 				margin-left: remy(80);
 				margin-top: remy(50);
 				
+				
 			}
 			.rotate-image3{
 				
@@ -258,8 +260,10 @@
 			.rotate-image{
 				width: 157px;
 				height: 190px;
+				margin-left: 0;
+				margin-top: 0;
 			}
-			.rotate-image3{top: -36px;}
+			.rotate-image3{top: -36px; right:24px;}
 		}
 	}
 }
