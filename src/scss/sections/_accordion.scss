@@ -1,5 +1,5 @@
 @use "../base/var" as *;
-.video-box{position: relative;
+.video-box{position: relative; display: flex;
 }
 .accordion-body {
 	display: none;

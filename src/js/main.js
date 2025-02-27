@@ -42,8 +42,30 @@ document.addEventListener("DOMContentLoaded", function () {
           },
         }
     });
-      // clinicSlider
-      let clinicSlider = new Swiper(".clinic-slider", {
+    //
+    
+    let revSlider = new Swiper(".about-review", {
+      slidesPerView: 'auto',
+      speed: 800,
+      spaceBetween: 10,
+      navigation: {
+          nextEl: ".teams-cards-next",
+        
+      },
+      breakpoints: {
+      
+      1024: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+      }
+  });
+    // clinicSlider
+    let clinicSlider = new Swiper(".clinic-slider", {
         slidesPerView: 'auto',
         speed: 800,
         spaceBetween: 18,
@@ -370,6 +392,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   
 });
-// let sw = new Swiper('.mySwiper', {
-//   slidesPerView: 1
-// })

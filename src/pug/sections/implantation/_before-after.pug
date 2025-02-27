@@ -1,0 +1,90 @@
+mixin tabsRightContent
+	//блок для десктоп версии
+	.rotate-image__group.hide-sm
+		.rotate-image.rotate-image1
+			img(src='./img/service-cards/img1.webp', srcset='./img/service-cards/img1@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
+			.flex
+				span.img-caption.img-caption--name До
+				span.img-logo
+				
+		.rotate-image.rotate-image2
+			img(src='./img/service-cards/img2.webp', srcset='./img/service-cards/img2@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
+			.flex
+				span.img-caption.img-caption--name После
+				span.img-logo
+	
+	//слайдер для моб версии с теми же картинками, что и в блоке выше
+	.mySwiper.swiper.block-sm
+		.swiper-wrapper
+			.swiper-slide
+				.rotate-image
+					img(src='./img/service-cards/img1.webp', srcset='./img/service-cards/img1@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
+					.flex
+						span.img-caption.img-caption--name До
+						span.img-logo
+			.swiper-slide
+				.rotate-image
+					img(src='./img/service-cards/img1.webp', srcset='./img/service-cards/img1@2x.webp 2x' width='332' height='239' loading='lazy' alt='img')
+					.flex
+						span.img-caption.img-caption--name До
+						span.img-logo
+		.mySwiper-nav.flex
+			button.arrow-prev
+				svg.svg-rarr
+					use(href='./img/sprite.svg#svg-rarr')
+			button.arrow-next
+				svg.svg-rarr
+					use(href='./img/sprite.svg#svg-rarr')
+	
+	//buttons-group
+	.align-right-buttons
+		a(href="#!").btn.btn--accent Назад
+		a(href="#!").btn-primary Перейти к следующему
+
+section.before-after
+	.container-special
+		.left-decore-line
+			p.txt-primary 02/07
+			span.fake-line
+			p До / После 
+		
+		.header-block
+			h2.h2 До / После 
+			a(href="#!").btn-primary.hide-sm 
+				span Еще больше улыбок 
+				svg.svg-rarr
+					use(href='./img/sprite.svg#svg-rarr')
+		
+		
+		.tabs__content-container
+			//TAB #1
+			.tabs-content.active(data-tcontent="all")
+				.tabs-content-wrapper
+					//LEFT CONTENT
+					.tabs-content__left
+						.user-card
+							.user-card__img
+								img(src='./img/user1.webp' width='329' height='280' loading='lazy' alt='img')
+
+							.user-card__body
+								.card__body-group
+									.title-24 Вера Павловна Твердохлебова
+									span.txt-bold Эстетическая тератия
+								.card__body-group
+									span.txt-bold Лечащий врач 
+									p.txt-16  Вера Павловна Твердохлебова
+								.card__body-group
+									.flex
+										span.clock-icon
+										span.clock-icon
+										span.clock-icon
+									.flex
+										span.coins-icon
+										span.coins-icon
+										span.coins-icon.disable
+							.before-after__buttons
+								a(href="#!").btn-accent.sm-100 Получить такую улыбку 
+					//RIGHT CONTENT
+					.tabs-content__right
+						+tabsRightContent
+					

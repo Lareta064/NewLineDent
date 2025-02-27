@@ -1,0 +1,15 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header-main-page
+	main.main
+		include ../sections/implantation/_promo.pug
+		include ../sections/_steps
+		include ../sections/implantation/_doctors.pug
+		include ../sections/implantation/_before-after.pug
+		
+		include ../sections/implantation/_review
+		include ../sections/_faq
+	
+	//FOOTER
+	include ../sections/_footer

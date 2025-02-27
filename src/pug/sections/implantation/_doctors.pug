@@ -1,0 +1,58 @@
+mixin doctorCrad(img, name,txt, num)
+	//card
+	.doctor-card.doctor-card--short
+		//CARD LEFT
+		.doctor-card__img
+			img.cover-img(src='./img/team/'+img+'.webp', srcset='./img/team/'+img+'@2x.webp' width='400' height='550' loading='lazy' alt='img')
+		//CARD CENTER
+		.doctor-card__profile
+			.doctor-card__profile-group
+				.doctor-card__title
+					.title-26 !{name}
+					ul.doctor-card__list
+						li
+							span Должность:
+							p #{txt}
+						li
+							span Стаж
+							p #{num} лет
+						li
+							span Свидетельство об аккредитации:
+						
+							p №103724 142571
+							p Стоматология хирургическая. Действителен до 04.07.27
+				
+				
+				a(href="https://www.youtube.com/embed/__-vp0g_BhA?si=ATYLxRiZZo-EeydT" data-fancybox="video-about").video-slim-btn
+					p узнать о враче
+					span.btn-play
+
+				
+//TEAM
+section.team
+	.container-special
+		.left-decore-line
+			p.txt-primary 02/07
+			span.fake-line
+			p наши врачи
+		
+		.header-block
+			h2.h2 Для вас&nbsp;работают опытные профессионалы
+			a(href="#!").btn-primary.hide-sm 
+				span Все врачи
+				svg.svg-rarr
+					use(href='./img/sprite.svg#svg-rarr')
+
+		.team-content
+			//Card
+			+doctorCrad(5,'Лейла Ахмедовна Бейноева','Стоматолог – терапевт, эндодонтист', 3)
+				ul
+					li 
+						p Образование:
+						p Выпускница ПСПбгму им. акад. И. А. Павлова 2020 год Стоматологический факультет
+					li 
+						p Ординатура:
+						p СЗГМУ им . И. И. Мечникова Кафедра стоматологии общей практики
+			//Card
+			+doctorCrad(2,'Чермен Олегович Дегоев','Стоматолог – терапевт, эндодонтист', 9)
+				p Окончил «Северо-Осетинский государственный медицинский университет им. Коста Левановича Хетагурова» . Прошел профессиональную подготовку в Северо-Западном государственном медицинском университете имени И. И. Мечникова
