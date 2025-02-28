@@ -69,21 +69,25 @@ document.addEventListener("DOMContentLoaded", function () {
       speed: 800,
       spaceBetween: 10,
       navigation: {
-          nextEl: ".about-review-nav .arrow-next",
-          prevEl: ".teams-cards-nav .arrow-prev",
+         nextEl: ".about-review-nav .arrow-next",
+         prevEl: ".about-review-nav .arrow-prev",
         
       },
       breakpoints: {
       320: {
-        slidesPerView: 'auto',
-         
+        slidesPerView: 1,
+        
         },
+      699: {
+          slidesPerView: 2,
+          
+          }, 
       1024: {
           slidesPerView: 3,
          
         },
         1280: {
-          slidesPerView: 3,
+          slidesPerView: 2.9,
           
         },
       }
