@@ -12,12 +12,13 @@
 	border: 1px solid #b9b1a6;
 	position: relative;
 	&>*{width: 100%;}
+	.step-card__top{justify-content: space-between;margin-bottom: 34px;}
 	.step__num{
 		font-size: 40px;
 		line-height: 1;
 		text-transform: uppercase;
 		color: #aba096;
-		margin-bottom: 34px;
+		
 	}
 	.step__img{
 		padding-left: 17px;
@@ -36,7 +37,8 @@
 	@media (min-width: 1280px) and (max-width: 1919px) {
 		padding: remy(35);
 		font-size: remy(14);
-		.step__num{font-size: remy(40); margin-bottom: remy(34)}
+		.step-card__top{margin-bottom: remy(34)}
+		.step__num{font-size: remy(40); }
 		.step__img{
 			padding-left: remy(17);
 			height: remy(242);
@@ -53,6 +55,7 @@
 		padding: 22px 20px;
 		padding-bottom: 88px;
 		font-size: 18px;
+		.step-card__top{margin-bottom: 20px;}
 		.step__num{font-size: 30px;}
 		.step__img{margin-bottom: 35px;}
 		.step__title{max-width: 100%;}
