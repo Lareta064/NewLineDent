@@ -59,9 +59,10 @@ section.before-after
 				.tabs__content-container
 					//TAB #1
 					.tabs-content.active(data-tcontent="all")
-						.tabs-content-wrapper
+						
+						.before-after-wrapper
 							//LEFT CONTENT
-							.tabs-content__left
+							.before-after__left
 								.user-card
 									.user-card__img
 										img(src='./img/user1.webp' width='329' height='280' loading='lazy' alt='img')
@@ -85,13 +86,13 @@ section.before-after
 									.before-after__buttons
 										a(href="#!").btn-accent.sm-100 Получить такую улыбку 
 							//RIGHT CONTENT
-							.tabs-content__right
+							.before-after__right
 								+tabsRightContent
 					//TAB #2
 					.tabs-content(data-tcontent="2")
-						.tabs-content-wrapper
+						.before-after-wrapper
 							//LEFT CONTENT
-							.tabs-content__left
+							.before-after__left
 								.user-card
 									.user-card__img
 										img(src='./img/team/1.webp' width='329' height='280' loading='lazy' alt='img')
@@ -117,13 +118,13 @@ section.before-after
 							
 							
 							//RIGHT CONTENT
-							.tabs-content__right
+							.before-after__right
 								+tabsRightContent
 					//TAB #3
 					.tabs-content(data-tcontent="3")
-						.tabs-content-wrapper
+						.before-after-wrapper
 							//LEFT CONTENT
-							.tabs-content__left
+							.before-after__left
 								.user-card
 									.user-card__img
 										img(src='./img/team/3.webp' width='329' height='280' loading='lazy' alt='img')
@@ -148,5 +149,5 @@ section.before-after
 										a(href="#!").btn-accent.sm-100 Получить такую улыбку 
 							
 							//RIGHT CONTENT
-							.tabs-content__right
+							.before-after__right
 								+tabsRightContent

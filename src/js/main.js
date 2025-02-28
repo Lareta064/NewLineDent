@@ -65,22 +65,26 @@ document.addEventListener("DOMContentLoaded", function () {
    
     //
     let revSlider = new Swiper(".about-review", {
-      slidesPerView: 'auto',
+      slidesPerView: 3,
       speed: 800,
       spaceBetween: 10,
       navigation: {
-          nextEl: ".teams-cards-next",
+          nextEl: ".about-review-nav .arrow-next",
+          prevEl: ".teams-cards-nav .arrow-prev",
         
       },
       breakpoints: {
-      
+      320: {
+        slidesPerView: 'auto',
+         
+        },
       1024: {
           slidesPerView: 3,
-          spaceBetween: 10,
+         
         },
         1280: {
           slidesPerView: 3,
-          spaceBetween: 10,
+          
         },
       }
   });

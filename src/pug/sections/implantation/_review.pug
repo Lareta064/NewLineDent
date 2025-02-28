@@ -1,4 +1,4 @@
-section.testimonial.has-absBtn
+section.testimonial.testimonial--inner.has-absBtn
 	.container-special
 		.left-decore-line
 			p.txt-primary 06/07
@@ -6,12 +6,14 @@ section.testimonial.has-absBtn
 			p Истории наших клиентов 
 		
 		.header-block
-			h2.h2 Улыбки наших клиентов
-			a(href="review.html").btn-primary.abs-btn
-				span Еще больше улыбок
-				svg.svg-rarr
-					use(href='./img/sprite.svg#svg-rarr')
-		
+			h2.h2 Отзывы клиентов 
+			.about-review-nav.flex-nav
+				button.arrow-prev
+					svg.svg-rarr
+						use(href='./img/sprite.svg#svg-rarr')
+				button.arrow-next
+					svg.svg-rarr
+						use(href='./img/sprite.svg#svg-rarr')
 		.about-review.swiper
 			.swiper-wrapper
 				.swiper-slide.testimonial-box
@@ -51,7 +53,6 @@ section.testimonial.has-absBtn
 
 				.swiper-slide.testimonial-box
 					.testimonial-card
-						
 						.testimonial-card__body
 							.testimonial-card__title
 								p Бердникова Лариса
@@ -66,9 +67,9 @@ section.testimonial.has-absBtn
 								span.rating-star
 								span.rating-star
 								span.rating-star.rating-star.disable
+				
 				.swiper-slide.testimonial-box
 					.testimonial-card
-						
 						.testimonial-card__body
 							.testimonial-card__title
 								p Бердников Максим
@@ -84,9 +85,9 @@ section.testimonial.has-absBtn
 								span.rating-star
 								span.rating-star.rating-star.disable
 
+				
 				.swiper-slide.testimonial-box
 					.testimonial-card
-						
 						.testimonial-card__body
 							.testimonial-card__title
 								p Бердникова Лариса

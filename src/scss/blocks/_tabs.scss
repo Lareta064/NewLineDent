@@ -29,13 +29,11 @@
 			font-size: remy(16);
 		}
 		@media (max-width: 767px) {
-		  width: 176px;
+			width: calc(50% - 5px);
 		  font-size: 16px;
 		  height: 51px;
 		}
-		@media (max-width: 402px) {
-			width: calc(50% - 5px);
-		}
+		
 	}
 	.tabs__nav-btn.active{
 		border-bottom: 1px solid #c7491f;
