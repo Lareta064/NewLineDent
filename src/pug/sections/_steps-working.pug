@@ -1,0 +1,52 @@
+section.steps.working-sters
+	.container-special
+		
+		.left-decore-line
+			p.txt-primary 04/07
+			span.fake-line
+			p Первичный прием
+		
+		.header-block
+			h2.h2 Как пройдет наша<br>первая встреча?
+		.steps-slider.swiper
+			.swiper-wrapper
+				.swiper-slide.step-card
+					.step-card__top.flex
+						span.step__num 01
+						span.step-card__name Диагностика
+					.step__img
+						img(src='./img/steps/1.webp', srcset='./img/steps/1@2x.webp 2x' width='157' height='161' loading='lazy' alt='img')
+					.step__title Сбор анамнеза
+					.step__desk
+						p Лечение зубов всегда начинается с комплексной диагностики, позволяющей поставить точный диагноз, установить причины, приведшие к появлению той или иной проблемы с зубами, и выбрать эффективную технологию ее устранения.
+				
+				.swiper-slide.step-card
+					span.step__num 02
+					.step__img
+						img(src='./img/steps/2.webp', srcset='./img/steps/2@2x.webp 2x' width='157' height='161' loading='lazy' alt='img')
+					.step__title Осмотр
+				
+				.swiper-slide.step-card
+					span.step__num 03
+					.step__img
+						img(src='./img/steps/3.webp', srcset='./img/steps/3@2x.webp 2x' width='157' height='161' loading='lazy' alt='img')
+					.step__title Фотопротокол
+				
+				.swiper-slide.step-card
+					span.step__num 04
+					.step__img
+						img(src='./img/steps/4.webp', srcset='./img/steps/4@2x.webp 2x' width='157' height='161' loading='lazy' alt='img')
+					.step__title Компьютерная томография
+				
+				.swiper-slide.step-card
+					span.step__num 05
+					.step__img
+						img(src='./img/steps/5.webp', srcset='./img/steps/5@2x.webp 2x' width='157' height='161' loading='lazy' alt='img')
+					.step__title Составление плана лечение
+			
+			//slider nav
+			.steps-slider-nav
+				.steps-slider-pagination
+				button.steps-slider-next.arrow-next
+					svg.svg-rarr
+						use(href='./img/sprite.svg#svg-rarr')

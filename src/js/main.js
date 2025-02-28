@@ -43,7 +43,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     //
-    
+    let teanShortSlider = new Swiper(" .team-short-swiper", {
+        slidesPerView: '1',
+        speed: 800,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".team-short-nav .arrow-next",
+            prevEl: ".team-short-nav .arrow-prev",
+          
+        },
+        breakpoints: {
+        
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            
+          }
+        },
+        
+    });
+   
+    //
     let revSlider = new Swiper(".about-review", {
       slidesPerView: 'auto',
       speed: 800,

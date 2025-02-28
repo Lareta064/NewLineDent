@@ -12,12 +12,32 @@
 		p{font-size: remy(18);}
 		p +p{margin-top: remy(10);}	
 	}
+	@media (max-width: 767px) {
+		p{font-size: 14px;}
+		p +p{margin-top: 10px;}
+		max-width: 100%;
+	}
 }
 .promo-special-wrapper{
 	padding-bottom: 65px;
 	h1{letter-spacing: 0;}
+	
 	@media (max-width: 1919px) {
 		padding-bottom: remy(65);
+	}
+	@media (max-width: 767px) {
+		.promo-buttons .btn-primary{
+			height: auto;
+			padding: 0;
+			
+			background-color: #fff;
+			border:0;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 110%;
+			color: #c7491f;
+			svg{color: #c7491f;}
+		}
 	}
 }
 .promo-special-text{
@@ -28,6 +48,10 @@
 	@media (max-width: 1919px) {
 		row-gap: remy(40);
 		padding-top: remy(48);
+	}
+	@media (max-width: 767px) {
+		row-gap: 40px;
+		padding-top: 30px;
 	}
 }
 .promo-special-grid{
@@ -44,16 +68,36 @@
 		grid-template-columns: remy(630) 1fr;
 		.rotate-image__group{right: remy(392);}
 	}
+	@media (max-width: 767px) {
+		grid-template-columns: 1fr;
+		row-gap:40px;
+		.rotate-image__group{
+			position: relative;
+			right: auto;
+			min-height: 250px;
+			height: auto;
+			.rotate-image{
+				width: 140px;
+				height: 170px;
+			}
+		}
+		.promo-product-cards{
+			align-items: flex-start;
+		}
+	}
 }
 .promo-product-cards{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	gap:28px;
+	gap:25px;
 	padding-top: 20px;
 	@media (max-width: 1919px) {
 		gap:remy(28);
 		padding-top: remy(20);
+	}
+	@media (max-width: 767px) {
+		padding-top: 65px;
 	}
 }
 .product-card.product-card--short{
@@ -84,15 +128,19 @@
 
 .promo-special .rotate-image__group{
 	display: flex;
-	img{
+	.rotate-image{
+		padding-bottom: 35px;
 		width: 243px;
 		height: 266px;
 		@media (max-width: 1919px) {
 		   width: remy(243);
 		   height: remy(266);
 		}
+		@media (max-width: 767px) {
+			padding-bottom: 25px;
+		}
 	}
-	.rotate-image{padding-bottom: 35px;}
+	
 	.rotate-image1{
 		position: relative;
 		transform: rotate(16deg);
@@ -102,6 +150,10 @@
 			top: remy(48);
 			left: remy(80);
 		}
+		@media (max-width: 767px) {
+			top: 0;
+			left: 20px;
+		}
 	}
 	.rotate-image2{
 		transform: rotate(12deg);
@@ -110,7 +162,11 @@
 		z-index: 3;
 		@media (max-width: 1919px) {
 		  top: remy(224);
-		  left: (-35);
+		  left: remy(-35);
+		}
+		@media (max-width: 767px) {
+			top: 131px;
+			left: -61px;
 		}
 	}
 	.rotate-image3{
@@ -119,8 +175,12 @@
 		left: -85px;
 		@media (max-width: 1919px) {
 			top: remy(117);
-			left: (-85);
-		  }
+			left: remy(-85);
+		}
+		@media (max-width: 767px) {
+		    top: 80px;
+    		left: -88px;
+		}
 	}
 }
 

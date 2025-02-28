@@ -29,7 +29,7 @@ mixin doctorCrad(img, name,txt, num)
 
 				
 //TEAM
-section.team
+section.team.team-slider
 	.container-special
 		.left-decore-line
 			p.txt-primary 02/07
@@ -43,16 +43,20 @@ section.team
 				svg.svg-rarr
 					use(href='./img/sprite.svg#svg-rarr')
 
-		.team-content
-			//Card
-			+doctorCrad(5,'Лейла Ахмедовна Бейноева','Стоматолог – терапевт, эндодонтист', 3)
-				ul
-					li 
-						p Образование:
-						p Выпускница ПСПбгму им. акад. И. А. Павлова 2020 год Стоматологический факультет
-					li 
-						p Ординатура:
-						p СЗГМУ им . И. И. Мечникова Кафедра стоматологии общей практики
-			//Card
-			+doctorCrad(2,'Чермен Олегович Дегоев','Стоматолог – терапевт, эндодонтист', 9)
-				p Окончил «Северо-Осетинский государственный медицинский университет им. Коста Левановича Хетагурова» . Прошел профессиональную подготовку в Северо-Западном государственном медицинском университете имени И. И. Мечникова
+		.team-short-swiper.swiper
+			.swiper-wrapper
+				.swiper-slide
+					//Card
+					+doctorCrad(5,'Лейла Ахмедовна Бейноева','Стоматолог – терапевт, эндодонтист', 3)
+				.swiper-slide
+					//Card
+					+doctorCrad(2,'Чермен Олегович Дегоев','Стоматолог – терапевт, эндодонтист', 9)
+
+			.team-short-nav.flex-nav
+				button.arrow-prev
+					svg.svg-rarr
+						use(href='./img/sprite.svg#svg-rarr')
+				button.arrow-next
+					svg.svg-rarr
+						use(href='./img/sprite.svg#svg-rarr')
+				

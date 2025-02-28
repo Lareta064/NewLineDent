@@ -261,6 +261,7 @@ section{
 	}
 	@media (max-width: 767px) {
 		width: 100%;
+		max-width: 400px;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -284,7 +285,7 @@ section{
 	
 }
 
-.flex,.flex-link,.align-right-buttons{
+.flex,.flex-link,.align-right-buttons, .flex-nav{
 	display: flex;
 	align-items: center;
 	column-gap:20px;
@@ -295,6 +296,7 @@ section{
 		column-gap:20px;
 	}
 }
+.flex-nav{justify-content: center;}
 .align-right-buttons{
 	justify-content: flex-end;
 	column-gap:16px;
@@ -426,6 +428,10 @@ padding-block: 20px;
 		padding: remy(20);
 		max-width: remy(391);
 	}
+	@media (max-width: 767px) {
+		width: 100%;
+		max-width: 392px;
+		}
 }
 .product-card{
 	display: flex;
@@ -441,6 +447,10 @@ padding-block: 20px;
 		font-size:remy(18);
 		padding: remy(20);
 	    width: remy(392);
+	}
+	@media (max-width: 767px) {
+	width: 100%;
+	max-width: 392px;
 	}
 }
 .product-card__top{
@@ -529,6 +539,10 @@ padding-block: 20px;
 		width: remy(392);
 		font-size: remy(13);
 	}
+	@media (max-width: 767px) {
+		width: 100%;
+		max-width: 392px;
+		}
 }
 .implant-card .title-20{
 	font-family: var(--second-family);

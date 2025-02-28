@@ -12,18 +12,28 @@
 
 	
 	
-	.title-26, .doctor-card__list p, .accordion-body{
+	.title-26, .doctor-card__list p{
 		font-size: 18px;
 		line-height: 133%;
 		letter-spacing: -0.03em;
 	}
 	.title-26{line-height: 111%; padding-right: 60px;}
 	.doctor-card__img{height:400px;}
+	
+	
 	@media (max-width: 1919px) {
 		grid-template-columns: remy(280) 1fr;
 		column-gap:remy(40);
-		.title-26, .doctor-card__list p, .accordion-body{font-size: remy(18);}
+		.title-26, .doctor-card__list p{font-size: remy(18);}
 		.doctor-card__img{height:remy(400);}
+	}
+	@media (max-width: 767px) {
+		grid-template-columns: 1fr;
+		column-gap:20px;
+		.doctor-card__img{height:remy2(212)}
+		.doctor-card__profile{padding-top: 0;}
+		.doctor-card__profile .doctor-card__list p{font-size: 14px;}
+		.doctor-card__profile .title-26{font-size: 18px;}
 	}
 	
 }
@@ -37,8 +47,17 @@
 		width:max-content;
 		height: 52px;
 		.btn-play{right: 5px;}
+		@media(max-width: 768px) and (max-width: 1919px) {
+			height: remy(52);
+			padding-left: 10;
+			padding-right: 10;
+		}
 	}
-	
+	&-group{
+		display: flex;
+		flex-direction: column;
+		row-gap: 24px;
+	}
 }
 .video-slim-btn{
 	border: 1px solid #b9b1a6;
@@ -48,20 +67,30 @@
 	width:max-content;
 	height: 52px;
 	border-radius: 50px;
-	padding: 10px 11px 10px 36px;
-	height: 52px;
+	font-size: 15px;
+	letter-spacing: 0.07em;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	position: relative;
-	padding-right: 26px;
-	padding-right: 70px;
+	padding: 10px 30px;
+	
+	column-gap:14px;
 	.btn-play{
-		right: 6px;
-		left: auto;
-		z-index: 2;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+		position: relative;
+		inset: auto;
+		transform:translate(0);
+		width: 34px;
+		height: 34px;
+	}
+	@media(min-width: 768px) and (max-width: 1919px) {
+		height: remy(52);
+		padding: remy(10) remy(26);
+		font-size: remy(15);
+		.btn-play{
+			width: remy(34);
+			height: remy(34);
+		}
 	}
 }
 .doctor-card.doctor-card--short  .doctor-card__list li {
@@ -82,4 +111,30 @@
 		color: #2e3033;
 	}
 	&+li{margin-top: 16px;}
+	 @media(min-width: 768px) and (max-width: 1919px) {
+		span{
+			font-size: remy(14);
+			margin-bottom: remy(8);
+		}
+		p{font-size: remy(18);}
+		&+li{margin-top: remy(16);}	
+	}
+	@media (max-width: 767px) {
+		p{font-size: 14px;}
+	}
+}
+.team-short-swiper{
+	margin-top: 30px;
+	padding-bottom: 20px;
+	.team-short-nav.flex-nav{
+		display: none;
+		position: relative;
+		bottom:-20px;
+	}
+
+	@media (max-width: 767px) {
+		.team-short-nav.flex-nav{
+			display: flex;
+		}
+	}
 }

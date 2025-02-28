@@ -10,7 +10,7 @@
 	line-height: 1.29;
 	color: #2e3033;
 	border: 1px solid #b9b1a6;
-	
+	position: relative;
 	&>*{width: 100%;}
 	.step__num{
 		font-size: 40px;
@@ -108,4 +108,10 @@
 			column-gap:20px;
 		}
 	}
+}
+
+.step-card__name{
+	position: absolute;
+	right: 20px;
+	top: 20px;
 }
