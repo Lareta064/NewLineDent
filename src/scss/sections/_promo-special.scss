@@ -62,7 +62,7 @@
 		position: absolute;
 		top: 0;
 		right: 392px;
-
+		
 	}
 	@media (max-width: 1919px) {
 		grid-template-columns: remy(630) 1fr;
@@ -75,7 +75,6 @@
 			position: relative;
 			right: auto;
 			height:345px;
-			
 			overflow: hidden;
 			.rotate-image{
 				width: 140px;
@@ -183,6 +182,38 @@
 		@media (max-width: 767px) {
 		    top: 100px;
     		left: -88px;
+		}
+	}
+	&.image-count-2{
+		.rotate-image{
+			width: 275px;
+			height: 330px;
+		}
+		.rotate-image1{
+			transform: translate(-42%, 67%) rotate(15.5deg);
+			top: auto;
+			left: auto;
+		}
+		.rotate-image2{
+			transform: translate(-55%, 20%) rotate(-20.5deg);
+			top: auto;
+			left: auto;
+			z-index:5;
+		}
+		@media (max-width: 1919px) {
+			.rotate-image{
+				width: remy(275);
+				height: remy(330);
+			}
+			
+			}
+		@media (max-width: 767px) {
+			.rotate-image{
+				width: 150px;
+				height: 190px;
+			}
+			.rotate-image1{transform: translate(27%, 67%) rotate(15.5deg);}
+			.rotate-image2{transform: translate(0, 20%) rotate(-20.5deg);}
 		}
 	}
 }

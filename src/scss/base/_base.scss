@@ -513,6 +513,9 @@ padding-block: 20px;
 		padding-top: remy(20);
 		font-size: remy(38);
 	}
+	@media (max-width: 767px) {
+		font-size: 35px;
+	}
 }
 .product-card__price .txt-primary{
 	span{

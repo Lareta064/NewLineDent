@@ -103,6 +103,13 @@
 	line-height: 150%;
 	color: #2e3033;
 	flex-grow: 1;
+	p{
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 7;
+		overflow: hidden;
+
+	}
 	@media (max-width: 1919px) {
 		font-size: remy(16);
 		line-height: 1.3;
@@ -406,10 +413,15 @@
 		
 		.show-more-btn{
 			position: absolute;
-			bottom: 40px;
+			bottom: 50px;
 			left: 50%;
 			transform: translateX(-50%);
+			width: 300px;
 		}
-		.about-review-nav{bottom: 110px;}
+		.about-review-nav{
+			bottom: 140px;
+			z-index: 5;
+			right: 20px;
+			transform: translateX(0);}
 	}
 }

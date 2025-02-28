@@ -59,6 +59,14 @@
 		row-gap: 24px;
 	}
 }
+.team-short-swiper.swiper .swiper-wrapper{
+	@media (min-width: 1199px) {
+		display: grid;
+		grid-template-columns:  1fr 1fr;
+		gap:30px;
+	}
+	
+}
 .team-short-swiper.swiper{
 	@media (max-width: 767px) {
 		width:calc(50% + 50vw);
