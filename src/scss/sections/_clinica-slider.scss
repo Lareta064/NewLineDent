@@ -15,6 +15,7 @@
 		width: 40%;
 		background: linear-gradient(90deg, rgba(185, 177, 166, 0) 0%, rgba(185, 177, 166, 0.7) 100%);
 		z-index: 2;
+		pointer-events: none;
 		@media (max-width: 767px) {
 		display: none;
 		}

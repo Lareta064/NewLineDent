@@ -409,9 +409,11 @@
 	}
 }
 .testimonial.testimonial--inner{
+	.show-more-btn{display: none;}
 	@media (max-width: 767px) {
 		
 		.show-more-btn{
+			display: flex;
 			position: absolute;
 			bottom: 50px;
 			left: 50%;

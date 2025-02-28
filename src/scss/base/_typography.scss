@@ -10,7 +10,8 @@
 	line-height: 1.2;
 	letter-spacing: -0.06em;
 	font-weight: 300;
-	text-transform: uppercase;
+	&.txt-upper{text-transform: uppercase;}
+	
 	@media (max-width: 1919px) {
 		font-size: remy(50);
 	}
@@ -123,6 +124,9 @@
 .txt-bold{font-weight: 700;}
 .txt-white{
 	color: white!important;
+}
+.txt-upper{
+	text-transform: uppercase;
 }
 .txt-primary{
 	color: #b9b1a6!important;

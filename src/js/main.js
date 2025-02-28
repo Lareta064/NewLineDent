@@ -20,7 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // window.addEventListener('resize', ()=>{
 
     // });
-
+    //.promo-product-cards grid
+    const promoCardsWrapper= document.querySelector('.promo-product-cards');
+    if( promoCardsWrapper){
+      const  promoCardsItems = promoCardsWrapper.querySelectorAll('.product-card');
+      if(promoCardsItems.length == 4){
+        promoCardsWrapper.classList.add('two-columns-grid');
+      }
+    }
     // teamSlider
     let teamSlider = new Swiper(".teams-cards", {
         slidesPerView: 'auto',
@@ -42,28 +49,32 @@ document.addEventListener("DOMContentLoaded", function () {
           },
         }
     });
-    //
-    let teanShortSlider = new Swiper(" .team-short-swiper", {
-        slidesPerView: '1',
-        speed: 800,
-        spaceBetween: 10,
-        navigation: {
-            nextEl: ".team-short-nav .arrow-next",
-            prevEl: ".team-short-nav .arrow-prev",
-          
-        },
-        breakpoints: {
-        
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            
-          }
-        },
-        
-    });
-   
-    //
+
+    //teamShortSlider
+    let teamShortSlider = null; 
+
+    function initShortSwiper() {
+        if (window.innerWidth < 768 && !teamShortSlider) {
+           serviceCards = new Swiper('.team-short-swiper', {
+            slidesPerView: 'auto',
+            speed: 800,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".team-short-nav .arrow-next",
+                prevEl: ".team-short-nav .arrow-prev",
+              
+            },
+         });
+        } else if (window.innerWidth >= 768 && teamShortSlider) {
+            // Уничтожение Swiper при большом экране
+            teamShortSlider.destroy(true, true);
+            teamShortSlider = null;
+        }
+    }
+    initShortSwiper();
+    window.addEventListener("resize", initShortSwiper);
+    
+    //revSlider
     let revSlider = new Swiper(".about-review", {
       slidesPerView: 3,
       speed: 800,
@@ -263,6 +274,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+
 });
 // ACCORDION
 document.addEventListener("DOMContentLoaded", function () {

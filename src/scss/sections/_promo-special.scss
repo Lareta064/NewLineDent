@@ -260,3 +260,43 @@
 		
 	}
 }
+.rotate-image__group.image-count-1{
+	right: 885px;
+	.rotate-image1{
+		width: 288px;
+		height: 330px;
+		transform: translate(2%, 60%) rotate(15.5deg);
+		top:auto!important;
+		left: auto!important;
+	}
+	@media (max-width: 1919px) {
+		right: remy(885);
+		.rotate-image1{
+			width: remy(288);
+			height: remy(330);
+			
+		}
+		@media (max-width: 767px) {
+		   
+		   .rotate-image1{transform: translate(57%, 15%) rotate(15.5deg);}
+		}
+	}
+	@media (max-width: 767px) {
+	 right: auto;height: 210px;
+	 .rotate-image1{transform: translate(57%, 12%) rotate(15.5deg);}
+	}
+}
+.promo-product-cards.two-columns-grid{
+	
+	@media(min-width:768px){
+		display: grid;
+		grid-template-columns: remy(392) remy(392);
+		gap:remy(25);
+		justify-content: flex-end;
+		align-content: flex-end;
+	}
+	@media(min-width:1920px){
+		grid-template-columns: 392px 392px;
+		gap:25px;
+	}
+}

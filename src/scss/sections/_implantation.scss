@@ -60,10 +60,11 @@
 	}
 }
 .team-short-swiper.swiper .swiper-wrapper{
-	@media (min-width: 1199px) {
-		display: grid;
-		grid-template-columns:  1fr 1fr;
+	@media (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
 		gap:30px;
+		.swiper-slide{width: calc(50% - 15px)!important; margin-right: 0!important;}
 	}
 	
 }
@@ -73,7 +74,7 @@
 	.swiper-slide{width: 360px!important;}
 	}
 	@media (max-width: 399px) {
-		.swiper-slide{width: auto!important;}
+		.swiper-slide{width: 280px!important;}
 	}
 }
 .video-slim-btn{
@@ -99,6 +100,7 @@
 		transform:translate(0);
 		width: 34px;
 		height: 34px;
+		flex-shrink: 0;
 	}
 	@media(min-width: 768px) and (max-width: 1919px) {
 		height: remy(52);
