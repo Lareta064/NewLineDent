@@ -59,6 +59,15 @@
 		row-gap: 24px;
 	}
 }
+.team-short-swiper.swiper{
+	@media (max-width: 767px) {
+		width:calc(50% + 50vw);
+	.swiper-slide{width: 360px!important;}
+	}
+	@media (max-width: 399px) {
+		.swiper-slide{width: auto!important;}
+	}
+}
 .video-slim-btn{
 	border: 1px solid #b9b1a6;
 	line-height: 110%;
