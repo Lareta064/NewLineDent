@@ -71,6 +71,7 @@
 }
 .steps-slider{
 	margin-top: 16px;
+	padding-bottom: 5px;
 	.swiper-slide{
 		width: 330px!important;
 		height: unset;
@@ -80,11 +81,11 @@
 	}
 	@media(min-width:1280px){
 		.swiper-wrapper{
-			display: grid;
+			display:flex;
 			grid-template-columns: repeat(10, 1fr);
 			column-gap: 20px;
 		}
-		.swiper-slide{grid-column: span 2; width: auto!important;}
+		.swiper-slide{flex:1; width: auto!important;}
 	}
 
 	.steps-slider-nav{
@@ -135,5 +136,20 @@
 	}
 }
 .step-card.step-card--work{
-	.step__img{height:133px;}
+
+	.step__img{
+		padding-left: 0;
+		margin-bottom: 40px;
+		img{width: 72%;}
+	}
+	.step__title{font-size: 18px; max-width: unset;}
+	@media (max-width: 1919px) {
+		.step__title{font-size: remy(18); 
+	}
+	@media (max-width: 767px) {
+		.step__img{height:133px;}
+		.step__title{font-size:18px;}
+	
+	}
+} 
 }

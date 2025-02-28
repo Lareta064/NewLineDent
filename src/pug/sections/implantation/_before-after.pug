@@ -55,36 +55,33 @@ section.before-after
 				svg.svg-rarr
 					use(href='./img/sprite.svg#svg-rarr')
 		
-		
-		.tabs__content-container
-			//TAB #1
-			.tabs-content.active(data-tcontent="all")
-				.tabs-content-wrapper
-					//LEFT CONTENT
-					.tabs-content__left
-						.user-card
-							.user-card__img
-								img(src='./img/user1.webp' width='329' height='280' loading='lazy' alt='img')
 
-							.user-card__body
-								.card__body-group
-									.title-24 Вера Павловна Твердохлебова
-									span.txt-bold Эстетическая тератия
-								.card__body-group
-									span.txt-bold Лечащий врач 
-									p.txt-16  Вера Павловна Твердохлебова
-								.card__body-group
-									.flex
-										span.clock-icon
-										span.clock-icon
-										span.clock-icon
-									.flex
-										span.coins-icon
-										span.coins-icon
-										span.coins-icon.disable
-							.before-after__buttons
-								a(href="#!").btn-accent.sm-100 Получить такую улыбку 
-					//RIGHT CONTENT
-					.tabs-content__right
-						+tabsRightContent
+		.tabs-content-wrapper
+			//LEFT CONTENT
+			.tabs-content__left
+				.user-card
+					.user-card__img
+						img(src='./img/user1.webp' width='329' height='280' loading='lazy' alt='img')
+
+					.user-card__body
+						.card__body-group
+							.title-24 Вера Павловна Твердохлебова
+							span.txt-bold Эстетическая тератия
+						.card__body-group
+							span.txt-bold Лечащий врач 
+							p.txt-16  Вера Павловна Твердохлебова
+						.card__body-group
+							.flex
+								span.clock-icon
+								span.clock-icon
+								span.clock-icon
+							.flex
+								span.coins-icon
+								span.coins-icon
+								span.coins-icon.disable
+					.before-after__buttons
+						a(href="#!").btn-accent.sm-100 Получить такую улыбку 
+			//RIGHT CONTENT
+			.tabs-content__right
+				+tabsRightContent
 					
