@@ -1,5 +1,54 @@
 @use "../base/var" as *;
 
+.promo-blog{
+	min-height: 700px;
+	position: relative;
+	overflow: hidden;
+	background-size: 1920px 887px;
+    background-position: right bottom;
+	&:after{
+		content:'';
+		position: absolute;
+		display: block;
+		bottom: 50%;
+		transform: translateY(55%);
+		right: -20px;
+		border: 1px solid #b9b1a6;
+		border-right: 0;
+		border-radius: 232px 0 0 232px;
+		box-shadow: inset 0 1px 1px 0 #97918c, inset -1px 0 3px 0 rgba(0, 0, 0, 0.25);
+		opacity: 0.5;	
+		width: 1200px;
+		height: 464px;
+		z-index: 1;
+		@media (max-width: 1919px) {
+			width: remy(1200);
+			height: remy(464);
+		}
+		@media (max-width: 767px) {
+		display: none;
+		}
+	}
+	@media (max-width: 1919px) {
+		min-height: remy(700);
+		background-size: remy(1920) remy(887);
+	}
+	@media (max-width: 767px) {
+	background-image: none!important;
+	}
+}
+.promo-blog-wrapper{
+	padding-top: 53px;
+	padding-bottom: 83px;
+	@media (max-width: 1919px) {
+		padding-top: remy(53);
+	    padding-bottom: remy(83);
+	}
+	@media (max-width: 767px) {
+		padding-top: 25px;
+	    padding-bottom: 20px;
+	}
+}
 .article-card{
 	background-color: #fff;
 	padding: 40px;
@@ -114,7 +163,7 @@
 	font-size: 14px;
 	
 	color: #2e3033;
-	@media(min-width: 767px) and (max-width: 1364px) {
+	@media(min-width: 767px) and (max-width: 1919px) {
 		padding: 0  remy(10);
 		height: remy(30);
 		line-height: remy(28);
