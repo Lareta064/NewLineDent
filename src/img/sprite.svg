@@ -31,7 +31,12 @@
 
 		</g>
 	</symbol>
-	
+	<symbol id="svg-larr" viewBox="0 0 38 8">
+		<g>	
+			<path d="M0.402344 4.09375L7.07249 7.94476L7.07249 0.242739L0.402344 4.09375ZM6.40548 4.76076L37.0881 4.76076L37.0881 3.42673L6.40548 3.42673L6.40548 4.76076Z" fill="currentColor" />
+			
+		</g>
+	</symbol>
 	<symbol id="svg-rarr" viewBox="0 0 48 12">
 		<g>
  			 <path d="M48 6L38 0.226495L38 11.7735L48 6ZM39 5L1.99002e-07 4.99999L-1.99002e-07 6.99999L39 7L39 5Z" fill="currentColor" />
