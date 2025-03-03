@@ -1,0 +1,41 @@
+mixin blogCard
+	.card-border-box
+		.blog-card
+			.blog-card__img
+				img(src='./img/blog/blog-card.webp', srcset='./img/blog/blog-card@2x.webp 2x' width='478' height='314' loading='lazy' alt='img')
+			.blog-card__body
+				.tags-box.flex
+					.border-tag Импланты
+					
+				.blog-card__title Протезирование зубов в Москве
+				p Это востребованная услуга, которая позволяет восстановить функциональность и эстетику улыбки. Современные стоматологические клиники предлагают широкий спектр решений...
+			.blog-card__link
+				a(href="blog.html").flex-link
+					span Читать статью 
+					svg.svg-rarr
+						use(href='./img/sprite.svg#svg-rarr')
+
+
+section.blog-content
+	.container
+		.blog-tabs.tabs-group
+			ul.tabs__nav.flex
+				li.tabs__nav-btn.flex(data-tbat="all") Все
+				
+				li.tabs__nav-btn.flex(data-tbat="2") Терапия
+				li.tabs__nav-btn.flex(data-tbat="3") Хирургия
+				li.tabs__nav-btn.flex(data-tbat="4") Ортодонтия
+				li.tabs__nav-btn.flex(data-tbat="5") Ортопедия
+				li.tabs__nav-btn.flex(data-tbat="6") Гигиена
+					
+			
+			.tabs__content-container
+				//TAB #1
+				.tabs-content.active(data-tcontent="all")
+					+blogCard
+					+blogCard
+					+blogCard
+					+blogCard
+					+blogCard
+					+blogCard
+					+blogCard
