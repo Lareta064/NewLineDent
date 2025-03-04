@@ -1,20 +1,47 @@
 @use "../base/var" as *;
 .single-article-grid{
 	display: flex;
+	flex-direction: row-reverse;
 	column-gap: 40px;
 	border: 1px solid #b9b1a6;
 	border-radius: 7px;
 	padding: 33px;
+	.article-text{
+		flex-grow: 1;
+		@media (max-width: 767px) {
+		width: 100%;
+		}
+	}
 	@media (max-width: 1919px) {
 		column-count: remy(40);
 		padding: remy(33);
+		border: none;
+	}
+	@media (max-width: 767px) {
+	 flex-direction: column;
+	 padding: 0;
+	 row-gap:28px;
 	}
 }
 .article-sidebar{
 	flex-shrink: 0;
 	width: 360px;
+	.content-menu a{
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 169%;
+		letter-spacing: -0.02em;
+		color: #2e3033;
+	}
 	@media (max-width: 1919px) {
 		width: remy(360);
+		.content-menu a{font-size: remy(16);}
+	}
+	@media (max-width: 767px) {
+	width: 100%;
+	.content-menu a{
+		font-size: 16px;
+	   }
 	}
 }
 .custom-text{
@@ -55,11 +82,12 @@
 		justify-content: center;
 		padding-bottom: 65px;
 		&>*+*{margin-top: 0;}
-		img{
-			width: 264px;
-			height: 290px;
+		
+		.rotate-image{
+			flex-shrink: 0;position: relative; .img-caption{font-size: 6px;}
+			width: 288px;
+			height: 426px;
 		}
-		.rotate-image{flex-shrink: 0;position: relative; .img-caption{font-size: 6px;}}
 		.rotate-image:first-child{
 			transform: rotate(18.89deg) translate(26px, 28px);
 			z-index: 1;
@@ -87,13 +115,13 @@
 		.rotate-image-group{
 			display: flex;
 			justify-content: center;
-			padding-bottom: 65px;
+			padding-bottom: 5.5vw;
 			
-			img{
-				width: remy(264);
-				height: remy(290);
+			.rotate-image{
+				flex-shrink: 0;position: relative; .img-caption{font-size: remy(6);}
+				width: remy(288);
+				height: remy(426);
 			}
-			.rotate-image{flex-shrink: 0;position: relative; .img-caption{font-size: remy(6);}}
 			.rotate-image:first-child{
 				transform: rotate(18.89deg) translate(remy(26), remy(28));
 				z-index: 1;
@@ -109,9 +137,35 @@
 		}
 	}
 	@media (max-width: 767px) {
+		font-size: 14px;
+		line-height: 129%;
 		h2, h3, h4{
 			font-size: 18px;
 			line-height: 111%;
-	}
+		}
+		*+*{margin-top: 27px;}
+		*+h2, *+h3{
+			margin-top: 54px;
+		}
+		ul, ol{padding-left: 20px; li+li{margin-top: 2px;}}
+		.rotate-image-group{
+			padding-bottom: 40px;
+			img{
+				width: 109px;
+				height: 119px;
+			}
+			.rotate-image:first-child{
+				transform: rotate(18.89deg) translate(17%, 10%);
+				
+			}
+			.rotate-image:nth-child(2){
+				transform: rotate(4.83deg) translate(8%, 14%);
+				
+			}
+			.rotate-image:nth-child(3){
+				transform: rotate(22.41deg) translate(-5%, 18%);
+				
+			}
+		}
 	}
 }
