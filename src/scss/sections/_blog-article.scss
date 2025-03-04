@@ -169,3 +169,114 @@
 		}
 	}
 }
+.team-preview__wrapper{
+	display: flex;
+}
+.team-grid .header-block{
+	@media (max-width: 767px) {
+		flex-direction: column;
+		row-gap:25px;
+	}
+	
+}
+.team-preview__wrapper .team-preview__text{
+	padding-top: 25px;
+	.persone-card-block{padding: 10px;}
+	.persone-card__title{
+		font-size: 18px;
+		line-height: 111%;
+	}
+	.team-preview__video-btn{
+		margin-left: -65px;
+	}
+	@media (max-width: 1919px) {
+		padding-top: remy(25);
+		.persone-card-block{padding: remy(10);}
+		.persone-card__title{font-size: remy(18);}
+			
+		
+		.team-preview__video-btn{margin-left: remy(-65);}
+	}
+	@media (max-width: 767px) {
+		padding-top: 0;
+		.persone-card-block{padding: 10px;}
+		.persone-card__title{font-size: 18px;}
+		.team-preview__video-btn{margin-left: -65px;}	
+	}
+}
+.team-preview__wrapper .video-poster{
+	width: 384px;
+	height: 450px;
+	flex-shrink: 0;
+	@media (max-width: 1919px) {
+		width: remy(384);
+		height: remy(450);
+	}
+	@media (max-width: 767px) {
+	width: 182px;
+	height: 314px;
+	}
+}
+.team-grid{
+	display: flex;
+	column-gap:85px;
+	.team-grid__left{width: 719px;}
+	.teams-cards-slider{
+		width: 582px;
+		padding-top: 25px;
+	}
+	
+	@media (max-width: 1919px) {
+		.team-grid__left{width: remy(719);}
+		.teams-cards-slider{width: remy(582);padding-top: remy(25);}
+		column-gap:remy(85);
+	}
+	@media (max-width: 767px) {
+		flex-direction: column;
+		
+		.team-grid__left{width: 100%;}
+		.teams-cards-slider{width:100%;padding-top: 0;}
+	}
+}
+.teams-swiper .swiper-wrapper{
+	@media(min-width:768px){
+		display: flex;
+		flex-wrap: wrap;
+		gap:remy(20);
+		.swiper-slide{
+			width: remy(281);
+			height: unset;
+		}
+	}
+	@media(min-width:1920px){
+		gap:20px;
+		.swiper-slide{
+			width: 281px;
+			
+		}
+	}
+}
+
+.team-preview__video-btn.rel-btn{
+	justify-content: center;
+	column-gap:20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 45px;
+	.btn-play{
+		position: relative;
+		
+	}
+	@media (max-width: 1919px) {
+		column-gap:remy(20);
+		padding-left: remy(20);
+		padding-right: remy(20);
+		height: remy(45);
+	}
+	@media (max-width: 767px) {
+		column-gap:20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		height: 45px;
+	}
+}

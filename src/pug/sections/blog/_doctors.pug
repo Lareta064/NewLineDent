@@ -1,0 +1,70 @@
+section.team
+	.container-special
+		.left-decore-line
+			p.txt-primary 02/07
+			span.fake-line
+			p наши врачи
+		
+		.team-grid
+			.team-grid__left
+				.header-block
+					h2.h2 Для вас работают&nbsp;опытные профессионалы
+					a(href="doctors.html").btn-primary
+						span Все врачи
+						svg.svg-rarr
+							use(href='./img/sprite.svg#svg-rarr')
+			
+
+				//RIGHT COLUMN
+				.team-preview__wrapper
+					.video-poster(style="background: linear-gradient(180deg, rgba(244, 242, 238, 0) 0%, #fff 100%), url('./img/team/big-img.webp'); background-size: contain; background-repeat: no-repeat; background-position: center;")
+					.team-preview__text
+						a(href="https://www.youtube.com/embed/__-vp0g_BhA?si=ATYLxRiZZo-EeydT" data-fancybox="video-about").team-preview__video-btn.rel-btn
+							p видео с врачом
+							span.btn-play
+						
+						.blockquote-faximily
+							span New
+				
+						.persone-card-block
+							.persone-card__title  РОМАН ВРУЙРОВИЧ ВАРДАНЯН
+							.persone-card__info
+								p Основатель клиники
+								p Стоматолог - хирург, имплантолог, пародонтолог 
+							a(href="#!").flex-link
+								span Подробнее
+								svg.svg-rarr
+									use(href='./img/sprite.svg#svg-rarr')
+
+				
+				
+			//карточки 
+			.teams-cards-slider
+				.teams-swiper.swiper
+					.swiper-wrapper
+															
+						.swiper-slide.persone-card
+							//card
+							.persone-card__img
+								img.cover-img(src="./img/team/2.webp", srcset="./img/team/2@2x.webp"  width="281" height='187' alt="img")
+							.persone-card-block
+								.persone-card__title  Дегоев Чермен Олегович
+								.persone-card__info
+									p Стоматолог – терапевт, эндодонтист
+						.swiper-slide.persone-card
+							//card
+							.persone-card__img
+								img.cover-img(src="./img/team/4.webp", srcset="./img/team/4@2x.webp"  width="281" height='187' alt="img")
+							.persone-card-block
+								.persone-card__title  Савостиков Роман Андреевич
+								.persone-card__info
+									p Стоматолог – ортопед
+						
+						.swiper-slide.persone-card
+							//card
+							.persone-card__img
+								img.cover-img(src="./img/team/5.webp", srcset="./img/team/5@2x.webp"  width="281" height='187' alt="img")
+							.persone-card-block
+								.persone-card__title  Бейноева Лейла Ахмедовна
+								.persone-card__info
+									p Стоматолог – терапевт, эндодонтист
