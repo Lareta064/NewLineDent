@@ -50,11 +50,14 @@
 
 
 }
-.header{
+header.header{
 	padding-top: 40px;
 	padding-bottom: 40px;
 	background-color: #fff;
 	border-bottom: 1px solid #b9b1a6;
+	position:sticky;
+	z-index: 6;
+	top:0;
 	&-content{
 		display: flex;
 		justify-content: space-between;

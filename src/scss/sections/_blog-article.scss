@@ -1,0 +1,117 @@
+@use "../base/var" as *;
+.single-article-grid{
+	display: flex;
+	column-gap: 40px;
+	border: 1px solid #b9b1a6;
+	border-radius: 7px;
+	padding: 33px;
+	@media (max-width: 1919px) {
+		column-count: remy(40);
+		padding: remy(33);
+	}
+}
+.article-sidebar{
+	flex-shrink: 0;
+	width: 360px;
+	@media (max-width: 1919px) {
+		width: remy(360);
+	}
+}
+.custom-text{
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 122%;
+	letter-spacing: -0.02em;
+	color: #2e3033;
+	h2, h3{
+		font-family: var(--second-family);
+		font-weight: 300;
+		font-size: 25px;
+		line-height: 128%;
+		letter-spacing: -0.01em;
+		text-transform: uppercase;
+		color: #2e3033;
+		position: relative;
+		margin-bottom: 27px;	
+	}
+	img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+	*+*{margin-top: 27px;}
+	*+h2, *+h3{
+		margin-top: 54px;
+	}
+	ul, ol{padding-left: 30px; li+li{margin-top: 2px;}}
+	ul{
+		list-style-type: disc;
+		*+*{margin-top: 2px;}
+	}
+	.rotate-image-group{
+		display: flex;
+		justify-content: center;
+		padding-bottom: 65px;
+		&>*+*{margin-top: 0;}
+		img{
+			width: 264px;
+			height: 290px;
+		}
+		.rotate-image{flex-shrink: 0;position: relative; .img-caption{font-size: 6px;}}
+		.rotate-image:first-child{
+			transform: rotate(18.89deg) translate(26px, 28px);
+			z-index: 1;
+		}
+		.rotate-image:nth-child(2){
+			transform: rotate(4.83deg) translate(-14px, 50px);
+			z-index: 3;
+		}
+		.rotate-image:nth-child(3){
+			transform: rotate(22.41deg) translate(-51px, 75px);
+			z-index: 2;
+		}
+	}
+	@media (max-width: 1919px) {
+		font-size: remy(18);
+		h2, h3,  h4{
+			font-size: remy(25);
+			margin-bottom: remy(27);	
+		}
+		*+*{margin-top: remy(27);}
+		*+h2, *+h3, *+h4{
+			margin-top: remy(54);
+		}
+		ul, ol{padding-left: remy(30);}
+		.rotate-image-group{
+			display: flex;
+			justify-content: center;
+			padding-bottom: 65px;
+			
+			img{
+				width: remy(264);
+				height: remy(290);
+			}
+			.rotate-image{flex-shrink: 0;position: relative; .img-caption{font-size: remy(6);}}
+			.rotate-image:first-child{
+				transform: rotate(18.89deg) translate(remy(26), remy(28));
+				z-index: 1;
+			}
+			.rotate-image:nth-child(2){
+				transform: rotate(4.83deg) translate(remy(-14), remy(50));
+				z-index: 3;
+			}
+			.rotate-image:nth-child(3){
+				transform: rotate(22.41deg) translate(remy(-51), remy(75));
+				z-index: 2;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		h2, h3, h4{
+			font-size: 18px;
+			line-height: 111%;
+	}
+	}
+}
