@@ -105,6 +105,15 @@
 	color: #2e3033;
 	@media (min-width: 768px) and (max-width: 1919px){font-size: remy(16);}
 }
+.txt-12{
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 133%;
+	letter-spacing: -0.03em;
+	
+	color: #2e3033;
+	@media (min-width: 768px) and (max-width: 1919px){font-size: remy(12);}
+}
 .gogol-text{
 	font-family: var(--font4);
 	font-weight: 400;
