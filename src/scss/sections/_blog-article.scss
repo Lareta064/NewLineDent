@@ -238,20 +238,28 @@
 		.teams-cards-slider{width:100%;padding-top: 0;}
 	}
 }
+.teams-swiper{
+	@media (max-width: 767px) {
+	width: calc(50% + 50vw);
+	}
+}
 .teams-swiper .swiper-wrapper{
+	.swiper-slide{
+		width: 210px!important;height: unset;
+	}
 	@media(min-width:768px){
 		display: flex;
 		flex-wrap: wrap;
 		gap:remy(20);
 		.swiper-slide{
-			width: remy(281);
-			height: unset;
+			width: remy(281)!important;;
+			
 		}
 	}
 	@media(min-width:1920px){
 		gap:20px;
 		.swiper-slide{
-			width: 281px;
+			width: 281px!important;
 			
 		}
 	}

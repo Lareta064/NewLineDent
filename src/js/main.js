@@ -52,10 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //teamShortSlider
     let teamShortSlider = null; 
-
     function initShortSwiper() {
         if (window.innerWidth < 768 && !teamShortSlider) {
-           serviceCards = new Swiper('.team-short-swiper', {
+          teamShortSlider = new Swiper('.team-short-swiper', {
             slidesPerView: 'auto',
             speed: 800,
             spaceBetween: 10,
@@ -74,6 +73,25 @@ document.addEventListener("DOMContentLoaded", function () {
     initShortSwiper();
     window.addEventListener("resize", initShortSwiper);
     
+    let teamSwiperBlog = null; 
+    function initblogTeamSwiper() {
+        if (window.innerWidth < 768 && !teamSwiperBlog) {
+          teamSwiperBlog = new Swiper('.teams-swiper', {
+            slidesPerView: 'auto',
+            speed: 800,
+            spaceBetween: 10,
+            
+         });
+        } else if (window.innerWidth >= 768 && teamSwiperBlog) {
+            // Уничтожение Swiper при большом экране
+            teamSwiperBlog.destroy(true, true);
+            teamSwiperBlog = null;
+        }
+    }
+    initblogTeamSwiper();
+    window.addEventListener("resize", initblogTeamSwiper);
+
+
     //revSlider
     let revSlider = new Swiper(".about-review", {
       slidesPerView: 3,
