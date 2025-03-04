@@ -15,7 +15,12 @@
 		padding-right: 16px;
 		padding-top: 11px;
 		line-height: 1;
-		@media(min-width:768px) and (max-width: 1919px){height: 32px;}
+		@media(min-width:768px) and (max-width: 1919px){
+			height:remy(52);
+			padding-left: remy(16);
+		    padding-right: remy(16);
+		    padding-top: remy(11);
+		}
 	}
 	input:focus{
 		border: 1px solid #C71647;
@@ -32,7 +37,10 @@
 		top: 15px;
 		transition: .3s;
 		pointer-events: none;
-		@media(min-width:768px) and (max-width: 1919px){font-size: remy(14); top:remy(15)}
+		@media(min-width:768px) and (max-width: 1919px){
+			font-size: remy(14); top:remy(15);
+			left: remy(16);
+		}
 	}
 	
 	textarea{
@@ -53,8 +61,13 @@
 		background-color: #f2faf1;
 	}
 	.fake-placeholder{color: #24c276;}
-	input +p{font-size: 14px;
-		color: #24c276; margin-top: 5px;padding-left: 16px;}
+	input +p{
+		font-size: 14px;
+		color: #24c276; 
+		margin-top: 5px;
+		padding-left: 16px;
+		@media(min-width:768px) and (max-width: 1919px){font-size: remy(14); margin-top: remy(5);padding-left: remy(16);}
+	}
 }
 .form-item.input-success:after,.form-item.input-error:after{
 	content: '';
@@ -71,6 +84,13 @@
 	position: absolute;
 	right: -5px; 
 	top: -15px;
+	@media(min-width:768px) and (max-width: 1919px){
+		width: remy(20);
+	   height: remy(20);
+	   font-size: remy(14);
+	   right: remy(-5); 
+	   top: remy(-15);
+	}
 	
 }
 .form-item.input-success:after{
@@ -78,6 +98,7 @@
 	background-size: 10px 12px;
 	background-position: center;;
 	background-color: #f2faf1;
+	@media(min-width:768px) and (max-width: 1919px){background-size: remy(10) remy(12);}
 }
 .form-item.input-error:after{
 	content: '!';
@@ -92,10 +113,14 @@
 	}
 	.fake-placeholder{color: #EE2121;}
 	input +p{font-size: 14px;
-		color: #EE2121; margin-top: 5px;padding-left: 16px;}
+		color: #EE2121; margin-top: 5px;padding-left: 16px;
+		@media(min-width:768px) and (max-width: 1919px){font-size: remy(14); margin-top: remy(5);padding-left: remy(16);}
+	
+	}
 }
 .form-btn{
 	column-gap:25px;
+	@media(min-width:768px) and (max-width: 1919px){column-gap:remy(25);}
 	@media (max-width: 767px) {
 	flex-direction: column;
 	row-gap:22px;
@@ -119,6 +144,7 @@
 form.flex-col{
 	row-gap:16px;
 	&>*{width: 100%;}
+	@media(min-width:768px) and (max-width: 1919px){row-gap:remy(16);}
 }
 /*custom select*/
 .dropdown {

@@ -38,4 +38,62 @@ section.blog-content
 					+blogCard
 					+blogCard
 					+blogCard
+					//FEEDBACK
+					.feedback__content.flex.p-block-80
+						.feedback__txt
+							p.txt-16 Оставьте заявку
+							.title-22 Получите скидку на первое посещение и бесплатную консультацию.
+							.social-block
+								a(href="#!").social-link
+									img(src="./img/social/inst2.svg", width="32" height="32" alt="img")
+								a(href="#!").social-link
+									img(src="./img/social/wa.svg", width="32" height="32" alt="img")
+								a(href="#!").social-link
+									img(src="./img/social/youtube.svg", width="40" height="32" alt="img")
+
+						.feedback__center
+							.gogol-text всегда  #[span.smile-icon] на связи
+						.feedback__form
+							form.contact-form.flex-col
+								
+								.form-item
+									span.fake-placeholder Имя
+									input.form-input(type="text" name="name")
+								.form-item
+									span.fake-placeholder Телефон
+									input.form-input(type="tel" name="phone")
+								.form-btn.flex
+									button.btn-primary(type="submit")
+										span Оставить заявку 
+										svg.svg-rarr
+											use(href='./img/sprite.svg#svg-rarr')
+									p.agree-txt Нажимая на кнопку «Отправить», я даю согласие на обработку персональных данных
+
+					//CARDS
 					+blogCard
+					+blogCard
+					+blogCard
+
+					.tabs-content__footer.flex
+						a(href="#!").btn-primary Показать больше
+						.pagination
+							.pagination-item.pagination-prev
+								svg.svg-larr
+									use(href='./img/sprite.svg#svg-larr')
+								span Назад
+							.pagination-item
+								span 1
+							.pagination-item
+								span 2
+							.pagination-item.pagination-dot
+								span
+							.pagination-item.pagination-dot
+								span
+							.pagination-item
+								span 11
+							.pagination-item
+								span 12
+							.pagination-item.pagination-next
+								span Вперед
+								svg.svg-rarr
+									use(href='./img/sprite.svg#svg-rarr')

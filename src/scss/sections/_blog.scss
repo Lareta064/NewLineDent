@@ -257,6 +257,26 @@
 	display: grid!important;
 	padding-top: 6px;
 	grid-template-columns: repeat(12, 1fr);
+
+	.feedback__content{
+		grid-column:  span 12;
+		margin-top: -5px;
+		background-color: #fff;
+		position: relative;
+		z-index: 2;
+		@media (max-width: 767px) {
+			border-bottom: 0;
+			padding-block: 0!important;
+		}
+	}
+	.tabs-content__footer{
+		grid-column:  span 12;
+		padding-block:20px;
+		justify-content: space-between;
+		
+	}
+	.pagination{margin-left: auto;
+	}
 	@media (max-width: 767px) {
 	row-gap:40px;
 	padding-top: 20px;
@@ -270,10 +290,10 @@
 	}
 }
 .blog-tabs .card-border-box{
-	padding-block:20px;
+	padding-block:24px;
 	border-bottom:1px solid #b9b1a6;
 	@media (max-width: 1919px) {
-		padding-block:remy(20);
+		padding-block:remy(24);
 	}
 	@media (max-width: 767px) {
 		padding-block:0;border-bottom:0;
