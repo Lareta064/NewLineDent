@@ -10,13 +10,34 @@
 	
 	.container
 		.promo-contacts-grid
-			.promo-contacts-text
-				.h2 Контакты
-				p.subtext Ответим на звонок ежедневно с 9:00 до 21:00 (Москва - GTM+3)
-				.contacts-links.flex-col
-					a(href="tel:+79999999999").contact-link +7 (999) 999-99-99
-					
-					a(href="tel:+79999999999").contact-link +7 (999) 999-99-99
+			//LEFT COLUMN
+			.promo-contacts-col.flex-col
+				.promo-contacts-text
+					h2.title-36.txt-upper Контакты
+					p.subtext Ответим на звонок ежедневно с 9:00 до 21:00<br>(Москва - GTM+3)
+					.contacts-block
+						a(href="tel:+78122421777").contact-link +7 (812) 242-17-77
 						
-
+						a(href="tel:+78122421777").contact-link +7 (812) 242-17-77
+					.company-info
+						p ООО "НЬЮ ЛАЙНДЕНТАЛ", ИНН: 9999999999<br>Юридический адрес: 199999, Санкт-Петербург, ул. Стахановцев, д.6
+				
+				//FORM
+				.promo-contacts-form
+					.title-36.txt-upper Обратная связь
+					form.contact-form.flex-col(action="")
+						.form-item
+							span.fake-placeholder Имя
+							input.form-input(type="text" name="name")
+						.form-item
+							span.fake-placeholder Телефон
+							input.form-input(type="tel" name="phone")
+			
+			//RIGHT COLUMN
 			.promo-contacts-image
+				.rotate-image.rotate-image--accent
+					img(src='./img/rotate/19.webp' width='384' height='433' loading='lazy' alt='img')
+				.rotate-image
+					img(src='./img/rotate/20.webp' width='384' height='433' loading='lazy' alt='img')
+				.rotate-image
+					img(src='./img/rotate/21.webp' width='384' height='433' loading='lazy' alt='img')
