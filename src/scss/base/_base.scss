@@ -335,7 +335,16 @@ section{
 }
 .p-block-20{
 padding-block: 20px;
-}	
+}
+.p-block-80{
+	padding-block: 80px;
+	@media (max-width: 1919px) {
+		padding-block: remy(80);
+	}
+	@media (max-width: 767px) {
+		padding-block: 40px;
+	}
+}
 .left-decore-line{
 	position: absolute;
 	top: 0;

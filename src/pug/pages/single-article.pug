@@ -4,17 +4,12 @@ block content
 	include ../sections/_header
 	main.main
 		include ../sections/blog/_promo-blog-article.pug
-		include ../sections/_steps-working
-		include ../sections/implantation/_doctors.pug
+		include ../sections/blog/_article-content.pug
+		include ../sections/blog/_doctors.pug
+		include ../sections/_review-section.pug
 		
-		include ../sections/implantation/_before-after.pug
-		
-		
-		include ../sections/implantation/_review
-		include ../sections/_faq
-	
 	//FOOTER
 	include ../sections/_footer
 
 block variables
-	-var title = "Гигиена";
+	-var title = "Одна статья";

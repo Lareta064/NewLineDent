@@ -10,7 +10,7 @@ mixin blogCard
 				.blog-card__title Протезирование зубов в Москве
 				p Это востребованная услуга, которая позволяет восстановить функциональность и эстетику улыбки. Современные стоматологические клиники предлагают широкий спектр решений...
 			.blog-card__link
-				a(href="blog.html").flex-link
+				a(href="single-article.html").flex-link
 					span Читать статью 
 					svg.svg-rarr
 						use(href='./img/sprite.svg#svg-rarr')
@@ -32,16 +32,14 @@ section.blog-content
 			.tabs__content-container
 				//TAB #1
 				.tabs-content.active(data-tcontent="all")
-					.blog-card-block
-						+blogCard
-						+blogCard
-						+blogCard
-						+blogCard
-						+blogCard
-						+blogCard
-						+blogCard
-
-					.feedback__content.flex
+					+blogCard
+					+blogCard
+					+blogCard
+					+blogCard
+					+blogCard
+					+blogCard
+					//FEEDBACK
+					.feedback__content.flex.p-block-80
 						.feedback__txt
 							p.txt-16 Оставьте заявку
 							.title-22 Получите скидку на первое посещение и бесплатную консультацию.
@@ -70,3 +68,32 @@ section.blog-content
 										svg.svg-rarr
 											use(href='./img/sprite.svg#svg-rarr')
 									p.agree-txt Нажимая на кнопку «Отправить», я даю согласие на обработку персональных данных
+
+					//CARDS
+					+blogCard
+					+blogCard
+					+blogCard
+
+					.tabs-content__footer.flex
+						a(href="#!").btn-primary.sm-100 Показать больше
+						.pagination
+							.pagination-item.pagination-prev
+								svg.svg-larr
+									use(href='./img/sprite.svg#svg-larr')
+								span Назад
+							.pagination-item
+								span 1
+							.pagination-item.pagination-active
+								span 2
+							.pagination-item.pagination-dot
+								span
+							.pagination-item.pagination-dot
+								span
+							.pagination-item
+								span 11
+							.pagination-item
+								span 12
+							.pagination-item.pagination-next
+								span Вперед
+								svg.svg-rarr
+									use(href='./img/sprite.svg#svg-rarr')

@@ -105,6 +105,15 @@
 	color: #2e3033;
 	@media (min-width: 768px) and (max-width: 1919px){font-size: remy(16);}
 }
+.txt-12{
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 133%;
+	letter-spacing: -0.03em;
+	
+	color: #2e3033;
+	@media (min-width: 768px) and (max-width: 1919px){font-size: remy(12);}
+}
 .gogol-text{
 	font-family: var(--font4);
 	font-weight: 400;
@@ -192,4 +201,56 @@
 		
 	}
 	
+}
+.pagination{
+	align-items: center;
+	display: flex;
+	column-gap:20px;
+	flex-shrink: 0;
+    width: max-content;
+	.pagination-item{
+		display: flex;
+		
+		justify-content: center;
+		align-items: center;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 225%;
+		color: #2e3033;
+		column-gap:20px;
+		cursor:pointer;
+		transition: .3s; 
+		&.pagination-active{color: #b9b1a6;}
+		svg{width: 34px;color: #2e3033;}
+	}
+	.pagination-next, .pagination-prev{
+		font-weight: 500;line-height: 110%;
+	}
+	.pagination-dot{
+		span{
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: #2e3033;
+			flex-shrink: 0;
+		}
+	}
+	@media(min-width:768px) and (max-width: 1919px){
+		column-gap:remy(20);
+		.pagination-item{
+			font-size: remy(20);column-gap:remy(20); svg{width: remy(34);}
+		}
+		.pagination-dot{
+			width: remy(8);
+			height: remy(8);
+		}
+	}
+	@media (max-width: 767px) {
+		width: 100%;
+		justify-content: space-between;
+		.pagination-item{display: none;}
+		.pagination-item.pagination-next, .pagination-item.pagination-prev{
+			display: flex;
+		}
+	}
 }
