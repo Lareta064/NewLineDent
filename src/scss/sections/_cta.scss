@@ -1,6 +1,6 @@
 @use "../base/var" as *;
 .cta{position: relative;
-
+	overflow: hidden;
 	.cta-bg-img{
 		position: absolute;
 		top: 45%;
