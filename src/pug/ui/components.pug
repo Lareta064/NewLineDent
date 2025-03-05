@@ -24,11 +24,14 @@ html(lang="ru")
 				.container-dashboard__content(style="background: #B9B1A6")
 					.social-block
 						a(href="#!").social-link
-							img(src="../img/social/inst.svg", width="24" height="24" alt="img")
+							svg.svg-inst
+								use(xlink:href='./img/brands.svg#instagram')
 						a(href="#!").social-link
-							span IN
+							svg.svg-wa
+								use(xlink:href='./img/brands.svg#whatsapp')
 						a(href="#!").social-link
-							span BE
+							svg.svg-tg
+								use(xlink:href='./img/brands.svg#telegram')
 				br
 				.address-block
 					.address-block__metro

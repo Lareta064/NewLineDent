@@ -202,6 +202,17 @@
 	}
 	
 }
+.social-block svg{
+	width: 24px;
+	height: 24px;
+	fill: #ABA096;
+}
+.header.header--primary, .footer {
+	.social-block .social-link{
+		border-color: white;
+	}
+	.social-block svg{fill: white;}
+}
 .pagination{
 	align-items: center;
 	display: flex;
