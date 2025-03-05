@@ -3,7 +3,10 @@
 	
 	background-color: #B9B1A6;
 	color: white;
-	
+	.contact-link{
+		font-weight: 600;
+		color: white;
+	}
 }
 .footer-top{
 	padding-block: 48px;
@@ -110,10 +113,10 @@
 	}
 }
 .contact-link{
-	font-weight: 600;
+	font-weight: 400;
 	font-size: 16px;
 	line-height: 150%;
-	color: #fff;
+	color:#2E3033;
 	&__icon{
 		flex-shrink: 0;
 		width: 24px;

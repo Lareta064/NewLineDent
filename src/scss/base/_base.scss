@@ -304,10 +304,11 @@ section{
 		column-gap:remy(16);
 	}
 }
-.flex-col{
+.flex-col,.contacts-block{
 	display: flex;
 	flex-direction: column;
 }
+
 .hide-sm {
 	@media (max-width: 767px) {
 	display: none!important;
