@@ -8,6 +8,7 @@
 	}
 	@media (max-width: 767px) {
 		padding: 20px;
+		&__top{column-gap:32px;}
 	}
 	&__img{
 		width: 101px;
@@ -31,6 +32,9 @@
 			}
 			@media (max-width: 767px) {
 				max-width: unset;
+			}
+			@media (max-width: 399px) {
+			font-size: 15px;
 			}	
 		}
 		
