@@ -254,14 +254,22 @@
 }
 
 .blog-tabs .tabs-content.active{
-	display: grid!important;
+	
 	padding-top: 6px;
-	grid-template-columns: repeat(12, 1fr);
+	
 	@media (max-width: 767px) {
-	row-gap:40px;
+	
 	padding-top: 20px;
 	}
 	
+}
+.blog-card-block{
+	display: grid!important;
+	grid-template-columns: repeat(12, 1fr);
+	@media (max-width: 767px) {
+	row-gap:40px;
+	
+	}
 }
 .blog-tabs .card-border-box{
 	grid-column: span 4;
