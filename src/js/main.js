@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //STERS SLIDER
     let stepsSlider= null;
     function initSwiperSlider() {
-        if (window.innerWidth < 1280 && !stepsSlider) {
+        if (window.innerWidth < 768 && !stepsSlider) {
           stepsSlider = new Swiper('.steps-slider', {
             slidesPerView: 'auto',
             speed: 800,
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
            }
          });
-        } else if (window.innerWidth >= 1280 && stepsSlider) {
+        } else if (window.innerWidth >= 768 && stepsSlider) {
             // Уничтожение Swiper при большом экране
             stepsSlider.destroy(true, true);
             stepsSlider = null;
