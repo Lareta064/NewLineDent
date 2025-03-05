@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
     //.promo-product-cards grid
     const promoCardsWrapper= document.querySelector('.promo-product-cards');
     if( promoCardsWrapper){
-      const  promoCardsItems = promoCardsWrapper.querySelectorAll('.product-card');
-      if(promoCardsItems.length == 4){
+      
+      if(promoCardsWrapper.childElementCount == 4){
         promoCardsWrapper.classList.add('two-columns-grid');
       }
     }

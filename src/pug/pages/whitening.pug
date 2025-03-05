@@ -1,0 +1,20 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	main.main
+		include ../sections/promos/_promo-whitening.pug
+		include ../sections/_steps-working
+		include ../sections/implantation/_doctors.pug
+		
+		include ../sections/implantation/_before-after.pug
+		
+		
+		include ../sections/implantation/_review
+		include ../sections/_faq
+	
+	//FOOTER
+	include ../sections/_footer
+
+block variables
+	-var title = "Отбеливание";

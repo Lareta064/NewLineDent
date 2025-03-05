@@ -286,17 +286,3 @@
 	 .rotate-image1{transform: translate(57%, 12%) rotate(15.5deg);}
 	}
 }
-.promo-product-cards.two-columns-grid{
-	
-	@media(min-width:768px){
-		display: grid;
-		grid-template-columns: remy(392) remy(392);
-		gap:remy(25);
-		justify-content: flex-end;
-		align-content: flex-end;
-	}
-	@media(min-width:1920px){
-		grid-template-columns: 392px 392px;
-		gap:25px;
-	}
-}
