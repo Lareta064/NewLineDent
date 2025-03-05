@@ -1,0 +1,59 @@
+.promo-contacts
+	.container
+		.breadcrumbs-wrapper
+			ul.breadcrumbs
+				li
+					a(href="index.html") Newlinedent
+				li
+					a(href="#!") Контакты
+	
+	
+	.container
+		.promo-contacts-grid
+			//LEFT COLUMN
+			.promo-contacts-col.flex-col
+				.promo-contacts-text
+					h2.title-36 Контакты
+					p.subtext Ответим на звонок ежедневно с 9:00 до 21:00<br>(Москва - GTM+3)
+					.contacts-block
+						a(href="tel:+78122421777").contact-link +7 (812) 242-17-77
+						
+						a(href="tel:+78122421777").contact-link +7 (812) 242-17-77
+					.company-info
+						p ООО "НЬЮ ЛАЙНДЕНТАЛ", ИНН: 9999999999<br>Юридический адрес: 199999, Санкт-Петербург, ул. Стахановцев, д.6
+
+					.promo-contacts-image.visible-sm
+						.rotate-image.rotate-image--accent
+							img(src='./img/rotate/19.webp' width='384' height='433' loading='lazy' alt='img')
+						.rotate-image
+							img(src='./img/rotate/20.webp' width='384' height='433' loading='lazy' alt='img')
+						.rotate-image
+							img(src='./img/rotate/21.webp' width='384' height='433' loading='lazy' alt='img')
+				//FORM
+				.promo-contacts-form
+					.title-36 Обратная связь
+					form.contact-form.flex-col(action="")
+						.form-item
+							span.fake-placeholder Имя
+							input.form-input(type="text" name="name")
+						.form-item
+							span.fake-placeholder Телефон
+							input.form-input(type="tel" name="phone")
+						.form-item
+							span.fake-placeholder Опишите ваш вопрос
+							textarea.form-input( name="message")
+						.form-btn.flex
+							//что бы кнопка стала красной, надо удалить атрибут disabled
+							button.btn-primary(type="submit" disabled)
+								span Отправить
+								
+							p.agree-txt Нажимая на кнопку «Отправить», я даю согласие на обработку персональных данных
+			
+			//RIGHT COLUMN
+			.promo-contacts-image.hide-sm
+				.rotate-image.rotate-image--accent
+					img(src='./img/rotate/19.webp' width='384' height='433' loading='lazy' alt='img')
+				.rotate-image
+					img(src='./img/rotate/20.webp' width='384' height='433' loading='lazy' alt='img')
+				.rotate-image
+					img(src='./img/rotate/21.webp' width='384' height='433' loading='lazy' alt='img')
