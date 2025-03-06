@@ -466,12 +466,13 @@ padding-block: 20px;
 }
 .product-card__top{
 	width: 100%; flex-grow: 1;
-	padding-bottom: 40px;
+	padding-bottom: 26px;
 	display: flex;
 	flex-direction: column;
 	row-gap: 10px;
+	
 	@media(min-width: 768px) and (max-width: 1919px) {
-		padding-bottom:remy(40);
+		padding-bottom:remy(26);
 		row-gap: remy(10);
 	}
 }
@@ -479,7 +480,7 @@ padding-block: 20px;
 	width: 100%;
 	column-gap:10px;
 	padding-bottom: 10px;
-	border-bottom: 1px solid #b9b1a6;
+	align-items:flex-start;
 	@media(min-width: 768px) and (max-width: 1919px) {
 		column-gap:remy(10);
 		padding-bottom: remy(10);
