@@ -4,7 +4,53 @@ block content
 	include ../sections/_header
 	main.main
 		include ../sections/promos/_promo-surgery.pug
-		include ../sections/_steps-working
+		section.steps.working-steps
+			.container-special
+				
+				.left-decore-line
+					p.txt-primary 04/07
+					span.fake-line
+					p Первичный прием
+				
+				.header-block
+					h2.h2 Как пройдет наша<br>первая встреча?
+				.steps-slider.swiper
+					.swiper-wrapper
+						.swiper-slide.step-card.step-card--work
+							.step-card__top.flex
+								span.step__num 01
+								span.step-card__name Диагностика
+							.step__img
+								img(src='./img/steps/2.webp', srcset='./img/steps/2@2x.webp 2x' width='157' height='161' loading='lazy' alt='img')
+							.step__title Подготовка к отбеливанию
+							
+						
+						.swiper-slide.step-card.step-card--work
+							.step-card__top.flex
+								span.step__num 02
+								span.step-card__name Диагностика
+							.step__img
+								img(src='./img/steps/6.webp', srcset='./img/steps/6@2x.webp 2x' width='157' height='161' loading='lazy' alt='img')
+							.step__title Отбеливание
+							
+						
+						.swiper-slide.step-card.step-card--work
+							.step-card__top.flex
+								span.step__num 03
+								span.step-card__name Диагностика
+							.step__img
+								img(src='./img/steps/7.webp', srcset='./img/steps/7@2x.webp 2x' width='157' height='161' loading='lazy' alt='img')
+							.step__title Реминерализация эмали
+							
+						
+						
+					
+					//slider nav
+					.steps-slider-nav
+						.steps-slider-pagination
+						button.steps-slider-next.arrow-next
+							svg.svg-rarr
+								use(href='./img/sprite.svg#svg-rarr')
 		include ../sections/implantation/_doctors.pug
 		
 		include ../sections/implantation/_before-after.pug
