@@ -254,7 +254,7 @@
 }
 
 .blog-tabs .tabs-content.active{
-	
+	display: grid!important;
 	padding-top: 6px;
 	grid-template-columns: repeat(12, 1fr);
 
