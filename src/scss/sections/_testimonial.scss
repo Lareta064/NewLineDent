@@ -284,6 +284,9 @@
 		}
 		}
 	}
+	@media (max-width: 401px) {
+		.swiper-slide .testimonial-card{width: 100%;}
+	}
 }
 .testimonial-slider .swiper-wrapper {
 	@media (min-width: 768px) {

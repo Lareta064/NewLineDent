@@ -20,7 +20,7 @@
 }
 @font-face{
 	font-family: 'Montserrat';
-	src: url('../fonts/Montserrat-LIght.woff2'), format('woff2');
+	src: url('../fonts/Montserrat-Light.woff2'), format('woff2');
 	font-weight: 300;
 	font-display: swap;
 }
@@ -463,6 +463,9 @@ padding-block: 20px;
 	width: 100%;
 	max-width: 392px;
 	}
+	@media (max-width: 401px) {
+		padding: 16px
+	  }
 }
 .product-card__top{
 	width: 100%; flex-grow: 1;
@@ -495,6 +498,9 @@ padding-block: 20px;
 	
 	@media(min-width: 768px) and (max-width: 1919px) {
 		font-size: remy(20);
+	}
+	@media (max-width: 401px) {
+	  font-size: 16px;
 	}
 }
 .product-card__col{

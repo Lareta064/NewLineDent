@@ -92,7 +92,7 @@
 	justify-content: center;
 	position: relative;
 	padding: 10px 30px;
-	
+	white-space: nowrap;
 	column-gap:14px;
 	.btn-play{
 		position: relative;
@@ -110,6 +110,9 @@
 			width: remy(34);
 			height: remy(34);
 		}
+	}
+	@media (max-width: 401px) {
+		padding: 10px 20px;
 	}
 }
 .doctor-card.doctor-card--short  .doctor-card__list li {

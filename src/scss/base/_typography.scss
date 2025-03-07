@@ -180,7 +180,8 @@
 .social-block{
 	display: flex;
 	align-items: center;
-	column-gap:4px;
+	gap:4px;
+	flex-wrap: wrap;
 	.social-link{
 		display: flex;
 		justify-content: center;
@@ -212,6 +213,11 @@
 		border-color: white;
 	}
 	.social-block svg{fill: white;}
+}
+.header .header-nav-wrapper {
+	@media (max-width: 767px) {
+		.social-block .social-link svg{fill:#aba096;}
+	}
 }
 .pagination{
 	align-items: center;

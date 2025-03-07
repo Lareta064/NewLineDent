@@ -2,6 +2,9 @@
 
 .blog-content{
 	padding-bottom: 68px;
+	.container{
+		max-width: 1597px;
+	}
 	@media (max-width: 1919px) {padding-bottom: remy(68);}
 	@media (max-width: 767px) {
 	padding-bottom: 40px;
@@ -254,9 +257,20 @@
 }
 
 .blog-tabs .tabs-content.active{
-	display: grid!important;
+	
 	padding-top: 6px;
-	grid-template-columns: repeat(12, 1fr);
+	.blog-cards-wrapper{
+		display: grid;grid-template-columns: 1fr 558px 1fr;
+		@media(min-width:768px) and (max-width: 1919px) {
+			grid-template-columns: 1fr remy(558) 1fr;
+		}
+		@media (max-width: 767px) {
+			grid-template-columns: 1fr;
+			row-gap:40px;
+		}
+		
+	}
+	
 
 	.feedback__content{
 		grid-column:  span 12;
@@ -295,7 +309,7 @@
 	}
 }
 .blog-tabs .card-border-box{
-	grid-column: span 4;
+	// grid-column: span 4;
 	@media (max-width: 767px) {
 		grid-column: span 12;
 	}
