@@ -130,6 +130,7 @@
     margin-top: 0;
 	border-bottom:0;
 	pointer-events: none;
+	
 	&:after{width: 15px; height:15px; display: none;}
 	@media (max-width: 767px) {
 		pointer-events: all;
@@ -142,6 +143,7 @@
 		}
 	}
 }
+
 .doctor-card__title .accordion-body{
 	@media (max-width: 767px) {
 	padding-top: 10px;
