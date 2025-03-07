@@ -1,5 +1,5 @@
 mixin blogCard
-	.card-border-box
+	.card-border-box&attributes(attributes)
 		.blog-card
 			.blog-card__img
 				img(src='./img/blog/blog-card.webp', srcset='./img/blog/blog-card@2x.webp 2x' width='478' height='314' loading='lazy' alt='img')
@@ -30,8 +30,8 @@ section.blog-content
 					
 			
 			.tabs__content-container
-				//TAB #1
-				.tabs-content.active(data-tcontent="all")
+				//TAB #1. Этот блок имеет скрытые карточки и кнопку Показать ещею Поэтому такйо блоку имеет класс .has-hide-cards. По клику на кнопку внутри этого блока через скрипт у карточек с классом hide-card снимается класс d-none, а на кнопке меняется текст Показать меньше. При повторном клике - все возвращается обратно
+				.tabs-content.active.has-hide-cards(data-tcontent="all")
 					.blog-cards-wrapper
 						+blogCard
 						+blogCard
@@ -77,9 +77,14 @@ section.blog-content
 						+blogCard
 						+blogCard
 						+blogCard
-
+						+blogCard(class="d-none hide-card")
+						+blogCard(class="d-none hide-card")
+						+blogCard(class="d-none hide-card")
+						+blogCard(class="d-none hide-card")
+						+blogCard(class="d-none hide-card")
+						+blogCard(class="d-none hide-card")
 					.tabs-content__footer.flex
-						a(href="#!").btn-primary.sm-100 Показать больше
+						a(href="#!" data-target="show-more").btn-primary.sm-100 Показать больше
 						.pagination
 							.pagination-item.pagination-prev
 								svg.svg-larr

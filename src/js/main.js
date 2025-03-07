@@ -449,5 +449,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const firstActiveTab = document.querySelector(".tabs__nav-btn.active") || document.querySelector(".tabs__nav-btn");
   if (firstActiveTab) activateTab(firstActiveTab);
 
-  
+  /*ОТОБРАЖЕНИЕ ЕЩЕ КАРТОЧЕК НА СТР БЛОГ */
+  let wrapperHasHideCars = document.querySelectorAll('.has-hide-cards');
+  if(wrapperHasHideCars.length > 0){
+    wrapperHasHideCars.forEach(function(box){
+      let showMoreBtn = box.querySelector('[data-target="show-more"]');
+      let hideCards = box.querySelectorAll('.hide-card');
+      showMoreBtn.addEventListener('click',  function(){
+        hideCards.forEach(function(card){
+          if(card.classList.contains('d-none')){
+            card.classList.remove('d-none');
+            showMoreBtn.innerText = 'Показать меньше'
+          }else{
+            card.classList.add('d-none');
+            showMoreBtn.innerText = 'Показать больше'
+          }
+        })
+      })
+
+    });
+  }
 });
