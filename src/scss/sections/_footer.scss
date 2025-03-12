@@ -3,6 +3,22 @@
 	
 	background-color: #B9B1A6;
 	color: white;
+	.footer-btn .btn{
+		height: 57px;
+		width: 317px;
+		font-weight: 600;
+		font-size: 15px;
+		@media (max-width: 1919px) {
+			height: remy(57);
+			width: remy(317);
+			font-size: remy(15);
+		}
+		@media (max-width: 767px) {
+		   height: 53px;
+		   width: 359px;
+		   font-size: 15px;
+		}
+	}
 	.contact-link{
 		font-weight: 600;
 		color: white;
@@ -56,14 +72,16 @@
 	row-gap: 32px;
 	flex-direction: column;
 	align-items: flex-start;
+	.social-block{column-gap:12px;}
 	@media (max-width: 1919px) {
 		row-gap: remy(32);
+		.social-block{column-gap:remy(12);}
 	}
 	@media (max-width: 767px) {
 		flex-wrap: wrap;
 		flex-direction: row;
 		gap:24px;
-		
+		.social-block{column-gap:16.59px;}
 		.logo{
 			order:-1;
 			width: 140px;

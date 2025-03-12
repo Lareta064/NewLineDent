@@ -2,6 +2,7 @@
 
 .promo{
 	background-color: #fff;
+	
 	.promo-top .container{
 		
 		position: relative;
@@ -135,6 +136,7 @@
 	}
 	.promo-title__box{
 		row-gap: 30px;
+		.price-block{.txt-24{font-weight: 500;}}
 		@media(min-width:768px) and (max-width: 1919px){
 			row-gap: remy(20);
 		}
@@ -194,14 +196,15 @@
 	.left-decore-line{
 			position: absolute;
 			color: #fff;
-			top:6%;
-			bottom:16%;
-			left:0;
+			top:5%;
+			bottom:5%;
+			left:12px;
 			transform: translateX(-50%);
 			text-align: center;
 			height: auto;
 			@media (max-width: 1919px) {
 				height: auto;
+				left:remy(12);
 			}
 			p{
 				padding-block:20px;
