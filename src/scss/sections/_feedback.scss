@@ -1,12 +1,36 @@
 @use "../base/var" as *;
 .feedback__content{
 	padding-bottom: 80px;
+	.social-link {
+		border:0;
+		width: 45px;
+		height: 45px;
+		svg{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.form-item input{
+		padding-left: 35px;
+		
+	}
+	.fake-placeholder{left: 35px;}
 	@media (max-width: 1919px) {
 		padding-bottom:remy(80);
+		form-item input{
+			padding-left:remy(35);
+			
+		}
+		.fake-placeholder{left: remy(35);}
 	}
 	@media (max-width: 767px) {
 		padding-bottom:40px;
 		border-bottom: 1px solid #b9b1a6;
+		form-item input{
+			padding-left: 35px;
+			
+		}
+		.fake-placeholder{left: 35px;}
 	}
 }
 .feedback__content{

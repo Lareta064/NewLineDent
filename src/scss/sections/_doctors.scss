@@ -17,10 +17,30 @@
 	display: flex;
 	flex-direction: column;
 	row-gap:80px;
+	.doctor-card .title-20{
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 150%;
+		text-transform: uppercase;
+		color: #2e3033;font-family: var(--second-family);
+	}
+	
+	
 	@media (max-width: 1919px) {
 		row-gap:remy(80);
+		.doctor-card .title-20{
+			
+			font-size: remy(20);}
 	}
 	@media (max-width: 767px) {
+		.accordion-header .title-20{
+			font-family: var(--font-family);
+			font-weight: 400;
+			font-size: 17px;
+			line-height: 106%;
+			text-transform: unset;
+
+		}
 		row-gap:20px;
 	}
 }
@@ -71,7 +91,8 @@
 		height: remy(550);
 	}
 	@media (max-width: 767px) {
-		height: remy2(225);
+		aspect-ratio: 333/225;
+		height: auto;
 	}
 }
 .doctor-card__title{
@@ -86,8 +107,8 @@
 			margin-bottom: remy(24);
 		}
 		@media (max-width: 767px) {
-			font-size: remy2(18);
-			margin-bottom: remy2(10);
+			font-size: 18px;
+			margin-bottom: 10px;
 			line-height: 111%;
 			
 		}
@@ -171,23 +192,24 @@
 }
 .doctor-card{
 	.title-20{
+		font-weight: 300;
 		font-size: 20px;
 		line-height: 150%;
 		text-transform: uppercase;
+		color: #2e3033;font-family: var(--second-family);
 		margin-bottom: 24px;
 	}
 	@media (max-width: 1919px) {
 		.title-20{
 			margin-bottom: remy(24);
-		}
-		.title-13{
 			font-size: remy(20);
-			margin-bottom: remy(24);
 		}
+		
 	}
 	@media (max-width: 767px) {
 		.title-20{
 			margin-bottom: 0;
+			.title-20{font-size: 18px;}
 		}
 		
 	}
@@ -212,7 +234,8 @@
 		}
 	}
 	@media (max-width: 767px) {
-	display: none;}
+		display: none;
+	}
 	
 }
 .doctor-card__profile-group{
@@ -225,7 +248,7 @@
 		.btn-primary{
 			height:48px;
 			font-size: 18px;
-			width: remy2(333);
+			width:100%;
 		}
 	}
 }
@@ -245,13 +268,21 @@
 	.accordion-header{
 		border-bottom: 0;
 		padding: 0;
+		font-family: var(--second-family);
+		font-weight: 300;
+		margin-top: 0;
+		margin-bottom: 20px;
+		.title-20{margin-bottom: 0;}
 		&:after{
 			display: none;
 		}
 	}
 	@media (max-width: 1919px) {
 		padding: remy(16) remy(24) remy(20) remy(24);
-		border-radius: remy(12)
+		border-radius: remy(12);
+		.accordion-header{
+			margin-bottom: 20px;
+		}
 	}
 	@media (max-width: 767px) {
 	padding: 0;
@@ -265,12 +296,16 @@
 	.accordion-header{
 		padding-bottom: 7px;
 		border-bottom: 1px solid #b9b1a6;
+		margin-bottom: 0;
 		&:after{
 			display: flex;
 		}
-
+		
 	}
-	.accordion-body{padding-top: 10px;}
+	.accordion-body{
+		padding-top: 10px;
+		
+	}
 	}
 }
 .schedule-time{
@@ -295,7 +330,7 @@
 			font-size:remy(18);
 		}
 		@media (max-width: 767px) {
-			font-size: remy2(10);
+			font-size:10px;
 			line-height: 100%;
 			letter-spacing: -0.03em;
 		}
@@ -325,10 +360,10 @@
 		}
 		
 		@media (max-width: 767px) {
-			border-radius: remy2(9);
-			padding: remy2(4) remy2(9);
-			width: remy2(34);
-			height: remy2(20);
+			border-radius: 9px;
+			padding: 4px 9px;
+			width: 34px;
+			height: 20px;
 		}
 	}
 	@media (max-width: 1919px) {
@@ -388,5 +423,53 @@
 	}
 	@media (max-width: 767px) {
 		gap:16px;
+	}
+}
+.doctors .doctors-wrapper{
+	.doctor-card__list span{
+		margin-bottom: 9px;
+		display: inline-block;
+	}
+	.doctor-card__buttons{
+		column-gap:28px;
+		.pro-doct-btn{
+			font-size: 18px;
+			width: 280px;
+			font-weight: 600;
+		}
+		.text-btn{column-gap:9px;}
+		@media(min-width: 768px) and (max-width: 1919px) {
+			column-gap:remy(28);
+			.pro-doct-btn{
+				font-size: remy(18);
+				width: remy(280);
+			}
+			.text-btn{column-gap:remy(9);}
+		}
+		@media (max-width: 767px) {
+			.pro-doct-btn{width: 100%;}
+		}
+
+	}
+	.doctor-card__list li+li{margin-top: 12px;}
+	.doctor-card__list p,.doctor-card .accordion-body{
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 133%;
+		letter-spacing: -0.03em;
+		color: #2e3033;
+	}
+	@media(min-width: 768px) and (max-width: 1919px) {
+		.doctor-card__list span {margin-bottom: remy(9)};
+		.doctor-card__list li+li{margin-top: remy(12);}
+		.doctor-card__list p,.doctor-card .accordion-body{font-size: remy(18);}
+	}
+	@media (max-width: 767px) {
+		.doctor-card__list p,.doctor-card .accordion-body{font-size: 14px;}
+		.doctor-card__title .exper-item{display: flex;flex-direction: row; column-gap:8px;}
+		.doctor-card__title .accordion-body{
+			padding-bottom: 10px;
+			&>*+*{margin-top: 8px;}
+		}
 	}
 }

@@ -175,6 +175,9 @@ form.flex-col{
 	text-align: left;
 	color:inherit;
 	cursor: pointer;
+	font-weight: 400;
+	font-size: 14px;
+	color: #2e3033;
 	z-index: 3;
 	 @media (max-width: 1919px) {
 		// padding: remy(16) remy(24);
@@ -191,7 +194,7 @@ form.flex-col{
 	content: "";
 	position: absolute;
 	top: 52%;
-	right: 10px;
+	right: 18px;
 	transform: translateY(-50%);
 	width: 24px;
 	height: 24px;

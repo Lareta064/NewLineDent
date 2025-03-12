@@ -18,36 +18,36 @@
 	font-style: italic;
 	font-display: swap;
 }
-@font-face{
-	font-family: 'Montserrat';
-	src: url('../fonts/Montserrat-Light.woff2'), format('woff2');
-	font-weight: 300;
-	font-display: swap;
-}
-@font-face{
-	font-family: 'Montserrat';
-	src: url('../fonts/Montserrat-Regular.woff2'), format('woff2');
-	font-weight: 400;
-	font-display: swap;
-}
-@font-face{
-	font-family: 'Montserrat';
-	src: url('../fonts/Montserrat-Medium.woff2'), format('woff2');
-	font-weight: 500;
-	font-display: swap;
-}
-@font-face{
-	font-family: 'Montserrat';
-	src: url('../fonts/Montserrat-SemiBold.woff2'), format('woff2');
-	font-weight: 600;
-	font-display: swap;
-}
-@font-face{
-	font-family: 'Montserrat';
-	src: url('../fonts/Montserrat-Bold.woff2'), format('woff2');
-	font-weight: 700;
-	font-display: swap;
-}
+// @font-face{
+// 	font-family: 'Montserrat';
+// 	src: url('../fonts/Montserrat-Light.woff2'), format('woff2');
+// 	font-weight: 300;
+// 	font-display: swap;
+// }
+// @font-face{
+// 	font-family: 'Montserrat';
+// 	src: url('../fonts/Montserrat-Regular.woff2'), format('woff2');
+// 	font-weight: 400;
+// 	font-display: swap;
+// }
+// @font-face{
+// 	font-family: 'Montserrat';
+// 	src: url('../fonts/Montserrat-Medium.woff2'), format('woff2');
+// 	font-weight: 500;
+// 	font-display: swap;
+// }
+// @font-face{
+// 	font-family: 'Montserrat';
+// 	src: url('../fonts/Montserrat-SemiBold.woff2'), format('woff2');
+// 	font-weight: 600;
+// 	font-display: swap;
+// }
+// @font-face{
+// 	font-family: 'Montserrat';
+// 	src: url('../fonts/Montserrat-Bold.woff2'), format('woff2');
+// 	font-weight: 700;
+// 	font-display: swap;
+// }
 @font-face{
 	font-family: 'RobotoMono';
 	src: url('../fonts/RobotoMono.woff2'), format('woff2');
@@ -83,6 +83,8 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Montserrat', sans-serif;
+	
+    font-optical-sizing: auto;
 	font-weight: 400;
 	font-size: 16px;
     color: #2E3033;
@@ -351,13 +353,12 @@ padding-block: 20px;
 	top: 0;
 	left: 0;
 	
-	
 	font-weight: 500;
 	font-size: 18px;
 	text-transform: uppercase;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-end;
 	
 	row-gap:20px;
 	p{
@@ -409,7 +410,9 @@ padding-block: 20px;
 		flex-grow: 1;
 		height: 5px;
 		width: 1px;
-		background: linear-gradient(70deg, rgb(40, 40, 40) 100%, rgb(185, 177, 166) 100%);
+		background: linear-gradient(70deg, rgb(40, 40, 40) 0%, rgb(185, 177, 166) 100%);
+		position: relative;
+		left:-4px;
 		
 	}
 	.txt-primary{

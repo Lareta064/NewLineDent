@@ -115,6 +115,7 @@
 	}
 	.align-right-buttons{
 		margin-top: auto;
+		&>*{font-weight: 600;}
 		@media (max-width: 767px) {
 			column-gap:15px;
 			margin-top: 30px;

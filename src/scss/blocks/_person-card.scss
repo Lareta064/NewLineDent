@@ -17,6 +17,7 @@
 	@media (min-width: 768px) and (max-width: 1919px) {
 		
 		height: 145px;
+		height: remy(187);
 	}
 	
 
@@ -50,7 +51,7 @@
 		line-height: 150%;
 	}
 	@media (min-width: 768px) and (max-width: 1919px) {
-		max-width: remy(347);
+		max-width: remy(400);
 		row-gap:remy(20);
 		padding: remy(20);
 		.persone-card__img{height: remy(187)}
