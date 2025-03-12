@@ -2,13 +2,29 @@
 .serv-card{
 	border: 1px solid #b9b1a6;
 	padding: 20px;
+	padding-bottom: 8px;
 	background-color: #fff;
+	.accordion-header{
+		border-top:0;
+		margin-top: 0;
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+	&__top{align-items: flex-start;}
 	@media (max-width: 1919px) {
 		padding: remy(20);
+		.accordion-header{
+			padding-top: remy(6);
+		  padding-bottom: remy(6);
+		}
 	}
 	@media (max-width: 767px) {
 		padding: 20px;
 		&__top{column-gap:32px;}
+		.accordion-header{
+			padding-top: 6px;
+		   padding-bottom: 6px;
+		}
 	}
 	&__img{
 		width: 101px;
@@ -25,8 +41,13 @@
 	}
 	&__title{
 		flex-grow: 1;
+		
 		.title-26{
 			max-width: 540px;
+			line-height: 1.73;
+			line-height: 1.15;
+			text-transform: uppercase;
+			display: inline-block;
 			@media (max-width: 1919px) {
 				max-width: remy(540);
 			}
@@ -69,7 +90,11 @@
 		p{
 			width: fit-content;
 		}
-		span{border-bottom:1px solid #b9b1a6; flex-grow: 1; }
+		span{
+			border-bottom:1px solid #b9b1a6; flex-grow: 1; 
+			position: relative;
+			bottom:8px;
+		}
 		.acc-icon{
 			width: 17px;
 			height: 17px;
@@ -79,10 +104,11 @@
 		}
 		@media (max-width: 1919px) {
 			font-size: remy(16);
+			span{bottom:remy(8);}
 		}
 		@media (max-width: 767px) {
-			
 			font-size: 16px;
+			span{bottom:8px;}
 		}	
 		
 	}
@@ -123,6 +149,22 @@
 	}
 	.service-link +.service-link{
 		border-top: 1px solid #B9B1A6;
+	}
+}
+.service-content{
+	.header-col{
+		padding-bottom: 40px;
+		margin-bottom: 40px;
+		border-bottom:1px solid #B9B1A6;
+		@media (max-width: 1919px) {
+			padding-bottom: remy(40);
+			margin-bottom: remy(40);
+		}
+		@media (max-width: 767px) {
+			border-bottom:0;
+			padding-bottom:20px;
+			margin-bottom: 20px;
+		}
 	}
 }
 .service-content-grid{
