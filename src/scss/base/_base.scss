@@ -729,7 +729,7 @@ padding-block: 20px;
 	
 	@media(min-width:768px){
 		display: grid;
-		grid-template-columns: remy(440) remy(440);
+		grid-template-columns: remy(448) remy(448);
 		gap:remy(25);
 		justify-content: flex-end;
 		align-content: flex-end;
@@ -742,7 +742,7 @@ padding-block: 20px;
 		grid-template-columns: 440px 440px;
 		gap:25px;
 		&>*{
-			width: 440px;
+			width: 448px;
 		}
 	}
 }

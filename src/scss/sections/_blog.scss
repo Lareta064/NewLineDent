@@ -5,10 +5,13 @@
 	.container{
 		max-width: 1597px;
 	}
-	@media (max-width: 1919px) {padding-bottom: remy(68);}
+	@media (max-width: 1919px) {padding-bottom: remy(68);
+		.container{max-width: remy(1597);}
+	}
 	@media (max-width: 767px) {
 	padding-bottom: 40px;
 	padding-top: 0;
+	.container{max-width: 400px;}
 	}
 }
 
@@ -289,7 +292,7 @@
 		justify-content: space-between;
 		@media (max-width: 767px) {
 		  flex-direction: column; row-gap: 20px;
-		  padding-top: 0;
+		
 		}
 	}
 	.pagination{margin-left: auto;
