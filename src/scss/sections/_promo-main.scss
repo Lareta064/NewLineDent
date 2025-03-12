@@ -198,16 +198,16 @@
 			color: #fff;
 			top:5%;
 			bottom:5%;
-			left:12px;
+			left:0;
 			transform: translateX(-50%);
 			text-align: center;
 			height: auto;
 			@media (max-width: 1919px) {
 				height: auto;
-				left:remy(12);
+				
 			}
 			p{
-				padding-block:20px;
+				padding-block:0;
 				white-space: nowrap;
 				position: relative;
 				z-index: 2;
@@ -227,8 +227,6 @@
 			}
 			
 		}
-		
-		
 	
 }
 .promo.promo-main{background-color: $pr;}

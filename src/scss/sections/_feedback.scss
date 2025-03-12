@@ -10,12 +10,27 @@
 			height: 100%;
 		}
 	}
+	.form-item input{
+		padding-left: 35px;
+		
+	}
+	.fake-placeholder{left: 35px;}
 	@media (max-width: 1919px) {
 		padding-bottom:remy(80);
+		form-item input{
+			padding-left:remy(35);
+			
+		}
+		.fake-placeholder{left: remy(35);}
 	}
 	@media (max-width: 767px) {
 		padding-bottom:40px;
 		border-bottom: 1px solid #b9b1a6;
+		form-item input{
+			padding-left: 35px;
+			
+		}
+		.fake-placeholder{left: 35px;}
 	}
 }
 .feedback__content{
