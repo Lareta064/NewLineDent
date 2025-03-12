@@ -1,6 +1,15 @@
 @use "../base/var" as *;
 .feedback__content{
 	padding-bottom: 80px;
+	.social-link {
+		border:0;
+		width: 45px;
+		height: 45px;
+		svg{
+			width: 100%;
+			height: 100%;
+		}
+	}
 	@media (max-width: 1919px) {
 		padding-bottom:remy(80);
 	}
