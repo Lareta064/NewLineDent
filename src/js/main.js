@@ -455,17 +455,20 @@ document.addEventListener("DOMContentLoaded", function () {
     wrapperHasHideCars.forEach(function(box){
       let showMoreBtn = box.querySelector('[data-target="show-more"]');
       let hideCards = box.querySelectorAll('.hide-card');
-      showMoreBtn.addEventListener('click',  function(){
-        hideCards.forEach(function(card){
-          if(card.classList.contains('d-none')){
-            card.classList.remove('d-none');
-            showMoreBtn.innerText = 'Показать меньше'
-          }else{
-            card.classList.add('d-none');
-            showMoreBtn.innerText = 'Показать больше'
-          }
-        })
-      })
+      if(showMoreBtn){
+
+        showMoreBtn.addEventListener('click',  function(){
+          hideCards.forEach(function(card){
+            if(card.classList.contains('d-none')){
+              card.classList.remove('d-none');
+              showMoreBtn.innerText = 'Показать меньше'
+            }else{
+              card.classList.add('d-none');
+              showMoreBtn.innerText = 'Показать больше'
+            }
+          })
+        });
+      }
 
     });
   }

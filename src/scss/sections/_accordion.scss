@@ -20,7 +20,7 @@
 	padding-right: 30px;
 	position: relative;
 	margin-top: 10px;
-	border-bottom: 1px solid #b9b1a6;
+	border-top: 1px solid #b9b1a6;
 	&.open{border-bottom: 0;}
 	@media (max-width: 1919px) {
 		font-size: remy(20);
@@ -37,7 +37,7 @@
 
 .accordion-group {
 	
-	border-bottom: 1px solid #b9b1a6;
+	// border-bottom: 1px solid #b9b1a6;
 }
 .accordion-body__content{
 	column-gap: 0;

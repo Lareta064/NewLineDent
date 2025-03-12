@@ -86,8 +86,8 @@ body {
 	font-weight: 400;
 	font-size: 16px;
     color: #2E3033;
-	-webkit-font-smoothing: subpixel-antialiased;
-	-moz-osx-font-smoothing: auto;
+	// -webkit-font-smoothing: subpixel-antialiased;
+	// -moz-osx-font-smoothing: auto;
 	display: flex;
 	flex-direction: column;
 	background-color: #fff;
@@ -364,6 +364,7 @@ padding-block: 20px;
 		flex-shrink:0;
 		height: max-content;
 		flex-shrink: 0;transform: scale(-1);writing-mode: vertical-rl;
+		white-space: nowrap;
 	}
 	@media (max-width: 1919px) {
 		font-size:remy(18);
@@ -408,7 +409,8 @@ padding-block: 20px;
 		flex-grow: 1;
 		height: 5px;
 		width: 1px;
-		background-color: #2E3033;
+		background: linear-gradient(70deg, rgb(40, 40, 40) 100%, rgb(185, 177, 166) 100%);
+		
 	}
 	.txt-primary{
 		color: #b9b1a6;
