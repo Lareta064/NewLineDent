@@ -138,13 +138,17 @@
 	}
 }
 .smile-icon{
-	width: 50px;
-	height: 38px;
+	width: 60px;
+	height: 70px;
 	display: inline-block;
 	flex-shrink: 0;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='50' height='68' viewBox='0 0 50 68' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M43.5 2.45312L37.5 24.4531' stroke='%23C7491F' stroke-width='3' stroke-linecap='round' /%3e%3cpath d='M24.5 2.45312L18.5 24.4531' stroke='%23C7491F' stroke-width='3' stroke-linecap='round' /%3e%3cpath d='M1.5 39.9531C1.5 55.4531 19.5 86.9531 48.5 44.4531' stroke='%23C7491F' stroke-width='3' stroke-linecap='round' /%3e%3c/svg%3e");
+	@media (min-width: 768px) and (max-width: 1919px) {
+		width: remy(60);
+	   height: remy(70);
+	}
 }
 .clock-icon{
 	width: 24px;

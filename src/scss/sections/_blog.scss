@@ -16,7 +16,7 @@
 }
 
 .promo-blog{
-	min-height: 700px;
+	height: 700px;
 	position: relative;
 	overflow: hidden;
 	background-size: 1920px 887px;
@@ -45,7 +45,7 @@
 		}
 	}
 	@media (max-width: 1919px) {
-		min-height: remy(700);
+		height: remy(700);
 		background-size: remy(1920) remy(887);
 	}
 	@media (max-width: 767px) {

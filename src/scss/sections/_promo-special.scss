@@ -1,14 +1,14 @@
 @use "base/var" as *;
 
 .promo-subtitle{
-	max-width: 440px;
+	max-width:520px;
 	p{
 		font-size: 18px;
 		line-height: 133%;
 	}
 	p +p{margin-top: 10px;}
 	@media (max-width: 1919px) {
-		max-width: remy(375);
+		max-width: 27.53125vw;
 		p{font-size: remy(18);}
 		p +p{margin-top: remy(10);}	
 	}

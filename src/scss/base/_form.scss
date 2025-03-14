@@ -35,11 +35,11 @@
 		z-index: 2;
 		position: absolute;
 		left: 16px;
-		top: 15px;
+		top: 17px;
 		transition: .3s;
 		pointer-events: none;
 		@media(min-width:768px) and (max-width: 1919px){
-			font-size: remy(14); top:remy(15);
+			font-size: remy(14); top:remy(17);
 			left: remy(16);
 		}
 	}

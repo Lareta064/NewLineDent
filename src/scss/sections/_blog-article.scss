@@ -13,14 +13,14 @@
 		}
 	}
 	@media (max-width: 1919px) {
-		column-count: remy(40);
+		column-gap: remy(40);
 		padding: remy(33);
-		border: none;
+		
 	}
 	@media (max-width: 767px) {
 	 flex-direction: column;
 	 padding: 0;
-	 row-gap:28px;
+	 row-gap:28px;border: none;
 	}
 }
 .article-sidebar{
