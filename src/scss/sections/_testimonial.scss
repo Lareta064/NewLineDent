@@ -39,6 +39,7 @@
 .testimonial-card__body{
 	padding: 25px;
 	padding-top: 32px;
+	padding-bottom: 42px;
 	display: flex;
 	flex-direction: column;
 	row-gap: 22px;
@@ -52,6 +53,7 @@
 	@media (max-width: 1919px) {
 		padding: remy(25);
 	    padding-top: remy(32);
+		padding-bottom: remy(42);
 		row-gap: remy(22);
 	}
 	@media (max-width: 767px) {
@@ -125,12 +127,12 @@
 
 
 .testimonial-box{
-	padding-top: 40px;
+	padding-top: 42px;
 	@media (max-width: 1919px) {
-	padding-top: remy(40);
+	padding-top: remy(42);
 	}
 	@media (max-width: 767px) {
-	padding-top: 40px;
+	padding-top: 42px;
 	}
 }
 .testimonial-box:nth-child(3n+2){
@@ -139,7 +141,7 @@
 	.testimonial-card{
 		flex-direction: column-reverse;
 		position: relative;
-		top:-10px;
+		// top:-10px;
 		&:after,&:before{
 			content:'';	
 			width: 1px;
