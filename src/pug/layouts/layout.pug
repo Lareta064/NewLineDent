@@ -17,6 +17,11 @@ html(lang="ru")
 		//- link(rel='stylesheet' href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
 		//Swiper
 		link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css")
+		//fonts
+		link(rel='preload' href='./fonts/PhonkSans-Light.woff2' as='font' type='font/woff2' crossorigin)
+		link(rel='preload' href='./fonts/PhonkSans-LightItalic.woff2' as='font' type='font/woff2' crossorigin)
+		link(rel='preload' href='./fonts/Gogol.woff' as='font' type='font/woff' crossorigin)
+		//- link(rel='preload' href='./fonts/Gogol.woff2' as='font' type='font/woff2' crossorigin)
 		link(rel='preconnect' href='https://fonts.googleapis.com')
 		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
 		link(href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet')
@@ -34,7 +39,37 @@ html(lang="ru")
 		
 		block content
 		
-		
+		//popUP FORM
+		.popup-block(data-modal="feedback")
+			.popup-block-content
+				.header-nav-logo.flex
+					a.logo(href='index.html')
+						svg.svg-logo
+							use(href='./img/sprite.svg#svg-logo')
+				.popup-block-wrapper
+					.popup-header
+						.h2 Записаться на&nbsp;консультацию
+						button.popup-close
+							svg.svg-cross(data-close)
+								use(href="./img/sprite.svg#svg-cross")
+					.popup-body
+						form.contact-form.flex-col(action="")
+							.form-item
+								span.fake-placeholder Имя
+								input.form-input(type="text" name="name")
+							.form-item
+								span.fake-placeholder Телефон
+								input.form-input(type="tel" name="phone")
+							.form-item
+								span.fake-placeholder Опишите ваш вопрос
+								textarea.form-input( name="message")
+							.form-btn.flex
+								
+								button.btn-primary(type="submit")
+									span Отправить
+									
+								p.agree-txt Нажимая на кнопку «Отправить», я даю согласие на&nbsp;обработку персональных данных
+
 		script(src="./libs/jquery/jquery-3.0.0.min.js")
 		
 		//Swiper

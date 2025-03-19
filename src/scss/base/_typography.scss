@@ -25,12 +25,13 @@
 	font-size: 30px;
 	line-height: 150%;
 	color: #2e3033;
-	font-weight: 700;
+	text-shadow: .5px .5px #2e3033;;
+	font-weight: 300;
 	@media (max-width: 1919px) {
 		font-size: remy(30);
 	}
 	@media (max-width: 767px) {
-	font-size: 20px;
+	font-size: 18px;
 	}
 }
 .title-36{

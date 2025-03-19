@@ -293,7 +293,78 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-
+    /* =============== modal с атрибутом [data-modal] ===============*/ 
+    const modalOpen = document.querySelectorAll('[data-btn]');
+    const modalFrames = document.querySelectorAll('[data-modal]');
+    
+    if (modalFrames.length > 0) {
+        const modalFramesClose = document.querySelectorAll('[data-close]');
+    
+        // Открытие модального окна
+        for (let item of modalOpen) {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation(); // Предотвращаем всплытие
+    
+                const itemAttr = item.getAttribute('data-btn');
+    
+                for (let frame of modalFrames) {
+                    const frameAttr = frame.getAttribute('data-modal');
+                    if (frameAttr === itemAttr) {
+                        frame.classList.add('visible');
+                        document.body.classList.add('lock');
+                    }
+                }
+            });
+        }
+    
+        // Закрытие модального окна при клике на крестик (data-close)
+        for (let item of modalFramesClose) {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation(); // Предотвращаем всплытие
+    
+                const parentModal = item.closest('[data-modal]');
+                if (parentModal) {
+                    // Закрываем текущее модальное окно
+                    parentModal.classList.remove('visible');
+    
+                    // Закрываем все дочерние модальные окна внутри родителя
+                    const childModals = parentModal.querySelectorAll('[data-modal].visible');
+                    for (let child of childModals) {
+                        child.classList.remove('visible');
+                    }
+    
+                    // Проверяем, остались ли открытые модальные окна
+                    const anyModalVisible = document.querySelector('[data-modal].visible');
+                    if (!anyModalVisible) {
+                        document.body.classList.remove('lock');
+                    }
+                }
+            });
+        }
+    
+        // Закрытие модальных окон по клику вне их
+        document.addEventListener('click', function (e) {
+            const target = e.target;
+    
+            // Проверяем, кликнули ли мы по data-modal, но не по data-btn внутри него
+            if (target.matches('[data-modal]') && !target.querySelector('[data-btn]:hover')) {
+                // Закрываем и текущее модальное окно, и его дочерние модалки
+                target.classList.remove('visible');
+                const childModals = target.querySelectorAll('[data-modal].visible');
+                for (let child of childModals) {
+                    child.classList.remove('visible');
+                }
+    
+                // Проверяем, остались ли открытые модальные окна
+                const anyModalVisible = document.querySelector('[data-modal].visible');
+                if (!anyModalVisible) {
+                    document.body.classList.remove('lock');
+                }
+            }
+        });
+    }
 });
 // ACCORDION
 document.addEventListener("DOMContentLoaded", function () {

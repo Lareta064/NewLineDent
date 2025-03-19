@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Phonk Sans';
+    src: url('PhonkSans-LightItalic.woff2') format('woff2'),
+        url('PhonkSans-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+

@@ -247,3 +247,8 @@
 	 width: calc(50% + 50vw);
 	}
 }
+.team{
+	@media (max-width: 767px) {
+	 overflow: hidden;
+	}
+}
