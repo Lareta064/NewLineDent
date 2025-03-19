@@ -107,6 +107,7 @@
 		.flex{
 			border-bottom:0;
 			padding-bottom: 0;
+			
 		}
 		
 		.title-20{
@@ -114,9 +115,14 @@
 			line-height: 100%;
 			letter-spacing: -0.03em;
 		}
-		@media (max-width: 767px) {
+		@media (max-width: 1919px) {
 			padding-bottom: remy(10);
 			.title-20{font-size: remy(35)}
+		}
+		@media (max-width: 767px) {
+			padding-bottom: 10px;
+			.title-20{font-size: 15.5px;}
+			
 		}
 	}
 	@media(min-width: 768px)and (max-width: 1919px) {
@@ -124,6 +130,15 @@
 			padding-bottom: remy(10);
 			.title-20{font-size: remy(35);}
 		}
+	}
+	@media (max-width: 767px) {
+		padding-bottom: 10px;
+		.product-card__price{font-size: 25px; padding-top: 12px;}
+		.product-card__img{
+			width: 46px;
+			height: 46px;
+		}
+		
 	}
 }
 
