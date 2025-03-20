@@ -4,6 +4,7 @@
 	src:  url('../fonts/Gogol.woff'), format('woff');
 	font-weight: 400;
 	font-display: swap;
+	// font-style: italic;
 }
 @font-face{
 	font-family: 'PhonkSans';
@@ -18,36 +19,36 @@
 	font-style: italic;
 	font-display: swap;
 }
-// @font-face{
-// 	font-family: 'Montserrat';
-// 	src: url('../fonts/Montserrat-Light.woff2'), format('woff2');
-// 	font-weight: 300;
-// 	font-display: swap;
-// }
-// @font-face{
-// 	font-family: 'Montserrat';
-// 	src: url('../fonts/Montserrat-Regular.woff2'), format('woff2');
-// 	font-weight: 400;
-// 	font-display: swap;
-// }
-// @font-face{
-// 	font-family: 'Montserrat';
-// 	src: url('../fonts/Montserrat-Medium.woff2'), format('woff2');
-// 	font-weight: 500;
-// 	font-display: swap;
-// }
-// @font-face{
-// 	font-family: 'Montserrat';
-// 	src: url('../fonts/Montserrat-SemiBold.woff2'), format('woff2');
-// 	font-weight: 600;
-// 	font-display: swap;
-// }
-// @font-face{
-// 	font-family: 'Montserrat';
-// 	src: url('../fonts/Montserrat-Bold.woff2'), format('woff2');
-// 	font-weight: 700;
-// 	font-display: swap;
-// }
+@font-face{
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Light.woff2'), format('woff2');
+	font-weight: 300;
+	font-display: swap;
+}
+@font-face{
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Regular.woff2'), format('woff2');
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face{
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Medium.woff2'), format('woff2');
+	font-weight: 500;
+	font-display: swap;
+}
+@font-face{
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-SemiBold.woff2'), format('woff2');
+	font-weight: 600;
+	font-display: swap;
+}
+@font-face{
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Bold.woff2'), format('woff2');
+	font-weight: 700;
+	font-display: swap;
+}
 @font-face{
 	font-family: 'RobotoMono';
 	src: url('../fonts/RobotoMono.woff2'), format('woff2');
@@ -483,6 +484,10 @@ padding-block: 20px;
 		padding-bottom:remy(26);
 		row-gap: remy(10);
 	}
+	@media (max-width: 767px) {
+	padding-bottom: 10px;
+	row-gap: 5px;
+	}
 }
 .product-card .flex{
 	width: 100%;
@@ -587,6 +592,9 @@ padding-block: 20px;
 	@media(min-width: 768px) and (max-width: 1919px) {
 		font-size: remy(20);
 	}
+	@media (max-width: 767px) {
+	font-size: 15.5px;
+	}
 }
 .implant-card__top{
 	column-gap:12px;
@@ -646,6 +654,9 @@ padding-block: 20px;
 		column-gap:remy(14);
 		font-size: remy(38)
 	}
+	@media (max-width: 767px) {
+	font-size: 25px;
+	}
 }
 .implant-card__footer-top .flex{
 	width: 100%;
@@ -690,6 +701,9 @@ padding-block: 20px;
 			font-size: remy(18);
 			
 		}
+		@media (max-width: 767px) {
+		font-size: 11px;
+		}
 	}
 	ol li {
 		position: relative;	
@@ -698,6 +712,9 @@ padding-block: 20px;
 		@media(min-width: 768px) and (max-width: 1919px) {
 			font-size: remy(18);
 			
+		}
+		@media (max-width: 767px) {
+		padding-left: 12px;
 		}
 	}
 	ol li:before {
@@ -711,6 +728,9 @@ padding-block: 20px;
 		@media(min-width: 768px) and (max-width: 1919px) {
 			font-size: remy(18);
 			
+		}
+		@media (max-width: 767px) {
+		font-size: 11px;
 		}
 	}
 }
