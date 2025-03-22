@@ -43,7 +43,7 @@
 		}
 		@media (max-width: 767px) {
 			
-			width: 340px;
+			width: 304px;
 			height: 246px;
 			
 		}
@@ -68,10 +68,27 @@
 	.promo-img .decore-text-top{
 		left: 11%;
 		top: 27%;
+		img{width: 340px;}
+		@media (max-width: 1919px) {
+			img{width: remy(340);}
+		}
+		@media (max-width: 767px) {
+			img{width: 126px;}
+			top: 29%;
+		}
 	}
 	.promo-img .decore-text-bottom{
 		right:0;
 		bottom: 28%;
+		img{width: 304px;}
+		@media (max-width: 1919px) {
+			img{width: remy(304);}
+		}
+		@media (max-width: 767px) {
+			img{width: 114px;}
+			right:-40px;
+			bottom: 30%;
+		}
 	}
 	
 	.promo-title__content{
