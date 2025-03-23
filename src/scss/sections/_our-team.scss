@@ -72,10 +72,16 @@
 	justify-content: flex-end;
 	padding-right: 145px;
 	margin-top: 26px;
+	span{display: block;}
+	img{
+		width: 220px;
+		height: auto;
+	}
 	@media (min-width: 768px) and (max-width: 1919px) {
 		font-size: remy(120);
 		padding-right: remy(145);
 		margin-top: remy(26);
+		img{width: remy(220);}
 	}
 	@media (max-width: 767px) {
 		font-size: 36px;
@@ -84,6 +90,7 @@
 		justify-content: flex-start;
 		padding-left: 40px;
 		margin-top: 15px;
+		img{width: 112px;}
 	}
 }
 .team-preview__video-btn{
@@ -127,9 +134,9 @@
 	display: flex;
 	position: relative;
 	.persone-card-block{
-		margin-top: -123px;
+		margin-top: -83px;
 		@media (min-width: 768px) and (max-width: 1919px) {
-			margin-top: remy(-123);
+			margin-top: remy(-83);
 		}
 		@media (max-width: 767px) {
 		   margin-top: 0;

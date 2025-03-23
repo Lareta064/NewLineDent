@@ -41,10 +41,7 @@
 	.cta-top{
 		position: relative;
 		margin-bottom: 200px;
-		.gogol-text{
-			position: relative;
-			left:115px;
-		}
+		
 		.quote-dark{position: absolute;
 			left: -55px;
 			top:-17px;
@@ -55,16 +52,14 @@
 				left: remy(-55);
 				top:remy(-17);
 			}
-			.gogol-text{left:remy(115);}
+			
 		}
 		@media (max-width: 767px) {
 	    	z-index: 4;
 			padding-left: 40px;
+			
 			p{padding-left: 10px;}
-			.gogol-text{
-				position: relative;
-				left:115px;
-			}
+			
 		}
 	}
 	.cta-big-txt{
@@ -84,30 +79,21 @@
 			position: relative;
 			z-index:2;
 		}
-		.gogol-text{
-			font-size: 130px;
-			line-height: 120%;
-			color: #c7491f;
-		}
+		
 		
 		@media (max-width: 1919px) {
 			font-size: remy(75);
-			.gogol-text{font-size:remy(130);}
+			
 
 		}
 		@media (max-width: 767px) {
 			font-size: 20px;
 			line-height: 174%;
 			letter-spacing: -0.04em;
-			.gogol-text{
-				font-size: 43px;
-
-			}
+			
 		}
 	}
 	
-	
-
 }
 .cta{
 	.rotate-image{
@@ -171,6 +157,7 @@
 		p{position: relative;z-index:2;	}
 		@media (max-width: 767px) {
 			text-align: center;
+			.quote-dark{display: none;}
 		}
 	}
 	.rotate-image1{
@@ -242,5 +229,72 @@
 		@media (max-width: 767px) {
 			display: none;
 			}
+	}
+}
+.cta-top p{
+	display: flex;
+	column-gap: 120px;
+	align-items: flex-end;
+	span{
+		line-height: 1.3;
+	}
+	img{
+		width: 441px;
+		height: 156px;
+		
+	}
+	@media (max-width: 1919px) {
+		column-gap: remy(120);
+		img{
+			width: remy(441);
+			height: remy(156);
+		}
+	}
+	@media (max-width: 767px) {
+		position: relative;
+		width: 270px;
+		height: 60px;
+		column-gap: 0;
+	  span{
+		white-space: nowrap;
+		position: relative;
+		top: -40px;
+	}
+	  img{
+		position: absolute;
+		right: 0;
+		bottom: -14px;
+		z-index: 2;
+		width: 160px;
+		height: auto;
+
+	  }
+	}
+}
+
+.cta-bottom  p{
+	display: flex;
+	align-items: center;
+	column-gap:40px;
+	img{
+		width: 446px;
+		height: 156px;
+	}
+	@media (max-width: 1919px) {
+		column-gap: remy(40);
+		img{
+			width: remy(446);
+			height: remy(156);
+		}
+	}
+	@media (max-width: 767px) {
+		column-gap:32px;
+		img{
+			position: relative;
+			left: 32px;
+			top:-3px;
+			width: 155px;
+			height: auto;
+		}
 	}
 }
