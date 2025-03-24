@@ -18,10 +18,21 @@
 		height: 411px;
 		.gogol-text{
 			position: absolute;
-			bottom: 0;
-			right: 0;
+			bottom: 23px;
+			right: -7px;
+			width: 429px;
 			transform: translate(50%, 38%) rotate(-16.05deg);
 			z-index: 2;
+		
+				@media (max-width: 1919px) {
+					width: remy(429);
+					bottom: remy(23);
+					right: remy(-7);
+				}
+				@media (max-width: 767px) {
+				
+				}
+			
 		}
 	}
 	@media (max-width: 1919px) {
@@ -39,6 +50,7 @@
 }
 .review__content-links{
 	flex:1;
+	
 	@media (max-width: 1023px) {
 	padding-top: 20px;
 	}
