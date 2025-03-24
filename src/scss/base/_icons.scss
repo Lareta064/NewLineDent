@@ -15,13 +15,21 @@
 .svg-rarr{
 	width: 48px;
 	height: 12px;color: $pr;
+	transition: .3s; 
 	@media(min-width:768px) and (max-width: 1919px) {width: remy(48);}
+	&:hover{
+		color: #9F917F;
+	}
 }
 .svg-larr{
 	width: 38px;
 	height: 8px;
 	color: #2E3033;
+	transition: .3s; 
 	@media(min-width:768px) and (max-width: 1919px) {width: remy(38);height: remy(8);}
+	&:hover{
+		color: #9F917F;
+	}
 }
 .arrow-prev .svg-rarr{
 	transform: rotate(180deg);
@@ -105,13 +113,14 @@
 
 .btn-play{
 	width: 43px;
-	height: 44px;
+	height: 42px;
 	display: block;
 	background-image: url('../img/video/play.webp');
-	background-size: contain;
+	background-size: cover;
 	position: absolute;
 	left: 50%;
 	top: 50%;
+	transition: .3s; 
 	transform: translate(-50%, -50%);
 	@media (min-width: 768px) and (max-width: 1919px) {
 		width: remy(43);

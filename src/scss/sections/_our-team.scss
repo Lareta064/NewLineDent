@@ -110,6 +110,12 @@
 	align-items: center;
 	backdrop-filter: blur(4px);
 	background: rgba(255, 255, 255, 0.58);
+	&:hover{
+		background: rgba(255, 255, 255, 0.58), rgba(0, 0, 0, 0.1);
+		.btn-play{
+			background-image: url('../img/video/play-hover.webp');
+		}
+	}
 	p{white-space: nowrap;}
 	.btn-play{
 		position: absolute;

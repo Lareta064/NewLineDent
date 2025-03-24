@@ -26,7 +26,16 @@
 		display: none;
 		}
 	}
+}
+.before-after__tabs .tabs__nav-btn {
+	&:hover{
+		border-bottom: 1px solid #c7491f;
+	}
+	&:active{
+		border-bottom: 1px solid #c7491f;
+		background-color: rgba(220, 216, 211, .2);
 	
+	}
 }
 .tabs__content-container{
 	// padding-top: 80px;

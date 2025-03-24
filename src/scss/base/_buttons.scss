@@ -34,17 +34,25 @@
 .btn-primary{
 	border:1px solid #c7491f;
 	background: #c7491f;color: #fff;
-	&:hover{color: #fff;}
+	&:hover{color: #fff; background-color: #af3e19;border:1px solid #af3e19;}
 }
 
 .btn{
 	color:#c7491f;
 	background-color: #fff;
 	border:1px solid #fff;
-	&:hover{color:#c7491f;}
+	&:hover{
+		color:#fff;
+		border:1px solid #C7491F;
+		background-color: #C7491F;
+	}
+
 }
 .btn.btn--accent{
 	border:1px solid #c7491f;
+	&:hover{
+		background-color: #ABA296;
+	}
 }
 .btn-outline{
 	border:1px solid currentColor;
