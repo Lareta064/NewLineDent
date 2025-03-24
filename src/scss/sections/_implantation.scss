@@ -94,6 +94,8 @@
 	padding: 10px 30px;
 	white-space: nowrap;
 	column-gap:14px;
+	transition: .3s; 
+	&:hover{background: #e5e5e5;}
 	.btn-play{
 		position: relative;
 		inset: auto;

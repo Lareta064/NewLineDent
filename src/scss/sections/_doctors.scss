@@ -395,6 +395,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
+		&>*{width: 100%;}
 	}
 }
 .filters-group.flex{
@@ -431,18 +432,20 @@
 		display: inline-block;
 	}
 	.doctor-card__buttons{
-		column-gap:28px;
+		column-gap:10px;
+		
 		.pro-doct-btn{
 			font-size: 18px;
 			width: 280px;
-			font-weight: 600;
+			font-weight: 600;height: 48px;
 		}
 		.text-btn{column-gap:9px;}
 		@media(min-width: 768px) and (max-width: 1919px) {
-			column-gap:remy(28);
+			column-gap:remy(10);
 			.pro-doct-btn{
 				font-size: remy(18);
 				width: remy(280);
+				height: remy(48)
 			}
 			.text-btn{column-gap:remy(9);}
 		}

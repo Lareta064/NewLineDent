@@ -52,6 +52,7 @@
 	border:1px solid #c7491f;
 	&:hover{
 		background-color: #ABA296;
+
 	}
 }
 .btn-outline{
@@ -111,7 +112,30 @@
 	}
 
 }
+.text-btn{
+	padding-left: 13px;
+	padding-right: 13px;
+	white-space: nowrap;
+	transition: .3s; 
+	height: 48px;
+	&:hover{
+		background: #e5e5e5;
+	}
+	@media (max-width: 1919px) {
+		height:remy(48);
+		padding-left: remy(13);
+	    padding-right: remy(13);
+	}
+	@media (max-width: 767px) {
+		height:48px;
+		font-size: 18px;
+		width: 100%;
+		column-gap:16px;
+	}
+}
+.btn--accent-slim:hover{color: white;}
 .text-btn.btn--accent{
    border-color: white;
+   
 }
 button[disabled]{background-color: #f6f6f6!important; border-color:#f6f6f6!important;}
