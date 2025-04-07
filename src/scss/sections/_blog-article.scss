@@ -172,6 +172,9 @@
 }
 .team-preview__wrapper{
 	display: flex;
+	@media (max-width: 767px) {
+	padding-top: 18px;
+	}
 }
 .team-grid .header-block{
 	@media (max-width: 767px) {
@@ -190,6 +193,9 @@
 	.team-preview__video-btn{
 		margin-left: -65px;
 	}
+	.blockquote-faximily{
+		margin-bottom: 20px;
+	}
 	@media (max-width: 1919px) {
 		padding-top: remy(25);
 		.persone-card-block{padding: remy(10);}
@@ -200,7 +206,7 @@
 	}
 	@media (max-width: 767px) {
 		padding-top: 0;
-		.persone-card-block{padding: 10px;}
+		.persone-card-block{padding: 10px; padding-top: 35px;}
 		.persone-card__title{font-size: 18px;}
 		.team-preview__video-btn{margin-left: -65px;}	
 	}
@@ -215,7 +221,7 @@
 	}
 	@media (max-width: 767px) {
 	width: 182px;
-	height: 314px;
+	height: 290px;
 	}
 }
 .team-grid{
@@ -269,24 +275,32 @@
 .team-preview__video-btn.rel-btn{
 	justify-content: center;
 	column-gap:20px;
-	padding-left: 20px;
-	padding-right: 20px;
-	height: 45px;
+	padding-inline: 20px 10px;
+	height: 48px;
+	border-radius: 45px;
+	width: fit-content;
+	display: flex;
+	&:hover{ background-color:  rgba(0, 0, 0, 0.1);}
 	.btn-play{
 		position: relative;
+		inset:0;
+		transform: translate(0, 0);
 		
 	}
 	@media (max-width: 1919px) {
 		column-gap:remy(20);
-		padding-left: remy(20);
-		padding-right: remy(20);
+		padding-inline: remy(20) remy(10);
 		height: remy(45);
+		
+		
+		
 	}
 	@media (max-width: 767px) {
-		column-gap:20px;
-		padding-left: 20px;
-		padding-right: 20px;
+		column-gap:10px;
+		padding-inline: 10px 8px;
 		height: 45px;
+		
+		
 	}
 }
 .article-footer-row{
