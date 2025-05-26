@@ -544,3 +544,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  let BeforeAfterSlider = new Swiper('.before-after-swiper', {
+     navigation: {
+      nextEl: '.before-after-next',
+      prevEl: '.before-after-prev',
+    },
+  });
+})
