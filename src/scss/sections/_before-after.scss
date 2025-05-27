@@ -262,7 +262,7 @@
 		.before-after__right{padding-top: remy(70);}
 	}
 	@media (max-width: 767px) {
-	  display: none;
+	//   display: none;
 	}
 }
 .before-after-nav{
@@ -271,7 +271,7 @@
 	right: 0;
 	z-index: 5;
 	.btn,.btn-primary{cursor: pointer; user-select: none;}
-	@media (max-width: 767px) {
-	display: none;
-	}
+	// @media (max-width: 767px) {
+	// display: none;
+	// }
 }
