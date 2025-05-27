@@ -476,7 +476,24 @@ document.addEventListener("DOMContentLoaded", function () {
 // TABS
 document.addEventListener("DOMContentLoaded", function () {
   let activeSwiper = null; // Храним активный Swiper
-
+  function initSwiper(container) {
+        return new Swiper(container, {
+            speed:600,
+            navigation: {
+                  nextEl: ".mySwiper-nav .arrow-next",
+                  prevEl: ".mySwiper-nav .arrow-prev",
+              },
+            breakpoints:{
+              768:{
+                
+                navigation: {
+                  nextEl: '.before-after-next',
+                  prevEl: '.before-after-prev',
+                },
+              }
+            }
+        });
+    }
   function activateTab(tabButton) {
       const tabValue = tabButton.getAttribute("data-tbat");
 
@@ -533,21 +550,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-document.addEventListener("DOMContentLoaded", function () {
-  let BeforeAfterSlider = new Swiper('.before-after-swiper', {
-    speed:600,
-     navigation: {
-          nextEl: ".mySwiper-nav .arrow-next",
-          prevEl: ".mySwiper-nav .arrow-prev",
-      },
-    breakpoints:{
-      768:{
+// document.addEventListener("DOMContentLoaded", function () {
+//   let BeforeAfterSlider = new Swiper('.before-after-swiper', {
+//     speed:600,
+//      navigation: {
+//           nextEl: ".mySwiper-nav .arrow-next",
+//           prevEl: ".mySwiper-nav .arrow-prev",
+//       },
+//     breakpoints:{
+//       768:{
         
-         navigation: {
-          nextEl: '.before-after-next',
-          prevEl: '.before-after-prev',
-        },
-      }
-    }
-  });
-})
+//          navigation: {
+//           nextEl: '.before-after-next',
+//           prevEl: '.before-after-prev',
+//         },
+//       }
+//     }
+//   });
+// })
