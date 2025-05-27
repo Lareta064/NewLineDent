@@ -40,40 +40,51 @@ mixin tabsRightContent
 	
 
 mixin singleSlide
-	.swiper-slide
-		.before-after-wrapper
-			//LEFT CONTENT
-			.before-after__left
-				.user-card
-					.user-card__img
-						img(src='./img/user1.webp' width='329' height='280' loading='lazy' alt='img')
-
-					.user-card__body
-						.card__body-group
-							.title-24 Вера Павловна Твердохлебова
-							span.txt-bold Эстетическая тератия
-						.card__body-group
-							span.txt-bold Лечащий врач 
-							p.txt-16  Вера Павловна Твердохлебова
-						.card__body-group
-							.flex
-								span.clock-icon
-								span.clock-icon
-								span.clock-icon
-							.flex
-								span.coins-icon
-								span.coins-icon
-								span.coins-icon.disable
-					.before-after__buttons
-						a(href="#!").btn-accent.sm-100 Получить такую улыбку 
-			//RIGHT CONTENT
-			.before-after__right
-				
-				
-				+tabsRightContent
+	.before-after-swiper.swiper
+		.swiper-wrapper
+			.swiper-slide
+				//RIGHT CONTENT slider
+				.before-after__right
+					+tabsRightContent
+			.swiper-slide
+				//RIGHT CONTENT slider
+				.before-after__right
+					+tabsRightContent
 
 
+	//slider navigation
+	.before-after-nav.align-right-buttons
+		button.before-after-prev.btn.btn--accent Назад
+		button.before-after-next.btn-primary Перейти к следующему
+mixin ba-slider
+	.before-after-wrapper
+		//LEFT CONTENT
+		.before-after__left
+			.user-card
+				.user-card__img
+					img(src='./img/user1.webp' width='329' height='280' loading='lazy' alt='img')
 
+				.user-card__body
+					.card__body-group
+						.title-24 Вера Павловна Твердохлебова
+						span.txt-bold Эстетическая тератия
+					.card__body-group
+						span.txt-bold Лечащий врач 
+						p.txt-16  Вера Павловна Твердохлебова
+					.card__body-group
+						.flex
+							span.clock-icon
+							span.clock-icon
+							span.clock-icon
+						.flex
+							span.coins-icon
+							span.coins-icon
+							span.coins-icon.disable
+				.before-after__buttons
+					a(href="#!").btn-accent.sm-100 Получить такую улыбку 
+			
+		+singleSlide
+					
 section.before-after
 	.container
 		
@@ -92,40 +103,30 @@ section.before-after
 				.tabs__content-container
 					//TAB #1
 					.tabs-content.active(data-tcontent="all")
-						.before-after-swiper.swiper
-							.swiper-wrapper
-								+singleSlide
-								+singleSlide
-								+singleSlide
-							
-							//slider navigation
-							.before-after-nav.align-right-buttons
-								button.btn.btn--accent.before-after-prev Назад
-								button.btn-primary.before-after-next Перейти к следующему
-								
-								
+						+ba-slider
+					
 					//TAB #2
-					.tabs-content(data-tcontent="2")
-						.before-after-swiper.swiper
-							.swiper-wrapper
-								+singleSlide
-								+singleSlide
-								+singleSlide
+					//- .tabs-content(data-tcontent="2")
+					//- 	.before-after-swiper.swiper
+					//- 		.swiper-wrapper
+					//- 			+singleSlide
+					//- 			+singleSlide
+					//- 			+singleSlide
 							
-							//slider navigation
-							.before-after-nav
-								.before-after-next
-								.before-after-prev
+					//- 		//slider navigation
+					//- 		.before-after-nav
+					//- 			.before-after-next
+					//- 			.before-after-prev
 
 					//TAB #3
 					.tabs-content(data-tcontent="3")
-						.before-after-swiper.swiper
-							.swiper-wrapper
-								+singleSlide
-								+singleSlide
-								+singleSlide
+						//- .before-after-swiper.swiper
+						//- 	.swiper-wrapper
+						//- 		+singleSlide
+						//- 		+singleSlide
+						//- 		+singleSlide
 							
-							//slider navigation
-							.before-after-nav
-								.before-after-next
-								.before-after-prev
+						//- 	//slider navigation
+						//- 	.before-after-nav
+						//- 		.before-after-next
+						//- 		.before-after-prev
