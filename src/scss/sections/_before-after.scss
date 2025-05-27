@@ -80,7 +80,7 @@
 	padding-top: 40px;
 	&>*{width: 100%;}
 	.before-after__left{padding-block: 0 40px;}
-	.before-after-swiper{padding-block: 0 ;}
+	.before-after-swiper{padding-block: 0 40px;}
 	}
 }
 .before-after__right{
@@ -262,7 +262,7 @@
 		.before-after__right{padding-top: remy(70);}
 	}
 	@media (max-width: 767px) {
-	//   display: none;
+	  display: none;
 	}
 }
 .before-after-nav{
@@ -271,7 +271,10 @@
 	right: 0;
 	z-index: 5;
 	.btn,.btn-primary{cursor: pointer; user-select: none;}
-	// @media (max-width: 767px) {
-	// display: none;
-	// }
+	@media (max-width: 767px) {
+		right: auto;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }

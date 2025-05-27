@@ -477,17 +477,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   let activeSwiper = null; // Храним активный Swiper
 
-  function initSwiper(container) {
-      return new Swiper(container, {
-          slidesPerView: 'auto',
-          speed: 800,
-          navigation: {
-              nextEl: ".mySwiper .arrow-next",
-              prevEl: ".mySwiper .arrow-prev",
-          },
-      });
-  }
-
   function activateTab(tabButton) {
       const tabValue = tabButton.getAttribute("data-tbat");
 
@@ -502,7 +491,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
          
           setTimeout(() => {
-              const swiperContainer = activeTab.querySelector(".mySwiper");
+              const swiperContainer = activeTab.querySelector(".before-after-swiper");
               if (swiperContainer) {
                   if (activeSwiper) activeSwiper.destroy(true, true); // Удаляем старый Swiper
                   activeSwiper = initSwiper(swiperContainer); // Запускаем новый Swiper
@@ -548,8 +537,17 @@ document.addEventListener("DOMContentLoaded", function () {
   let BeforeAfterSlider = new Swiper('.before-after-swiper', {
     speed:600,
      navigation: {
-      nextEl: '.before-after-next',
-      prevEl: '.before-after-prev',
-    },
+          nextEl: ".mySwiper-nav .arrow-next",
+          prevEl: ".mySwiper-nav .arrow-prev",
+      },
+    breakpoints:{
+      768:{
+        
+         navigation: {
+          nextEl: '.before-after-next',
+          prevEl: '.before-after-prev',
+        },
+      }
+    }
   });
 })
