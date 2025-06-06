@@ -475,54 +475,68 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 // TABS
 document.addEventListener("DOMContentLoaded", function () {
-  let activeSwiper = null; // Храним активный Swiper
-  function initSwiper(container) {
-        return new Swiper(container, {
-            speed:600,
-            navigation: {
-                  nextEl: ".mySwiper-nav .arrow-next",
-                  prevEl: ".mySwiper-nav .arrow-prev",
-              },
-            breakpoints:{
-              768:{
-                
-                navigation: {
-                  nextEl: '.before-after-next',
-                  prevEl: '.before-after-prev',
-                },
-              }
-            }
-        });
-    }
-  function activateTab(tabButton) {
-      const tabValue = tabButton.getAttribute("data-tbat");
-
-      document.querySelectorAll(".tabs__nav-btn").forEach(btn => btn.classList.remove("active"));
-      document.querySelectorAll(".tabs-content").forEach(tab => tab.classList.remove("active"));
-
-      
-      tabButton.classList.add("active");
-      const activeTab = document.querySelector(`.tabs-content[data-tcontent="${tabValue}"]`);
-      if (activeTab) {
-          activeTab.classList.add("active");
-
-         
-          setTimeout(() => {
-              const swiperContainer = activeTab.querySelector(".before-after-swiper");
-              if (swiperContainer) {
-                  if (activeSwiper) activeSwiper.destroy(true, true); // Удаляем старый Swiper
-                  activeSwiper = initSwiper(swiperContainer); // Запускаем новый Swiper
-              }
-          }, 50);
-      }
-  }
-
  
-  document.querySelectorAll(".tabs__nav-btn").forEach(btn => {
-      btn.addEventListener("click", () => activateTab(btn));
-  });
 
-  
+  let activeSwiper = null;
+
+function initSwiper(container, isBeforeAfter = false) {
+    return new Swiper(container, {
+        speed: isBeforeAfter ? 600 : 800,
+        slidesPerView: isBeforeAfter ? 1 : 'auto', // можно настроить по твоей логике
+        navigation: isBeforeAfter
+            ? {
+                nextEl: ".before-after-next",
+                prevEl: ".before-after-prev",
+            }
+            : {
+                nextEl: ".mySwiper-nav .arrow-next",
+                prevEl: ".mySwiper-nav .arrow-prev",
+            },
+    });
+}
+
+function activateTab(tabButton) {
+    const tabValue = tabButton.getAttribute("data-tbat");
+
+    document.querySelectorAll(".tabs__nav-btn").forEach(btn => btn.classList.remove("active"));
+    document.querySelectorAll(".tabs-content").forEach(tab => tab.classList.remove("active"));
+
+    tabButton.classList.add("active");
+
+    const activeTab = document.querySelector(`.tabs-content[data-tcontent="${tabValue}"]`);
+    if (!activeTab) return;
+
+    activeTab.classList.add("active");
+
+    setTimeout(() => {
+        if (activeSwiper) {
+            activeSwiper.destroy(true, true);
+            activeSwiper = null;
+        }
+
+        const isMobile = window.innerWidth <= 767;
+        const swiperSelector = isMobile ? ".mySwiper" : ".before-after-swiper";
+        const swiperContainer = activeTab.querySelector(swiperSelector);
+
+        if (swiperContainer) {
+            activeSwiper = initSwiper(swiperContainer, !isMobile);
+        }
+    }, 50);
+}
+
+document.querySelectorAll(".tabs__nav-btn").forEach(btn => {
+    btn.addEventListener("click", () => activateTab(btn));
+});
+
+// Опционально: пересоздание Swiper при ресайзе, если активен таб
+window.addEventListener("resize", () => {
+    const currentTab = document.querySelector(".tabs-content.active");
+    const currentBtn = document.querySelector(".tabs__nav-btn.active");
+    if (currentTab && currentBtn) {
+        activateTab(currentBtn);
+    }
+});
+
   const firstActiveTab = document.querySelector(".tabs__nav-btn.active") || document.querySelector(".tabs__nav-btn");
   if (firstActiveTab) activateTab(firstActiveTab);
 
@@ -550,21 +564,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-// document.addEventListener("DOMContentLoaded", function () {
-//   let BeforeAfterSlider = new Swiper('.before-after-swiper', {
-//     speed:600,
-//      navigation: {
-//           nextEl: ".mySwiper-nav .arrow-next",
-//           prevEl: ".mySwiper-nav .arrow-prev",
-//       },
-//     breakpoints:{
-//       768:{
-        
-//          navigation: {
-//           nextEl: '.before-after-next',
-//           prevEl: '.before-after-prev',
-//         },
-//       }
-//     }
-//   });
-// })

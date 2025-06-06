@@ -62,7 +62,7 @@ mixin singleSlide
 			button.before-after-next.btn-primary Перейти к следующему
 			
 			
-mixin ba-slider
+mixin ba-slider(txt)
 	.before-after-wrapper
 		//LEFT CONTENT
 		.before-after__left
@@ -72,7 +72,7 @@ mixin ba-slider
 
 				.user-card__body
 					.card__body-group
-						.title-24 Вера Павловна Твердохлебова
+						.title-24 #{txt}
 						span.txt-bold Эстетическая тератия
 					.card__body-group
 						span.txt-bold Лечащий врач 
@@ -109,12 +109,12 @@ section.before-after
 				.tabs__content-container
 					//TAB #1
 					.tabs-content.active(data-tcontent="all")
-						+ba-slider
+						+ba-slider('Вера Павловна Твердохлебова')
 					
 					//TAB #2
 					.tabs-content(data-tcontent="2")
-						+ba-slider
+						+ba-slider('Елена Павловна Иванова')
 
 					//TAB #3
 					.tabs-content(data-tcontent="3")
-						+ba-slider
+						+ba-slider('Светлана Сергеевна Петрова')

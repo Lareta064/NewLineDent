@@ -18,6 +18,7 @@
 		width: 1300px;
 		height: 464px;
 		z-index: 1;
+		pointer-events: none;
 		@media (max-width: 1919px) {
 			width: remy(1240);
 			height: remy(464);

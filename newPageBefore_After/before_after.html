@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--=======убрать перевод цифр в номер телефона на ios  и safari ======-->
+  <meta name="format-detection" content="telephone=no">
+  <!--fancybox-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+  <!--Swiper-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <!--fonts-->
+  <!--========= custom styles ========-->
+  <link rel="stylesheet" href="./css/main.css">
+  <title>До / после</title>
+</head>
+
+<body>
+  <!--HEADER-->
+  <header class="header">
+    <div class="container sm-100">
+      <div class="header-content flex">
+        <a class="logo" href="index.html">
+          <svg class="svg-logo">
+            <use href="./img/sprite.svg#svg-logo"></use>
+          </svg>
+        </a>
+        <div class="header-nav-wrapper flex" id="header-menu">
+          <!--LOGO для моб версии-->
+          <div class="header-nav-logo flex">
+            <a class="logo" href="index.html">
+              <svg class="svg-logoDark">
+                <use href="./img/sprite.svg#svg-logoDark"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header-nav-scroll flex">
+            <!--MENU-->
+            <ul class="header-menu flex">
+              <li>
+                <a href="service-page.html">Услуги и цены</a>
+              </li>
+              <li>
+                <a href="before_after.html">до / после</a>
+              </li>
+              <li>
+                <a href="doctors.html">наши врачи</a>
+              </li>
+              <li>
+                <a href="review.html">Отзывы </a>
+              </li>
+              <li>
+                <a href="about.html">о нас</a>
+              </li>
+              <li>
+                <a href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+            <div class="address-block">
+              <div class="address-block__metro">
+                <svg class="svg-metro">
+                  <use href="./img/sprite.svg#svg-metro"></use>
+                </svg>
+                <p>Новочеркасская</p>
+              </div>
+              <div class="address-block__info">
+                <p>ул. Стахановцев, д. 6</p>
+                <p>пн-вс: 9:00 — 21:00</p>
+              </div>
+            </div>
+            <div class="header-contacts flex">
+              <a class="btn" href="tel:+79999999999">Позвонить</a>
+              <div class="social-block">
+                <a class="social-link" href="#!">
+                  <svg class="svg-inst">
+                    <use xlink:href="./img/brands.svg#instagram"></use>
+                  </svg>
+                </a>
+                <a class="social-link" href="#!">
+                  <svg class="svg-wa">
+                    <use xlink:href="./img/brands.svg#whatsapp"></use>
+                  </svg>
+                </a>
+                <a class="social-link" href="#!">
+                  <svg class="svg-tg">
+                    <use xlink:href="./img/brands.svg#telegram"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--MOBILE MENU BURGER-->
+        <button class="menu-toggle" type="button">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="promo promo-inner">
+      <div class="breadcrumbs-wrapper">
+        <div class="container">
+          <ul class="breadcrumbs">
+            <li>
+              <a href="index.html">Newlinedent</a>
+            </li>
+            <li>
+              <a href="#!">до/после</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="promo-inner__grid grid-two-column">
+          <div class="promo-inner__title flex-col">
+            <h1 class="h1 txt-upper">Фото работ:
+              <br>до и после
+            </h1>
+            <p class="txt-24">Реальные результаты, которые вдохновляют</p>
+            <div class="promo-inner__btn">
+              <a class="btn-primary sm-100" href="#!">
+                <span>Записаться на прием </span>
+                <svg class="svg-rarr">
+                  <use href="./img/sprite.svg#svg-rarr"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="rotate-img-group">
+            <div class="rotate-image rotate-image1">
+              <img src="./img/rotate/5.webp" width="230" height="250" loading="lazy" alt="img">
+              <div class="flex">
+                <span class="img-logo"></span>
+                <span class="img-caption">виниры
+                  <br>что то там
+                </span>
+              </div>
+            </div>
+            <div class="rotate-image rotate-image2">
+              <img src="./img/rotate/6.webp" width="230" height="250" loading="lazy" alt="img">
+              <div class="flex">
+                <span class="img-logo"></span>
+                <span class="img-caption img-caption--name">Мария </span>
+              </div>
+            </div>
+            <div class="rotate-image rotate-image3">
+              <img src="./img/rotate/7.webp" width="230" height="250" loading="lazy" alt="img">
+              <div class="flex">
+                <span class="img-logo"></span>
+                <span class="img-caption img-caption--name">Любовь</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="before-after">
+      <div class="container">
+        <div class="before-after__tabs">
+          <div class="tabs-group">
+            <ul class="tabs__nav flex">
+              <li class="tabs__nav-btn flex" data-tbat="all">Все</li>
+              <li class="tabs__nav-btn flex" data-tbat="2">Терапия</li>
+              <li class="tabs__nav-btn flex" data-tbat="3">Хирургия</li>
+              <li class="tabs__nav-btn flex" data-tbat="4">Ортодонтия</li>
+              <li class="tabs__nav-btn flex" data-tbat="5">Ортопедия</li>
+              <li class="tabs__nav-btn flex" data-tbat="6">Гигиена</li>
+            </ul>
+            <div class="tabs__content-container">
+              <!--TAB #1-->
+              <div class="tabs-content active" data-tcontent="all">
+                <div class="before-after-wrapper">
+                  <!--LEFT CONTENT-->
+                  <div class="before-after__left">
+                    <div class="user-card">
+                      <div class="user-card__img">
+                        <img src="./img/user1.webp" width="329" height="280" loading="lazy" alt="img">
+                      </div>
+                      <div class="user-card__body">
+                        <div class="card__body-group">
+                          <div class="title-24">Вера Павловна Твердохлебова</div>
+                          <span class="txt-bold">Эстетическая тератия</span>
+                        </div>
+                        <div class="card__body-group">
+                          <span class="txt-bold">Лечащий врач </span>
+                          <p class="txt-16"> Вера Павловна Твердохлебова</p>
+                        </div>
+                        <div class="card__body-group">
+                          <div class="flex">
+                            <span class="clock-icon"></span>
+                            <span class="clock-icon"></span>
+                            <span class="clock-icon"></span>
+                          </div>
+                          <div class="flex">
+                            <span class="coins-icon"></span>
+                            <span class="coins-icon"></span>
+                            <span class="coins-icon disable"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="before-after__buttons">
+                        <a class="btn-accent sm-100" href="#!">Получить такую улыбку </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--slider for mobile-->
+                  <div class="mySwiper swiper block-sm">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="rotate-image block-sm">
+                          <img src="./img/service-cards/img1.webp" srcset="./img/service-cards/img1@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                          <div class="flex">
+                            <span class="img-caption img-caption--name">До</span>
+                            <span class="img-logo"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="rotate-image">
+                          <img src="./img/service-cards/img1.webp" srcset="./img/service-cards/img1@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                          <div class="flex">
+                            <span class="img-caption img-caption--name">До</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--navigation mobile-->
+                    <div class="mySwiper-nav flex">
+                      <button class="arrow-prev">
+                        <svg class="svg-rarr">
+                          <use href="./img/sprite.svg#svg-rarr"></use>
+                        </svg>
+                      </button>
+                      <button class="arrow-next">
+                        <svg class="svg-rarr">
+                          <use href="./img/sprite.svg#svg-rarr"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <!--slider for desktop-->
+                  <div class="before-after-swiper swiper hide-sm">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <!--RIGHT CONTENT slider-->
+                        <div class="before-after__right">
+                          <!--блок для десктоп версии-->
+                          <div class="rotate-image__group hide-sm">
+                            <div class="rotate-image rotate-image1">
+                              <img src="./img/service-cards/img1.webp" srcset="./img/service-cards/img1@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                              <div class="flex">
+                                <span class="img-caption img-caption--name">До</span>
+                                <span class="img-logo"></span>
+                              </div>
+                            </div>
+                            <div class="rotate-image rotate-image2">
+                              <img src="./img/service-cards/img2.webp" srcset="./img/service-cards/img2@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                              <div class="flex">
+                                <span class="img-caption img-caption--name">После</span>
+                                <span class="img-logo"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <!--buttons-group-->
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <!--RIGHT CONTENT slider-->
+                        <div class="before-after__right">
+                          <!--блок для десктоп версии-->
+                          <div class="rotate-image__group hide-sm">
+                            <div class="rotate-image rotate-image1">
+                              <img src="./img/service-cards/img1.webp" srcset="./img/service-cards/img1@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                              <div class="flex">
+                                <span class="img-caption img-caption--name">До</span>
+                                <span class="img-logo"></span>
+                              </div>
+                            </div>
+                            <div class="rotate-image rotate-image2">
+                              <img src="./img/service-cards/img2.webp" srcset="./img/service-cards/img2@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                              <div class="flex">
+                                <span class="img-caption img-caption--name">После</span>
+                                <span class="img-logo"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <!--buttons-group-->
+                        </div>
+                      </div>
+                    </div>
+                    <!--slider navigation desktop-->
+                    <div class="before-after-nav align-right-buttons">
+                      <button class="before-after-prev btn btn--accent">Назад</button>
+                      <button class="before-after-next btn-primary">Перейти к следующему</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--TAB #2-->
+              <div class="tabs-content" data-tcontent="2">
+                <div class="before-after-wrapper">
+                  <!--LEFT CONTENT-->
+                  <div class="before-after__left">
+                    <div class="user-card">
+                      <div class="user-card__img">
+                        <img src="./img/user1.webp" width="329" height="280" loading="lazy" alt="img">
+                      </div>
+                      <div class="user-card__body">
+                        <div class="card__body-group">
+                          <div class="title-24">Елена Павловна Иванова</div>
+                          <span class="txt-bold">Эстетическая тератия</span>
+                        </div>
+                        <div class="card__body-group">
+                          <span class="txt-bold">Лечащий врач </span>
+                          <p class="txt-16"> Вера Павловна Твердохлебова</p>
+                        </div>
+                        <div class="card__body-group">
+                          <div class="flex">
+                            <span class="clock-icon"></span>
+                            <span class="clock-icon"></span>
+                            <span class="clock-icon"></span>
+                          </div>
+                          <div class="flex">
+                            <span class="coins-icon"></span>
+                            <span class="coins-icon"></span>
+                            <span class="coins-icon disable"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="before-after__buttons">
+                        <a class="btn-accent sm-100" href="#!">Получить такую улыбку </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--slider for mobile-->
+                  <div class="mySwiper swiper block-sm">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="rotate-image block-sm">
+                          <img src="./img/service-cards/img1.webp" srcset="./img/service-cards/img1@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                          <div class="flex">
+                            <span class="img-caption img-caption--name">До</span>
+                            <span class="img-logo"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="rotate-image">
+                          <img src="./img/service-cards/img1.webp" srcset="./img/service-cards/img1@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                          <div class="flex">
+                            <span class="img-caption img-caption--name">До</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--navigation mobile-->
+                    <div class="mySwiper-nav flex">
+                      <button class="arrow-prev">
+                        <svg class="svg-rarr">
+                          <use href="./img/sprite.svg#svg-rarr"></use>
+                        </svg>
+                      </button>
+                      <button class="arrow-next">
+                        <svg class="svg-rarr">
+                          <use href="./img/sprite.svg#svg-rarr"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <!--slider for desktop-->
+                  <div class="before-after-swiper swiper hide-sm">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <!--RIGHT CONTENT slider-->
+                        <div class="before-after__right">
+                          <!--блок для десктоп версии-->
+                          <div class="rotate-image__group hide-sm">
+                            <div class="rotate-image rotate-image1">
+                              <img src="./img/service-cards/img1.webp" srcset="./img/service-cards/img1@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                              <div class="flex">
+                                <span class="img-caption img-caption--name">До</span>
+                                <span class="img-logo"></span>
+                              </div>
+                            </div>
+                            <div class="rotate-image rotate-image2">
+                              <img src="./img/service-cards/img2.webp" srcset="./img/service-cards/img2@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                              <div class="flex">
+                                <span class="img-caption img-caption--name">После</span>
+                                <span class="img-logo"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <!--buttons-group-->
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <!--RIGHT CONTENT slider-->
+                        <div class="before-after__right">
+                          <!--блок для десктоп версии-->
+                          <div class="rotate-image__group hide-sm">
+                            <div class="rotate-image rotate-image1">
+                              <img src="./img/service-cards/img1.webp" srcset="./img/service-cards/img1@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                              <div class="flex">
+                                <span class="img-caption img-caption--name">До</span>
+                                <span class="img-logo"></span>
+                              </div>
+                            </div>
+                            <div class="rotate-image rotate-image2">
+                              <img src="./img/service-cards/img2.webp" srcset="./img/service-cards/img2@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                              <div class="flex">
+                                <span class="img-caption img-caption--name">После</span>
+                                <span class="img-logo"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <!--buttons-group-->
+                        </div>
+                      </div>
+                    </div>
+                    <!--slider navigation desktop-->
+                    <div class="before-after-nav align-right-buttons">
+                      <button class="before-after-prev btn btn--accent">Назад</button>
+                      <button class="before-after-next btn-primary">Перейти к следующему</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--TAB #3-->
+              <div class="tabs-content" data-tcontent="3">
+                <div class="before-after-wrapper">
+                  <!--LEFT CONTENT-->
+                  <div class="before-after__left">
+                    <div class="user-card">
+                      <div class="user-card__img">
+                        <img src="./img/user1.webp" width="329" height="280" loading="lazy" alt="img">
+                      </div>
+                      <div class="user-card__body">
+                        <div class="card__body-group">
+                          <div class="title-24">Светлана Сергеевна Петрова</div>
+                          <span class="txt-bold">Эстетическая тератия</span>
+                        </div>
+                        <div class="card__body-group">
+                          <span class="txt-bold">Лечащий врач </span>
+                          <p class="txt-16"> Вера Павловна Твердохлебова</p>
+                        </div>
+                        <div class="card__body-group">
+                          <div class="flex">
+                            <span class="clock-icon"></span>
+                            <span class="clock-icon"></span>
+                            <span class="clock-icon"></span>
+                          </div>
+                          <div class="flex">
+                            <span class="coins-icon"></span>
+                            <span class="coins-icon"></span>
+                            <span class="coins-icon disable"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="before-after__buttons">
+                        <a class="btn-accent sm-100" href="#!">Получить такую улыбку </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--slider for mobile-->
+                  <div class="mySwiper swiper block-sm">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="rotate-image block-sm">
+                          <img src="./img/service-cards/img1.webp" srcset="./img/service-cards/img1@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                          <div class="flex">
+                            <span class="img-caption img-caption--name">До</span>
+                            <span class="img-logo"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="rotate-image">
+                          <img src="./img/service-cards/img1.webp" srcset="./img/service-cards/img1@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                          <div class="flex">
+                            <span class="img-caption img-caption--name">До</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--navigation mobile-->
+                    <div class="mySwiper-nav flex">
+                      <button class="arrow-prev">
+                        <svg class="svg-rarr">
+                          <use href="./img/sprite.svg#svg-rarr"></use>
+                        </svg>
+                      </button>
+                      <button class="arrow-next">
+                        <svg class="svg-rarr">
+                          <use href="./img/sprite.svg#svg-rarr"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <!--slider for desktop-->
+                  <div class="before-after-swiper swiper hide-sm">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <!--RIGHT CONTENT slider-->
+                        <div class="before-after__right">
+                          <!--блок для десктоп версии-->
+                          <div class="rotate-image__group hide-sm">
+                            <div class="rotate-image rotate-image1">
+                              <img src="./img/service-cards/img1.webp" srcset="./img/service-cards/img1@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                              <div class="flex">
+                                <span class="img-caption img-caption--name">До</span>
+                                <span class="img-logo"></span>
+                              </div>
+                            </div>
+                            <div class="rotate-image rotate-image2">
+                              <img src="./img/service-cards/img2.webp" srcset="./img/service-cards/img2@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                              <div class="flex">
+                                <span class="img-caption img-caption--name">После</span>
+                                <span class="img-logo"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <!--buttons-group-->
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <!--RIGHT CONTENT slider-->
+                        <div class="before-after__right">
+                          <!--блок для десктоп версии-->
+                          <div class="rotate-image__group hide-sm">
+                            <div class="rotate-image rotate-image1">
+                              <img src="./img/service-cards/img1.webp" srcset="./img/service-cards/img1@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                              <div class="flex">
+                                <span class="img-caption img-caption--name">До</span>
+                                <span class="img-logo"></span>
+                              </div>
+                            </div>
+                            <div class="rotate-image rotate-image2">
+                              <img src="./img/service-cards/img2.webp" srcset="./img/service-cards/img2@2x.webp 2x" width="332" height="239" loading="lazy" alt="img">
+                              <div class="flex">
+                                <span class="img-caption img-caption--name">После</span>
+                                <span class="img-logo"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <!--buttons-group-->
+                        </div>
+                      </div>
+                    </div>
+                    <!--slider navigation desktop-->
+                    <div class="before-after-nav align-right-buttons">
+                      <button class="before-after-prev btn btn--accent">Назад</button>
+                      <button class="before-after-next btn-primary">Перейти к следующему</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--FOOTER-->
+  <footer class="footer">
+    <!--TOP CONTENT-->
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-top__content flex">
+          <div class="footer-contacts flex">
+            <a class="logo" href="#!">
+              <img src="./img/footer-logo.webp" srcset="./img/footer-logo@2x.webp" width="110" height="103" loading="lazy" alt="img">
+            </a>
+            <div class="footer-address">
+              <p>г. Санкт-Петербург</p>
+              <p>ст.м. "Новочеркасская", ул. Стахановцев, д. 6</p>
+              <p>пн-вс: 9:00 — 21:00</p>
+            </div>
+            <div class="footer-links contacts-block">
+              <a class="contact-link flex" href="tel:+79999999999">
+                <div class="contact-link__icon">
+                  <img src="./img/phone-solid.svg" width="24" height="24" loading="lazy" alt="img">
+                </div>
+                <span>+7 (999) 999-99-99</span>
+              </a>
+              <a class="contact-link flex" href="tel:+79999999999">
+                <div class="contact-link__icon">
+                  <img src="./img/phone-solid.svg" width="24" height="24" loading="lazy" alt="img">
+                </div>
+                <span>+7 (999) 999-99-99</span>
+              </a>
+              <a class="contact-link flex" href="mailto:nld-12@mail.ru">
+                <div class="contact-link__icon">
+                  <img src="./img/envelope-solid.svg" width="24" height="24" loading="lazy" alt="img">
+                </div>
+                <span>nld-12@mail.ru</span>
+              </a>
+            </div>
+            <div class="social-block">
+              <a class="social-link" href="#!">
+                <svg class="svg-inst">
+                  <use xlink:href="./img/brands.svg#instagram"></use>
+                </svg>
+              </a>
+              <a class="social-link" href="#!">
+                <svg class="svg-wa">
+                  <use xlink:href="./img/brands.svg#whatsapp"></use>
+                </svg>
+              </a>
+              <a class="social-link" href="#!">
+                <svg class="svg-tg">
+                  <use xlink:href="./img/brands.svg#telegram"></use>
+                </svg>
+              </a>
+              <a class="social-link" href="#!">
+                <svg class="svg-fb">
+                  <use xlink:href="./img/brands.svg#facebook"></use>
+                </svg>
+              </a>
+              <a class="social-link" href="#!">
+                <svg class="svg-be">
+                  <use xlink:href="./img/brands.svg#behance"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="footer-btn">
+              <button class="btn sm-100" type="button" data-btn="feedback">Записаться на консультацию</button>
+            </div>
+          </div>
+          <!--MAP-->
+          <div class="footer-map">
+            <div class="map">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A13e02d731c04b56220a2a064d1fa54db38ac5402f907fd4bdf75e632a107fa8e&amp;amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--FOOTER NAVs-->
+    <div class="footer-menus">
+      <div class="container">
+        <div class="footer-menus__content">
+          <!--MENU LIST-->
+          <nav class="footer-nav footer-nav--big">
+            <div class="footer-nav__title">Лечение</div>
+            <ul class="footer-nav__list">
+              <li>
+                <a href="therapy.html">Диагностика</a>
+              </li>
+              <li>
+                <a href="orthopedics.html">Терапия</a>
+              </li>
+              <li>
+                <a href="implantation.html">Имплантология</a>
+              </li>
+              <li>
+                <a href="3d.html">Несъемное протезирование</a>
+              </li>
+              <li>
+                <a href="hygiene.html">Эстетическая стоматология</a>
+              </li>
+              <li>
+                <a href="whitening.html">Отбеливание зубов</a>
+              </li>
+              <li>
+                <a href="protezirovanie.html">Ортодонтия</a>
+              </li>
+              <li>
+                <a href="surgery.html">Хирургия</a>
+              </li>
+              <li>
+                <a href="orthopedics.html">Ортопедия</a>
+              </li>
+              <li>
+                <a href="3d.html">Съемное протезирование</a>
+              </li>
+              <li>
+                <a href="hygiene.html">Профилактика и гигиена</a>
+              </li>
+            </ul>
+          </nav>
+          <!--MENU LIST-->
+          <nav class="footer-nav">
+            <div class="footer-nav__title">О нас </div>
+            <ul class="footer-nav__list">
+              <li>
+                <a href="about.html">о клинике</a>
+              </li>
+              <li>
+                <a href="doctors.html">наши врачи</a>
+              </li>
+              <li>
+                <a href="before_after.html">до / после </a>
+              </li>
+              <li>
+                <a href="review.html">Отзывы</a>
+              </li>
+              <li>
+                <a href="blog.html">блог</a>
+              </li>
+              <li>
+                <a href="contacts.html">Контакты контакты </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!--FOOTER-BOTTOM-->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom__content flex">
+          <p class="copyright-txt">&copy;2025 NEWLINENT</p>
+          <div class="politic-link">
+            <a href="#!">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+          </div>
+          <div class="savov-link">
+            <a class="savov-link" href="savov.ru">ДЕЗАЙН БЮРО – SAVOV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--popUP FORM-->
+  <div class="popup-block" data-modal="feedback">
+    <div class="popup-block-content">
+      <div class="header-nav-logo flex">
+        <a class="logo" href="index.html">
+          <svg class="svg-logo">
+            <use href="./img/sprite.svg#svg-logo"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="popup-block-wrapper">
+        <div class="popup-header">
+          <div class="h2">Записаться на&nbsp;консультацию</div>
+          <button class="popup-close">
+            <svg class="svg-cross" data-close>
+              <use href="./img/sprite.svg#svg-cross"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="popup-body">
+          <form class="contact-form flex-col" action="">
+            <div class="form-item">
+              <span class="fake-placeholder">Имя</span>
+              <input class="form-input" type="text" name="name">
+            </div>
+            <div class="form-item">
+              <span class="fake-placeholder">Телефон</span>
+              <input class="form-input" type="tel" name="phone">
+            </div>
+            <div class="form-item">
+              <span class="fake-placeholder">Опишите ваш вопрос</span>
+              <textarea class="form-input" name="message"></textarea>
+            </div>
+            <div class="form-btn flex">
+              <button class="btn-primary" type="submit">
+                <span>Отправить</span>
+              </button>
+              <p class="agree-txt">Нажимая на кнопку «Отправить», я даю согласие на&nbsp;обработку персональных данных</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./libs/jquery/jquery-3.0.0.min.js"></script>
+  <!--Swiper-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!--fancy-->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <!--=============== custom scripts ===================-->
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
